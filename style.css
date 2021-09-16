@@ -1,5 +1,4 @@
-body
-{
+body{
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -8,12 +7,9 @@ body
 	min-height: 100vh;
 }
 
-header, footer
-{
+header, footer{
 	background-color: #83A697;
-	flex-basis: 70px;
-	margin: ;
-	padding: ;
+	flex-basis: 80px;
 }
 
 header
@@ -30,28 +26,72 @@ footer
 	align-items: center;
 }
 
+aside, nav{
+	flex: 1, 2, 20%
+}
+
+
 main 
 {
 	display: flex;
-	flex-basis: 725px;
+	flex-basis: 760px;
+	order:solid black ;
+	height: 100%%;
+	border: ;
 }
 
 section
 {
-	display: flex;
-	flex: 4 1 60%;  /* flex row, flex shrink, flex basis */
-	background-color: #FFFFFF;
-	border: ;
-	justify-content: center;
-	margin: ;
+	display: grid;
+	grid-template-columns: 40% 40%;
 }
 
-aside, nav
+div
 {
-	flex: 1 2 20%;
-	margin:  ;
-	padding: ;
+	display: grid;
+	grid-template-columns: 1fr 1fr ;
+	grid-template-rows:;
+	border: ;
+	height: 250px;
+	width: 60%;
+	align-content: center;
 }
+.div1, .div3
+{
+	justify-self: center;
+	align-self: center;
+
+}
+.div2, .div4
+{
+	align-self: center;
+}
+.div1
+{
+	justify-self: right;
+}
+.div3
+{
+	justify-self: right;
+}
+
+h1
+{
+	border: ;
+	height:  ;
+	text-align: center;
+	font-size: ;
+
+}
+.h1
+{
+	text-align: center;
+}
+
+h3{
+	text-align: center;
+}
+
 
 nav
 {
@@ -66,69 +106,47 @@ aside
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	width: 25%;
-	
+	width: 25%; }
+
+aside, nav
+{
+	flex: 1 2 20%;
+	margin:  ;
+	padding: ;
 }
 
-ol,li
-{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}a 
-{
-	text-decoration: blink;
-	font-size: 1.9em;
-	color: red;
-}
-
-#imgweb
-{
+img
+{ 
 	border: ;
-	height: ;
-}
-
-#h1web
-{
-	display: flex;
-	border:	;
 	align-items: center;
-	justify-content: center;
-	width: 100%;} 
-	.coteweb
-	{
-		background-color: #F4FEFE;
-	}
-#imgapplication
-{
-	border: solid beige;
-	display: flex;
-	justify-content: center;
-	flex-direction: row;
 }
 
-img#imgadministrateur
+figure
 {
+	font-size: 1.0em;
 }
 
-#h1administrateur
+a 
 {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
+	text-decoration: none;
+}
+a:hover
+{
+	background-color: red;
+}
+
+form
+{
+
 	border: ;
+	width: ;
+
+
 }
 
-#coteweb
+figcaption 
 {
-	color: red;
+	font-size: 1.4;
 }
 
-#h1gestionnaire
-{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
+
