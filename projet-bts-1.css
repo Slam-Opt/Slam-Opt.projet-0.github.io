@@ -1,0 +1,296 @@
+body{
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+	min-height: 100vh;
+	margin: 0px;
+	padding: 0px;
+
+}
+
+
+
+header{
+	display: flex;
+	justify-content: flex-end;
+	flex-basis: auto;
+	background-color: #83A697;
+	align-items: ;
+}.logo{
+	width: 100px;
+	
+}
+
+
+footer
+{
+	display: flex;
+	justify-content: space-around;
+	flex-basis: auto;
+	background-color: #83A697;
+}
+
+.boutonsortir{
+	display: flex;
+	margin: auto;
+}
+
+p 
+{
+  font-size: 1.5em;
+
+}
+
+main[id="presentation"] 
+{
+	flex-basis: 800px; 
+	display: flex;
+	flex-direction:; /* Supprimer ici permet d'avoir nav et aside*/
+	flex-wrap: ;     /* À ne pas utiliser n'importe comment*/
+	justify-content: center;
+	flex: 2 1;
+}
+
+main[id="metiers"] 
+{
+	flex-basis: 800px; 
+	display: flex;
+	flex-direction:; /* Supprimer ici permet d'avoir nav et aside*/
+	flex-wrap: ;     /* À ne pas utiliser n'importe comment*/
+	justify-content: center;
+	flex: 2 1;
+}
+
+#sectionliste
+{
+	display: flex;
+	flex-direction: column;
+	width: 60%;
+	margin: auto;
+	align-items: center;
+}
+
+.navmetiers, .asidemetiers{
+	display: flex;
+	flex-direction: column;
+
+}
+nav.navmetiers{
+	
+	background-color: #C8AD7F;
+	order: -1;
+	flex: 2 1 20%;
+
+}
+aside.asidemetiers{
+	
+	background-color: #BBD2E1;
+	flex: 4 1 20%;
+}
+
+.liste
+{
+	font-size: 2em;
+	list-style-type: none;
+}
+
+.navmetiers{
+	justify-content: center;
+	align-items: center;
+}
+
+.boutonsortie{
+	display: flex;
+	flex-direction: column ;
+	align-self: baseline;
+	border: solid darkred;
+}
+
+
+main[id="index"]
+{
+	
+	flex-basis: 800px; 
+	display: flex;
+	flex-direction: column; 
+	justify-content: center;
+	align-items: center;
+	background-color: #F0FFFF;
+	flex: 2 1;
+}.titreindex{
+	width: 53%;
+	height: 220px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}.photoindex{
+	width: 40%;
+	height: 400px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	
+}
+
+
+main[id="principaleweb"]{
+	flex-basis: 800px;  
+	display: flex;
+	flex: 	2 1 ;  
+
+}.asideweb{
+	background-color: #C8AD7F;
+	display: flex;
+	flex-direction: column;
+	flex: 2 1 30%;
+	order: -1;
+	
+	}.photoweb{
+	display: flex;
+	flex-direction: column;
+	margin-left: 90px; 
+
+	}
+	.horloge{
+	display: flex;
+	flex-direction: column;
+	margin-left: 100px; 
+	}
+
+.paragrapheweb{
+	display: ;
+	width: 91%;
+	background-color: #F0FFFF;
+
+	}
+
+main[id="accueil"]{
+	display: flex;
+	flex-direction: column;
+	background-color: #C8AD7F;
+	flex-basis: 800px;
+	flex: 2 1;
+	justify-content: center;
+	align-items: center;
+}
+
+
+
+main[id="principaleappli"] 
+{
+	flex-basis: 800px; / 
+	display: flex;
+	flex-direction:; /* Supprimer ici permet d'avoir nav et aside*/
+	flex-wrap: wrap;     /* À ne pas utiliser n'importe comment*/
+	justify-content: center;  /* les items se positionnent au centre de la boite */
+	background-color: #F0FFFF;
+	flex: 2 1;
+
+}.paragrapheappli{
+	width: 50%;
+	margin: auto;
+	background-color: #F0FFFF;
+}.retourappli{
+	display: flex;
+	justify-content: center;
+	width: 25%;
+	background-color: #C8AD7F;
+	margin: auto;
+}
+
+
+main[id="administrateur"] 
+{
+	display: flex;
+	flex-basis: 800px; / 
+	display: flex;
+	align-items: center;
+	flex: 2 1;   
+	background-color: #F0FFFF;
+}#paragraphe{
+	width: 50%;
+	margin: auto;
+	order: -1;
+}
+
+
+main[id="principale"] 
+{
+	display: flex;
+	background-color: #F0FFFF;
+	flex-basis: 800px; 
+}
+
+
+img[title="Horloge"]
+{
+	width: 80px;
+
+}
+img[title="Administrateur réseau"]
+{
+	width: 800px;
+	margin-right: 50px;
+
+}
+section[id="appli"]{
+	display: flex;
+	justify-content: center;
+}
+
+.accès
+{	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.retour
+{
+	display: flex;
+	justify-content: center;
+	width: 50%;
+	background-color: #C8AD7F;
+	margin: auto;
+}
+
+a 
+{
+	text-decoration: none;
+	color: black;
+}
+
+a:hover{
+	background-color: #EC0D0D;
+}
+
+table
+{
+	width: ;
+	border-color: #C8AD7F;
+}
+main[id="tableau"]
+{
+	display: flex;
+	flex-direction: column;
+	flex-basis: 800px;
+	background-color: #FEFEFE;
+	flex: 2 1;
+
+}
+#tableau
+{
+	align-items: center;
+}
+
+/* alignement du titre du tableau */
+
+h1.titre1tableau, h3.titre3tableau{
+	display: flex;
+	justify-content: center;
+}
+
+
