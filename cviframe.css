@@ -1,0 +1,178 @@
+body{
+
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	background-color: ; 
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	size: a4;	
+}
+
+/*-----------------LES SECTIONS-------------------*/
+
+
+section[class="infos"]
+{
+	width: 70%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	font-size: 1.2em;
+}
+
+section[class="photo"]
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 30%;
+}
+
+p[class="photo"]
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+
+img[class="photo"]
+{
+	
+	width: 60%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+}
+
+
+/*-----------------------LES DIV--------------------------------*/
+
+section[class="cv"]
+{
+	padding: 20px 20px;
+	
+}
+
+div[class="infos"]
+{
+	display: flex;
+	font-family: comic sans ms;
+	
+}
+
+
+div[class="titre"]
+{
+	display: flex;
+	font-family: comic sans ms;
+	
+}
+
+div[class="formation"]
+{
+	display: flex;
+	font-family: comic sans ms;
+}
+
+div[class="experience"]
+{
+	display: flex;
+	font-family: comic sans ms;
+}
+
+div[class="competence"]
+{
+	display: flex;
+	font-family: comic sans ms;
+}
+
+div[class="autre"]
+{
+	display: flex;
+	font-family: comic sans ms;
+}
+
+
+/*-------------------LES ARTICLES----------------------*/
+
+
+article[class="a1"]
+{
+	width: 15%;
+}
+article[class="a2"]
+{
+	width: 85%;
+}
+
+
+/*---------------LES SPAN-------------------------*/
+
+
+
+span[class="italic"]
+{
+	font-style: italic;
+}
+
+span[class="gras"]
+{
+	font-weight: bold;
+}
+
+span[class="gras-nom"]
+{
+	font-weight: bold;
+	font-size: 1.4em;
+}
+
+span[class="gras-italic"]
+{
+	font-style: italic;
+	font-weight: bold;
+}
+
+span[class="gras-titre"]
+{
+	font-size: 1.3em;
+	font-weight: bold;
+	color: #26619C;
+	height: 1.6em;
+}
+
+
+/*-----------------LES CONTENEURS----------------------*/
+
+
+section[class="conteneur0"]
+{
+	
+}
+
+section[class="conteneur1"]
+{
+	
+} 
+
+section[class="conteneur2"]
+{
+	
+} 
+
+section[class="conteneur3"]
+{
+	
+}
+
+section[class="conteneur4"]
+{
+	
+}
