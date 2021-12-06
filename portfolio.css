@@ -383,6 +383,24 @@ li[class="sous-veilles"]:hover a[class="sous-menu"]
 }
 
 
+/* ---------------- PAGE CV ------------------- */
+
+section[class="cv"]
+{
+
+	background-color: white;
+	flex: 4 1 30%; /* flex-grow, flex-shrink, flex-basis */ 
+	flex-wrap: wrap;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: ;
+	font-size: 0.8em;
+}
+
+
+
 /*-----------------------PAGE CONTACT------------------------*/
 
 
