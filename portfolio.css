@@ -9,63 +9,50 @@ body{
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
-	margin: 60px;
-	flex-basis: 700px;
 	
 }
 
 
-header, footer{
+header
+{
+	border: solid  #FEFDF0;  /* maintien aussi la hauteur actuelle de la bannière */
+	background-color:  #FEFDF0;
+	justify-content: center;
+	align-items: center;
+	flex-basis: ;
+
+}
+
+footer
+{
 
 	border: solid  #FEFDF0;  /* maintien aussi la hauteur actuelle de la bannière */
 	background-color:  #FEFDF0;
-	border-radius: ;
-	
+	display: flex;
+	flex-basis: ;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
 
 }
-.banniere{
 
+
+h1[class="banniere"]
+{
 	text-align: center;
 	font-family: comic sans ms;
-
+	flex-wrap: wrap;
 }
 
-
-
-header{
-
-	
-	justify-content: center;
-	align-items: center;
-	flex-basis: 80px;
-}
-
-
-footer{
-
-	display: flex;
-	flex-basis: 50px;
-	justify-content: center;
-	align-items: center;
-}
 
 
 main{
 
 		display: flex;
 		flex-direction: ;
-		flex-basis: 563px; /* taille */  /
+		flex-basis:  ; /* taille */  /
 		flex-wrap: wrap; 
 	
-}
-
-
-h1[class="index"] {
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
 }
 
 h1[class="banniere"]
@@ -78,7 +65,7 @@ h1[class="banniere"]
 }
 
 
-h1[class="p-menu"] {
+h1[class="menu"] {
 
 	font-family: comic sans ms;
 }
@@ -90,272 +77,12 @@ h1[class="p-menu"] {
 
 
 
-header[class="header-2"]
-{
-	display: flex;
-	flex-wrap: wrap;
-
-}
-
-nav[class="header-2"]
-{
-	display: flex;
-	flex-wrap: wrap;
-	width: 100%;
-	justify-content: center;
-	align-items: center;
-
-}
-
-ul[class="header-2"]
-{
-	display: flex;
-	flex-wrap: wrap;
-	width: 100%;
-	justify-content: center;
-	align-items: center;
-	margin: 0px;
-	padding: 0px;
-}
-
-li[class="header-2"]
-{
-	border: ;
-	display: flex;
-	list-style-type: none;
-	width: 12%;
-	justify-content: center;
-	align-items: center;
-	height: 50px;
-}
-
-
-li[class="autres"]
-{
-	border: ;
-	display: flex;
-	flex-direction: column;
-	list-style-type: none;
-	width: 12%;
-	justify-content: center;
-	align-items: center;
-	height: 50px;
-}
-
-
-
-a[class="header-2"]
-{
-	border: ;
-	text-decoration: none;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}  
-
-
 /* SOUS MENUS : on dispose les boites des sous-menus + on retire les puces et autre décorations */
 
 
 
-ul[class="accueil"]
-{
-	display: flex;
-	flex-direction: column;
-	margin: 0px;
-	padding: 0px;
-
-}
-
-ul[class="tp"]
-{
-	display: flex;
-	flex-direction: column;
-	margin: 0px;
-	padding: 0px;
-
-}
-
-
-li[class="portfolio"]
-{
-
-	list-style-type: none;
-	display: flex;
-	background-color: #FEFDF0;
-	height: 50px;
-
-}
-
-li[class="tp"]
-{
-
-	list-style-type: none;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	background-color: #FEFDF0;
-	height: 50px;
-}
-
-li[class="ppe"]
-{
-
-	list-style-type: none;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	background-color: #FEFDF0; 
-	height: 50px;
-}
-
-
-
-/* Puis, On positionne les MENU et SOUS-menus par dessous les menus */
-
-ul[class="tp"]
-{
-	
-	position: absolute;
-	width: 11.3%;
-	height: 50px;
-	justify-content: center;
-	align-items: center;
-	top: 13.4em;
-	display: none;
-
-}
-
-
-ul[class="sous-tp"]
-{
-
-	
-	display: flex;
-	flex-direction: column;
-	position: absolute;   /* stabilise (fixe) les liens du menu (pas les sous-menus) */  
-	width: 100%;
-	height: 50px;
-	justify-content: center;
-	align-items: center;
-	left: 11em;
-	display: none;
-	border: ;
-
-}
-
-
-ul[class="accueil"]
-{
-
-	position: absolute;   /* stabilise (fixe) les liens du menu (pas les sous-menus) */
-	width: 11%;
-	height: 50px;
-	justify-content: center;
-	align-items: center;
-	top: 13.5em;
-	display: none;
-	
-}
-
-
-ul[class="sous-ppe"]
-{
-	display: flex;
-	flex-direction: column;
-	position: absolute;   /* stabilise (fixe) les liens du menu (pas les sous-menus) */
-	width: 100%;
-	height: 50px;
-	justify-content: center;
-	align-items: center;
-	left: 11em;
-	display: none;
-
-}
-
-
-
-li[class="sous-tp"]
-{
-
-	list-style-type: none;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	background-color: #FEFDF0;
-	height: 50px;
-	
-}
-
-li[class="sous-ppe"]
-{
-	list-style-type: none;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	width: ;
-	align-items: center;
-	background-color: #FEFDF0;
-	height: 50px;
-		
-}
-
-
-/* SURVOL DES MENUS */
-
-
-li[class="header-2"] :hover, li[class="autres"] :hover, li[class="tp"] :hover, li[class="sous-tp"] :hover, li[class="ppe"] :hover, li[class="sous-ppe"] :hover  
-{
-
-	background-color: black;
-	transition: 0.5s;
-
-}
-
-a[class="header-2"]:hover /*, a[class="portfolio"]:hover, a[class="sous-menu"] */
-{   /* survol des titres TP n°... */
-
-	color: white;
-	font-weight: bold;
-	transition: 0.5s;
-	font-size: 1.3em;
-	
-	
-	
-}
-
-
 
 /*  SURVOL DES SOUS MENUS */
-
-
-
-li[class="header-2"]:hover ul[class="accueil"]
-{
-	display: initial;
-}
-
-
-li[class="autres"]:hover ul[class="tp"]
-{
-	display: initial;
-}
-
-
-li[class="tp"]:hover ul[class="sous-tp"]
-{
-	display: initial;
-}
-
-li[class="ppe"]:hover ul[class="sous-ppe"]
-{
-	display: initial;
-}
 
 
 
@@ -373,24 +100,13 @@ section[class="centrale"]
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+	font-size: ;
 	border: ;
 
 }
 
 
-section[class="presentation"]
-{
-
-	background-color:#83A697;
-	flex: 4 1 30%; /* flex-grow, flex-shrink, flex-basis */
-	flex-wrap: wrap;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-
-div[class="presentation"]
+div[class="centrale"]
 {
 	background-color: #E1CE9A;
 	font-family: comic sans ms;
@@ -423,25 +139,10 @@ p[class="p1"], p[class="p2"]
 }
 
 
-section[class="cv"]
-{
-
-	background-color: white;
-	flex: 4 1 30%; /* flex-grow, flex-shrink, flex-basis */ 
-	flex-wrap: wrap;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	font-family: ;
-	font-size: 0.8em;
-}
-
-
 /*------------------SECTIONS GAUCHE ET DROITE ---------------*/
 
 
-section[class="laterale-gauche"], section[class="laterale-droit"] 
+nav[class="laterale-gauche"], aside[class="laterale-droit"] 
 {
 	flex: 1 2 20%; /* grossir, maigrir, taille */
 	flex-wrap: ;
@@ -457,26 +158,8 @@ section[class="laterale-gauche"], section[class="laterale-droit"]
 }
 
 
-/*------------------------CODE MENU----------------------*/
+/*------------------------LIENS PORTFOLIO----------------------*/
 
-section[class="laterale-gauche"]
-{
-	border: ;
-}
-
-nav[class="laterale"]
-{
-	border:;
-	width: 70%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
-	margin: 0px;
-	padding: 0px;
-
-}
 
 ul[class="menu"]
 {
@@ -485,7 +168,7 @@ ul[class="menu"]
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: ;
-	width: 65%;
+	width: 45%;
 	height: ;
 	margin: 0px;
 	padding: 0px;
@@ -562,8 +245,6 @@ a[class="menu"]:hover
 	font-weight: bold;
 	font-size: 1.2em;
 	transition: 0.5s;
-
-	
 }
 
 /*----------------SOUS-MENUS---------------------*/
@@ -635,8 +316,8 @@ ul[class="sous-projets"]
 	
 	
 	position: absolute;   /* stabilise (fixe) les liens du menu (pas les sous-menus) */
-	margin-left: 12.8em;
-	bottom: 18.58em;
+	margin-left: 13.5em;
+	bottom: ;
 
 }
 
@@ -645,8 +326,8 @@ ul[class="sous-veilles"]
 	
 	
 	position: absolute;   /* stabilise (fixe) les liens du menu (pas les sous-menus) */
-	margin-left: 12.8em ;
-	bottom: 18.58em;
+	margin-left: 13.5em ;
+	bottom: ;
 
 }
 
@@ -667,8 +348,6 @@ li[class="veilles"]:hover ul[class="sous-veilles"]
 {
 	display: initial;
 }
-
-
 
 
 li[class="sous-projets"]:hover a[class="sous-veilles"]
@@ -704,7 +383,9 @@ li[class="sous-veilles"]:hover a[class="sous-menu"]
 }
 
 
-/*-----------------------CONTACT------------------------*/
+/*-----------------------PAGE CONTACT------------------------*/
+
+
 
 section[class="formulaire"]
 {
@@ -783,7 +464,6 @@ h1[class="titre"]
 	align-items: center;
 	flex-wrap: wrap;
 }
-
 
 
 
