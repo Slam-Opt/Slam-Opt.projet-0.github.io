@@ -72,20 +72,6 @@ h1[class="menu"] {
 
 
 
-
-/*  DEUXIEME EN-TÊTE : MENUS   On dispose les boîtes --*/
-
-
-
-/* SOUS MENUS : on dispose les boites des sous-menus + on retire les puces et autre décorations */
-
-
-
-
-/*  SURVOL DES SOUS MENUS */
-
-
-
 /*----------------------SECTIONS CENTRALES ----------------------*/
 
 
@@ -101,7 +87,6 @@ section[class="centrale"]
 	align-items: center;
 	text-align: center;
 	font-size: ;
-	border: ;
 
 }
 
@@ -146,7 +131,7 @@ nav[class="laterale-gauche"], aside[class="laterale-droit"]
 {
 	flex: 1 2 20%; /* grossir, maigrir, taille */
 	flex-wrap: ;
-	background-color: #83A697; /*#E1CE9A; */
+	background-color: #83A697; 
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -427,10 +412,6 @@ div[class="formulaire"]
 	width: 100%;
 }
 
-label
-{
-
-}
 
 form
 {
