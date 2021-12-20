@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EXERCICE DE PARITÉ</title>
+	<script type="text/javascript">
+		function check(){
+			var nombre;
+			
+			nombre = Number(document.getElementById("monInput").value);
+
+			if(nombre%2 == 0)
+			{
+				alert("Nombre pair");
+			}
+
+			else
+			{
+				alert("Nombre impair");
+			}
+		}
+	</script>
+</head>
+
+<body>
+	Entrez un nombre : <input type="text" name="monInput" id="monInput">
+	<button onclick="check()">Vérifier</button>
+
+</body>
+</html>

@@ -13,60 +13,100 @@ body
 {
 	background: #F5F5F5;
 	font-family: comic sans ms;
-	font-size: ;
+	font-size: /*0.8rem*/;
 }
 
 /* Page limitée en largeur et centrée */
 
-div[class="general"]
+div[class="general"] 
 {
-	max-width: 1200px;
+	max-width: 1300px;
 	margin: 0 auto;
 }
 
-header
+
+/*----------------------------------EN TÊTE -----------------------------*/
+
+header       
 {
 	height: 80px;
 	padding: 10px;
 	background-color: lightgrey;
 	font-size: 1rem;
+	display: flex;
 }
 
 
-a[id="bouton-mobile"]
+div[class="entete-1"]    
+{
+	
+	width: 50%;
+	display: flex;
+	align-items: center;
+}
+
+div[class="entete-2"]   
+{
+	width: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+h1[class="entete"]   
+{
+	
+	padding-right: 30px;
+}
+
+
+img[class="entete"]
+{
+	width: 20%;
+}
+
+
+/*-------------------------------MENU VERTICAL ------------------------------*/
+
+
+a[id="bouton-mobile"]     
 {
 	display: none;
 }
 
-nav
+nav[class="laterale"]                  
 {
 	background-color: lavender;
+	width: ;
+	border: ;
 }
 
-main 
+main               
 {
-	padding: 10px 30px 10px 30px;
+	padding: 10px 10px 10px 30px;
 	min-height: ;
 	display: flex;
+	flex-direction: ;
 	width: 100%;
 }
 
-footer
+footer           
 {
 	padding: 10px;
 	background-color: lightgrey;
 }
 
-/* MENU DE NAVIGATION */
+
+/*--------------------- MENU DE NAVIGATION GAUCHE------------------------*/
 
 
-div[class="nav-et-main"]
+div[class="nav-et-main"]        
 {
 	display: flex;
 }
 
 
-ul[class="menu"]
+ul[class="menu"]              
 {
 	list-style-type: none;
 	margin: 0;
@@ -74,18 +114,18 @@ ul[class="menu"]
 }
 
 
-ul[class="menu"] li
+ul[class="menu"] li       
 {
 	flex: 1 1 auto;
 }
 
 
-ul[class="menu"] li a
+ul[class="menu"] li a       
 {
 	display: block;
 	padding: 15px;
 	background-color: ;
-	text-align: center;
+	text-align: ;
 	border-right: solid 1px silver;
 	border-bottom: solid 1px silver;
 	font-size: 1.5rem;
@@ -94,39 +134,38 @@ ul[class="menu"] li a
 }
 
 
-nav li:last-of-type a
+nav li:last-of-type a    
 {
 	border-right: ;
 }
 
 
-nav a:hover
+nav a:hover   
 {
 	background-color: silver;
 }
 
 
-ul[class="menu"] li a, ul[class="menu"] li a:visited
+ul[class="menu"] li a, ul[class="menu"] li a:visited    
 {
 	display: block;
-	padding: ;
-	font-size: ;
+	padding: 15px 20px;
+	font-size: 0.9rem;          /* LA TAILLE DU TEXTE DES LIENS DE NAVIGATION */
 	text-decoration: none;
 	color: black;
 }
 
-ul[class="menu"]: hover
+ul[class="menu"]:hover       
 {
 	background-color: lightsteelblue;
 	color: brown;
 }
 
 
-/* SOUS MENU */
+/*--------------------------- SOUS MENU GAUCHE ---------------------------*/
 
 
-
-ul[class="sous-menu-1"], ul[class="sous-menu-2"]
+ul[class="sous-menu-1"], ul[class="sous-menu-2"]   
 {
 	list-style-type: none;
 	margin: 0;
@@ -136,13 +175,13 @@ ul[class="sous-menu-1"], ul[class="sous-menu-2"]
 }
 
 
-ul[class="sous-menu-1"] li , ul[class="sous-menu-2"] li
+ul[class="sous-menu-1"] li , ul[class="sous-menu-2"] li 
 {
 	flex: 1 1 auto;
 }
 
 
-ul[class="sous-menu-1"] li a , ul[class="sous-menu-2"] li a
+ul[class="sous-menu-1"] li a , ul[class="sous-menu-2"] li a 
 {
 	display: block;
 	padding: 15px;
@@ -153,11 +192,12 @@ ul[class="sous-menu-1"] li a , ul[class="sous-menu-2"] li a
 	font-size: 1rem;
 	color: darkblue;
 	text-decoration: none;
+	width: 12rem;
 }
 
 
 
-/* --------------POSITIONNEMENT DES SOUS-MENUS-------------------*/
+/* --------------POSITIONNEMENT DES SOUS-MENUS GAUCHE-------------------*/ 
 
 li[class="projets"]
 {
@@ -168,9 +208,8 @@ ul[class="sous-menu-1"]
 {
 	
 	position: absolute;  
-	left: 7.4rem; 
+	left: 10.45rem; 
 	bottom: -5rem;
-
 
 }
 
@@ -182,21 +221,20 @@ li[class="veilles"]
 
 ul[class="sous-menu-2"]
 {
-	
-	
+
 	position: absolute;
-	left: 7.4rem;
+	left: 10.45rem;
 	bottom: -5rem;
 }
 
 
 
 
-/* SURVOL SOUS MENU */
+/*------------------ SURVOL SOUS MENU GAUCHE -------------------------*/
 
 
 
-li[class="projets"]:hover ul
+li[class="projets"]:hover ul     
 {
 	display: initial;
 }
@@ -208,13 +246,1227 @@ li[class="veilles"]:hover ul
 
 
 
-/* SECTION */
+/* ----------------------------SECTION CENTRALE ---------------------*/  
 
-section
+section  
 {
-	
+
 	width: 100%;
 
 }
 
+
+section[class="centrale"] 
+{
+
+	width: 100%;
+	display: ;
+
+}
+
+
+
+
+
+/*----------------------MENU NAVIGATION ENTETE --------------------------*/
+
+
+
+nav[class="entete"]
+{
+	display: flex;
+
+}
+
+
+ul[class="entete"]
+{
+	list-style-type: none;
+	display: flex;
+	padding: 30px;
+}
+
+
+
+li[class="entete"]
+{
+	flex: 0 1 auto;
+}
+
+
+
+a[class="sous-entete"], a[class="sous-entete"]:visited
+{
+	display: block;
+	padding: 10px 17px;
+	font-size: 0.9rem;
+	text-decoration: none;
+	color: ;
+	width: 12rem;
+	text-align: center;
+}
+
+
+/*--------------------- NAVIGATION SOUS ENTÊTE -----------------------------*/
+
+
+ul[class="sous-entete-1"], ul[class="sous-entete-2"]   
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	background-color: lavender;
+	display: none;
+}
+
+
+ul[class="sous-entete-1"] li , ul[class="sous-entete-2"] li 
+{
+	flex: 1 1 auto;
+}
+
+
+ul[class="sous-entete-1"] li a , ul[class="sous-entete-2"] li a 
+{
+	display: block;
+	padding: 15px;
+	background-color: ;
+	text-align: center;
+	border-right: solid 1px silver;
+	border-bottom: solid 1px silver;
+	font-size: 1rem;
+	color: darkblue;
+	text-decoration: none;
+	width: 10rem;
+}
+
+
+/* --------------POSITIONNEMENT DES SOUS-MENUS GAUCHE-------------------*/ 
+
+li[class="projet"]
+{
+	position: relative;
+}
+
+ul[class="sous-entete-1"]
+{
+	position: absolute;  
+	top: 2.42rem;
+}
+
+
+li[class="veill"]
+{
+	position: relative;
+}
+
+ul[class="sous-entete-2"]
+{
+	position: absolute;
+	top: 2.40rem;
+}
+
+
+
+/*------------------ SURVOL SOUS EN-TETE -------------------------*/
+
+
+
+li[class="projet"]:hover ul     
+{
+	display: initial;
+	background-color: lightgrey;
+}
+
+li[class="veill"]:hover ul
+{
+	display: initial;
+	background-color: lightgrey;
+}
+
+
+/*--------------SECTION LATERALE GAUCHE -------------------------*/
+
+aside[class="laterale-gauche"]
+{
+	display: flex;
+	flex-direction: column;
+	width: 26%;
+	height: 40rem;
+	background-color: lavender;
+}
+
+article[class="portrait"]
+{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+
+p[class="portrait"]
+{
+	display: flex;
+	height: 300px;
+}
+
+
+
+label[class="tel-texte"]
+{
+	padding: 0px;
+	margin: 0px;
+	height: 2rem;
+	font-size: 1.2rem;
+	display: flex;
+	align-items: center;
+	padding: 5px 5px 5px 15px;
+}
+
+label[class="tel"]
+{
+	padding: 0px;
+	margin: 0px;
+	height: 1.5rem;
+	font-size: 0.8rem;
+	display: flex;
+	align-items: center;
+	padding: 5px 5px 5px 15px;
+}
+
+label[class="etablissement"]
+{
+	padding: 0px;
+	margin: 0px;
+	height: 3rem;
+	font-size: 1.2rem;
+	display: flex;
+	align-items: center;
+	padding: 5px 5px 5px 15px;
+}
+
+
+
+label[class="portrait"]
+{
+	padding: 0px;
+	margin: 0px;
+	height: 1.5rem;
+	font-size: 0.8rem;
+	display: flex;
+	align-items: center;
+	padding: 5px 5px 5px 15px;
+}
+
+a[class="portrait"]
+{
+	padding: 0px;
+	margin: 0px;
+	height: 4rem;
+	display: flex;
+	align-items: center;
+	padding: 5px 5px 5px 15px;
+}
+
+
+
+h3[class="portrait"]
+{
+	padding: 5px 5px 5px 15px;
+
+}
+
+/*---------------SECTION PAGE ACCUEIL ------------------*/
+
+
+p[class="nom"]
+{
+	font-size: 1.4rem;
+	padding: 10px 17px;
+}
+
+
+p[class="profil-titre"], p[class="qualification-titre"]
+{
+	padding: 10px 17px;
+	margin: 0px;
+	font-size: 1rem;
+}
+
+p[class="profil"], p[class="qualification"]
+{
+	padding: 10px 17px;
+	margin: 0px;
+	font-size: 0.8rem;
+}
+
+
+p[class="applications"], p[class="web"]
+{
+	border: solid black 1px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 17px;
+	margin-left: 10px ;
+	width: 30%;
+	border-radius: 20px;
+	font-size: 0.9rem;
+
+}
+
+
+
+div[class="centrale"]
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+div[class="statut"]
+{
+	display: flex;
+}
+
+
+div[class="nom"]
+{
+	margin: 0px;
+	padding: 10px 17px;
+}
+
+span[class="nom"]
+{
+
+}
+
+
+span[class="profil"], span[class="qualification"]
+{
+	font-weight: bolder;
+}
+
+
+
+/*--------------PAGE CONTACT -----------------------*/
+
+div[class="contact"]
+{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+form[class="contact"]
+{
+	
+	height: 28rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+td[class="input-contact"]
+{
+
+	width: 70%;
+	justify-content: center;
+	align-items: center;
+}
+
+table[class="contact"]
+{
+	
+	width: 70%;
+}
+
+input[class="contact"]
+{
+	
+	height: 35px;
+	width: 100%;
+	border: none;
+}
+
+textarea[class="contact"]
+{
+	
+	height: 35px;
+	width: 100%;
+	border: none;
+}
+
+label[class="contact"]
+{
+
+	display: flex;
+	justify-content: flex-end;
+}
+
+
+h1[class="titre"]
+{
+
+	width: 70%;
+}
+
+
+label[class="contact"], input[class="contact"], textarea[class="contact"]
+{
+	margin-left: 7px;
+}
+
+
+
+/*-------------------------------------PAGES PROJETS / TRAVAUX ---------------------------------*/
+
+
+nav[class="laterale-gauche"]
+{
+	display: flex;
+	flex-direction: column;
+	width: 26%;
+	height: 40rem;
+	background-color: lavender;
+}
+
+
+nav[class="projets"]
+{
+
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+
+article[class="portrait"]
+{
+	border: ;
+}
+
+
+
+p[class="logo-html"]
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border:  ;
+}
+
+
+li[class="projets"] a
+{
+
+	display: flex;
+	text-decoration: none;
+}
+
+
+
+h1[class="projets"]
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+div[class="projets"]
+{
+	display: flex;
+	flex-direction: ;
+	width: 100%
+}
+
+
+ul[class="projets"]              
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+
+ul[class="projets"] li       
+{
+	flex: 1 1 auto;
+}
+
+
+a[class="projets"]      
+{
+	display: block;
+	padding: 15px;
+	background-color: ;
+	text-align: ;
+	border-right: solid 1px silver;
+	border-bottom: solid 1px silver;
+	font-size: 1.5rem;
+	color: darkblue;
+	text-decoration: none;
+}
+
+
+nav li:last-of-type a  
+{
+	border-right: ;
+}
+
+
+a[class="projets"]:hover   
+{
+	background-color: silver;
+}
+
+
+a[class="projets"], a[class="projets"]:visited    
+{
+	display: block;
+	padding: 15px 20px;
+	font-size: 0.9rem;          /* LA TAILLE DU TEXTE DES LIENS DE NAVIGATION */ 
+	text-decoration: none;
+	color: black;
+}
+
+ul[class="projets"]:hover     
+{
+	background-color: /*lightsteelblue */;  
+	color: brown;   
+}
+
+/* SOUS PROJETS PERSONNALISEES */
+
+
+ul[class="sous-projets"]              
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: none;
+}
+
+
+ul[class="sous-projets"] li       
+{
+	flex: 1 1 auto;
+}
+
+
+a[class="sous-projets"]    
+{
+	display: block;
+	padding: 15px;
+	background-color: ;
+	text-align: ;
+	border-right: solid 1px silver;
+	border-bottom: solid 1px silver;
+	font-size: 1.5rem;
+	color: darkblue;
+	text-decoration: none;
+}
+
+
+a[class="sous-projets"]:hover   
+{
+	background-color: silver;
+}
+
+
+a[class="sous-projets"], a[class="sous-projets"]:visited    
+{
+	display: block;
+	padding: 15px 20px;
+	font-size: 0.9rem;          /* LA TAILLE DU TEXTE DES LIENS DE NAVIGATION */
+	text-decoration: none;
+	color: black;
+}
+
+ul[class="sous-projets"]: hover     
+{
+	background-color: lightsteelblue;
+	color: brown;
+}
+
+
+
+/*--------------------------------------PAGE TP HTML ---------------------------------*/
+
+li[class="html"] a
+{
+
+	display: flex;
+	text-decoration: none;
+}
+
+
+ul[class="html"]             
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: none;     
+}
+
+
+ul[class="html"] li    
+{
+	flex: 1 1 auto;
+}
+
+
+a[class="html"]      
+{
+	display: block;
+	padding-left: 35px;
+	background-color: ;
+	text-align: ;
+	font-size: 1rem;
+	color: darkblue;
+	text-decoration: none;
+}
+
+
+nav li:last-of-type a  
+{
+	border-right: ;
+}
+
+
+a[class="html"]:hover   
+{
+	background-color: silver;
+}
+
+
+a[class="html"], a[class="html"]:visited    
+{
+	display: block;
+	padding: ;
+	font-size: 0.9rem;          /* LA TAILLE DU TEXTE DES LIENS DE NAVIGATION */ 
+	text-decoration: none;
+	color: ;
+}
+
+
+article[class="web"]
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+
+article[class="gestionnaire"]
+{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 56vh;
+}
+
+
+p[class="dev-web"]
+{
+	width: 98%;
+}
+
+
+p[class="gestionnaire"]
+{
+	width: ;
+	height: 40vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+img[class="web"]
+{
+	width: 100%;
+}
+
+
+img[class="gestionnaire"]
+{
+	width: 56%;
+}
+
+
+/*--------------------------------------PAGE TP CSS ---------------------------------*/
+
+li[class="css"] a
+{
+
+	display: flex;
+	text-decoration: none;
+}
+
+
+ul[class="css"]              
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: none;
+}
+
+
+ul[class="css"] li    
+{
+	flex: 1 1 auto;
+}
+
+
+a[class="css"]      
+{
+	display: block;
+	padding-left: 35px;
+	background-color: ;
+	text-align: ;
+	font-size: 1rem;
+	color: darkblue;
+	text-decoration: none;
+}
+
+
+nav li:last-of-type a  
+{
+	border-right: ;
+}
+
+
+a[class="css"]:hover   
+{
+	background-color: silver;
+}
+
+
+a[class="css"], a[class="css"]:visited    
+{
+	display: block;
+	padding: ;
+	font-size: 0.9rem;          /* LA TAILLE DU TEXTE DES LIENS DE NAVIGATION */ 
+	text-decoration: none;
+	color: ;
+}
+
+
+ h1[class="css"]{
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+}
+
+.section1{
+	background-color: #E1CE9A;
+}
+
+.particle1{
+	text-align: justify;
+	padding: 10px;
+}
+
+
+
+section[class="section1"], section[class="section2"], section[class="section3"]
+{
+	width: 32%;
+	display: flex;
+	flex-direction: column;
+	border: solid 2px #000000 ;
+	border-radius: 6px;
+	margin: 5px          /* espace les trois block  */
+}
+
+.section2{
+	background-color: #FEE7F0;
+}
+
+.particle2{
+	text-align: justify;
+	padding: 10px;
+}
+
+.section3{
+	background-color: #F0FFFF;
+}
+
+.article3{
+	color: red;
+}
+
+.section3 p {
+
+	margin: auto;
+
+}
+
+img[id="imagetp1"]{
+
+	width: 100%;
+	display: flex;
+	justify-content: ;
+	align-items: ;
+	margin: auto;
+}
+
+
+section[class="css"]
+{
+	border:  ;
+	overflow-y: auto;
+	height: 66vh;
+}
+
+article[class="css"]
+{
+	display: flex;
+	justify-content: center;
+}
+
+
+/*-------TP CSS 2 --------*/
+
+
+
+div[class="div-css"]
+{
+	border: ;
+	display: flex;
+	flex-direction: column;
+	height: 66vh;
+	overflow-y: auto;
+}
+
+section[class="index"] {
+	border: solid red;
+	border-radius: 30px;
+	padding: 15px;
+}
+
+
+.article1{
+	border: solid green;
+	border-radius: 30px;
+	background-color: #FDE9E0;
+	padding: 15px
+}
+
+
+.article2{
+	border: solid green;
+	border-radius: 30px;
+	padding: 15px;
+}
+
+div.conteneurtp2{
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+}
+
+
+
+/* ---TP CSS 3 ---*/
+
+div[class="tableau-tp3"]
+{
+	height: 56vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+table[class="tp3"] {
+	border: 3px solid  #83A697;
+	width: 100%;
+	background-color: #E1CE9A; /*#D0E3FA;*/
+	margin: auto;
+
+}
+
+th[class="tp3"] {
+	font-family: arial;
+	font-size: 1.20em;
+	text-align: center;
+	border: 1px solid #000099;
+	background-image: url('');
+}
+
+td[class="tp3"]
+{
+	font-family: verdana;
+	font-size: 0.80em;
+	text-align: center;
+	border: 1px solid #000099;
+}
+
+
+
+/* -----TP CSS 4 ----*/
+
+
+table[class="tp4"]
+{
+	border: 3px solid #C7D0CC;
+	width: 60%;
+	background-color: #C7D0CC;
+	margin: auto ;
+}
+
+
+th[class="titretableau"]
+{
+	font-family: arial;
+	font-size: 1.20em;
+	text-align: center;
+	border: 1px solid #000099;
+	background-image: url('');
+	height: 200px;
+}
+
+td[class="pays"], td[class="texte"]
+{
+	font-family: verdana;
+	font-size: 0.80em;
+	text-align: center;
+	border: 1px solid #000099;
+	width: 50%;
+}
+
+td.texte{vertical-align: bottom;
+}
+
+
+div.conteneurtp3{
+
+	display: flex;
+}
+
+h1.navigation{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+a.navigation{
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 20%;
+	text-decoration: none;
+}
+
+
+img[class="pays"]
+{
+	width: 81%;   /* L'image influence la taille du tableau */
+}
+
+
+
+/*--------------------------------------FORMULAIRE --------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------iFRAME --------------------------------------*/
+
+article[class="iframe"]
+{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 56vh;
+}
+
+
+iframe[class="iframe"]
+{
+	height: 56vh;
+	width: 100%;
+}
+
+li[class="iframe"] a
+{
+
+	display: flex;
+	text-decoration: none;
+}
+
+
+ul[class="iframe"]             
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: none;     
+}
+
+
+ul[class="iframe"] li    
+{
+	flex: 1 1 auto;
+}
+
+
+a[class="iframe"]      
+{
+	display: block;
+	padding-left: 35px;
+	background-color: ;
+	text-align: ;
+	font-size: 1rem;
+	color: darkblue;
+	text-decoration: none;
+}
+
+
+nav li:last-of-type a  
+{
+	border-right: ;
+}
+
+
+a[class="iframe"]:hover   
+{
+	background-color: silver;
+}
+
+
+a[class="iframe"], a[class="iframe"]:visited    
+{
+	display: block;
+	padding: ;
+	font-size: 0.9rem;          /* LA TAILLE DU TEXTE DES LIENS DE NAVIGATION */ 
+	text-decoration: none;
+	color: ;
+}
+
+
+article[class="web"]
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+
+article[class="gestionnaire"]
+{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 56vh;
+}
+
+
+p[class="dev-web"]
+{
+	width: 98%;
+}
+
+
+p[class="gestionnaire"]
+{
+	width: ;
+	height: 40vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+img[class="web"]
+{
+	width: 100%;
+}
+
+
+img[class="gestionnaire"]
+{
+	width: 56%;
+}
+
+
+
+/*--------------------------------------SQL --------------------------------------*/
+
+
+article[class="sql"]
+{
+	display: ;
+	flex-direction: ;
+	width: 100%;
+	height: 56vh;
+	columns: 3 auto;     /*Pour faire fonctionner le multicolonage, il ne faut pas utiliser le 'flexbox'*/
+	font-size: 0.8rem;
+	padding: 10px 17px;
+	overflow: auto;
+}
+
+
+h3[class="sql"]
+{
+	color: orangered;
+}
+
+
+/*--------------------------------------PHP --------------------------------------*/
+
+article[class="php"]
+{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 56vh;
+}
+
+
+p[class="php-titre"]
+{
+	padding: 10px 17px;
+	margin: 0px;
+	font-size: 1rem;
+}
+
+p[class="php"]
+{
+	padding: 10px 17px;
+	margin: 0px;
+	font-size: 0.8rem;
+}
+
+
+
+
+/*-------------------------------------JavaScript --------------------------------------*/
+
+article[class="js"]
+{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 56vh;
+	text-align: ;
+}
+
+
+p[class="js-titre"]
+{
+	padding: 10px 17px;
+	margin: 0px;
+	font-size: 1rem;
+}
+
+
+nav[class="js"]
+{
+	padding: 10px 17px;
+	margin: 0px;
+	font-size: 0.8rem;
+	display: ;
+	flex-direction: ;
+	width: 100%;
+	height: 40rem;
+	background-color: ;
+}
+
+ul[class="js"]              
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction:;
+	flex-wrap: wrap;
+
+}
+
+
+li[class="js"]    
+{
+	flex: 1 1 auto;
+}
+
+
+
+a[class="js"]      
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	padding: 15px;
+	background-color: ;
+	border-right: solid 1px silver;
+	border-bottom: solid 1px silver;
+	font-size: 1.1vw;
+	color: darkblue;
+}
+
+
+
+a[class="projets"]:hover   
+{
+	background-color: silver;
+}
+
+
+a[class="js"]:visited    
+{
+	display: flex;
+	padding: 15px 20px;
+	font-size: 0.9rem;          /* LA TAILLE DU TEXTE DES LIENS DE NAVIGATION */ 
+	text-decoration: none;
+	color: black;
+}
+
+ul[class="js"]:hover     
+{
+	background-color: /*lightsteelblue */;  
+	color: brown;   
+}
+
+
+
+
+/*--------------------------------------VEILLES --------------------------------------*/
+
+
+div[class="veilles"]
+{
+	display: flex;
+	flex-direction: ;
+	width: 100%
+}
+
+section[class="technologique"], section[class="juridique"]
+{
+	border: solid red;
+	display: flex;
+	flex-direction: ;
+	width: 100%;
+}
 

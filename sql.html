@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>SQL</title>
+	<link rel="stylesheet" type="text/css" href="portfolio.css">
+</head>
+<body>
+
+<div class="general">   <!-- Contenu général -->
+
+<!-- Entête -->
+
+	<header class="entete">
+		<img src="logo.jpg" class="entete">
+		<nav class="entete">
+			<ul class="entete">
+				<li class="entete"><a href="index.html" class="sous-entete">ACCUEIL</a></li>
+				<li class="entete"><a href="cv.html" class="sous-entete">CV </a></li>
+				<li class="projet"><a href="projets.html" class="sous-entete">PROJETS / TRAVAUX</a></li>
+				<li class="veill"><a href="veilles.html" class="sous-entete">VEILLES</a></li>
+				<li class="entete"><a href="contact.html" class="sous-entete">CONTACT </a> </li>
+			</ul>
+		</nav>
+	</header>
+
+<!-- Menu de navigation -->
+	<div class="nav-et-main">
+		<nav class="laterale-gauche">
+			<article class="portrait">
+				<p class="logo-html"><img src="sql.png" height="180px"></p>
+			</article>
+
+			<ul class="projets">
+				<li class="projets"><a href="html.html" class="projets">Html</a></li>
+				<li class="projets"><a href="formulaire.html" class="projets">Formulaire</a></li>
+				<li class="projets"><a href="iframe.html" class="projets">iFrame</a></li>
+				<li class="projets"><a href="css.html" class="projets">Css</a></li>
+				<li class="projets"><a href="javascript.html" class="projets">JavaScript</a></li>
+				<li class="projets"><a href="sql.html" class="projets">SQL</a></li>
+				<li class="projets"><a href="php.html" class="projets">PHP</a></li>
+			</ul>
+		</nav>
+
+<!-- Contenu principal de la page -->
+
+	<main>
+	<div class="projets">
+	<section class="gestionnaire">
+			<nav class="projets">
+				<ul class="projets">
+					<li class="projets">
+						<a href="#" class="projets"><h1 class="projets">Rquêtes SQL</h1></a></li>
+				</ul>
+			</nav>
+			<article class="sql">
+				<h3 class="sql">TP DU 08/11/2021 </h3>
+				<p class="sql"> SELECT * <br>
+				FROM voitures <br>
+			WHERE couleur = 'Noir' </p>
+
+			<p class="sql"> SELECT * <br>
+				FROM clients <br>
+			WHERE ville = 'Paris' </p>
+
+			<p class="sql"> SELECT immatriculation, marques <br>
+				FROM voitures <br>
+			WHERE couleur = 'Noir' </p>
+
+			<p class="sql"> SELECT * <br>
+				FROM voitures <br>
+			WHERE kilometrage < 10000 </p>
+
+			<p class="sql"> SELECT * <br>
+				FROM voitures <br>
+			WHERE marque = 'Mercedes' </p>
+
+			<p class="sql"> SELECT * <br>
+				FROM locations <br>
+			WHERE code_client = 101 </p>
+
+			<p class="sql"> SELECT * <br>
+				FROM locations <br>
+			WHERE id_locations = 1001 </p>
+
+			<h3 class="sql">TP DU 23/11/2021 </h3>
+
+			<p class="sql"> SELECT * <br>
+				FROM voitures <br>
+			ORDER BY immatriculation </p>
+
+			<p class="sql"> SELECT * <br>
+				FROM voitures <br>
+			ORDER BY marque, modele</p>
+
+			<p class="sql"> SELECT LOWER ('marque'), LOWER ('modele') <br>
+				FROM voitures <br>
+			WHERE marque = 'Mercedes' </p>
+
+			<p class="sql"> SELECT UPPER ('marque'), UPPER ('modele') <br>
+				FROM voitures <br>
+			WHERE marque = 'Mercedes' </p>
+
+			<p class="sql"> ALTER TABLE voitures <br>
+				ADD prix_achat <br>
+			VARCHAR (255) </p>
+
+			<p class="sql"> SELECT * <br>
+				FROM voitures <br>
+			WHERE prix_achat BETWEEN 15000 AND 20000 </p>
+
+			<p class="sql"> SELECT * <br>
+				FROM voitures <br>
+			WHERE prix_achat < 20000 AND prix_achat > 15000</p>
+
+			<p class="sql"> AVG('kilometrage') <br>
+				FROM voitures <br>
+			WHERE marque = 'Mercedes' </p>
+
+			<p class="sql"> COUNT(*) <br>
+				FROM voitures <br>
+			WHERE marque = 'Mercedes' </p>
+
+			<p class="sql"> COUNT(*) <br>
+				FROM voitures <br>
+			WHERE couleur = 'Noir' </p>
+
+			<p class="sql"> COUNT(*) <br>
+				FROM voitures <br>
+			GROUP BY = marque </p>
+
+			<p class="sql"> SELECT marque, COUNT(*) <br>
+				FROM voitures <br>
+			GROUP BY marque </p>
+
+			<p class="sql">SELECT MAX ('kilometrage')<br>
+				FROM voitures </p>
+
+			<p class="sql"> SELECT marque, modele, immatriculation <br>
+				FROM voitures <br>
+				WHERE kilometrage < 10000 </p>
+
+			<p class="sql"> SELECT * <br>
+				FROM clients <br>
+				WHERE ville = 'Massy'
+				OR ville = 'Boulogne' </p>
+
+			<p class="sql">SELECT SUM (prix_achat)<br>
+				FROM voitures 
+				WHERE marque = 'Mercedes' </p>
+
+			<p class="sql">SELECT code_client, ville <br>
+				FROM clients <br>
+			WHERE nom_prenom LIKE 'T%'</p>
+
+			<p class="sql">INSERT INTO voitures (immatriculation, marque, modele, kilometrage, carburant, couleur, nbr_places, nbr_portes, prix_achat) <br>
+			VALUES ('F0000T', 'Mercedes', 'Audi', '2000', 'Essence', 'Noir', '5', '5', '3000')</p>
+
+			<h3 class="sql">TP DU 30/11/2021 </h3>
+
+			<p class="sql">SELECT * <br>
+			FROM employee <br>
+			WHERE first_name LIKE 'B%' </p>
+
+			<p class="sql">SELECT * <br>
+			FROM employee <br>
+			WHERE first_name LIKE '%o%'</p>
+
+			<p class="sql">SELECT * <br>
+			FROM employee <br>
+			WHERE first_name LIKE '%n' </p>
+
+			<p class="sql">SELECT * <br>
+			FROM employee <br>
+			WHERE first_name LIKE '__n'</p>
+
+			<p class="sql">SELECT * <br>
+			FROM employee <br>
+			WHERE first_name LIKE 'j__' </p>
+
+			<p class="sql">SELECT * <br>
+			FROM employee <br>
+			WHERE salary > 3000000 </p>
+
+			<p class="sql">SELECT * <br>
+			FROM employee <br>
+			WHERE salary > 3000000 <br>
+			AND Departement = 'finance' </p>
+
+			<p class="sql">SELECT * <br>
+			FROM employee <br>
+			WHERE salary BETWEEN 2000000 AND 5000000 </p>
+
+			<p class="sql">SELECT * <br>
+			FROM employee <br>
+			WHERE YEAR(Joining_date) = 2019 </p>
+
+			<p class="sql">SELECT * <br>
+			FROM employee <br>
+			WHERE First_name = 'bob'
+			OR 'alex' </p>
+
+			<p class="sql">UPDATE voitures <br>
+			SET kilometrage = 100000 </p>
+
+			<p class="sql">UPDATE voitures <br>
+			SET prix_achat = 50000 <br>
+			WHERE marque = 'bmw'</p>
+
+			<p class="sql">UPDATE clients <br>
+			SET adresse = "21 Avenue de Strasbourg" <br>
+			WHERE nom_prenom = 'Thomas P' </p>
+
+			<p class="sql">SELECT V.marque <br>
+				FROM voitures V <br>
+				JOIN Locations L ON (V.immatriculation = L.immatriculation) <br>
+			WHERE L.code_client = '1001'</p>
+
+			<p class="sql">SELECT V.kilometrage, V.modele, V.marque <br>
+				FROM voitures V <br>
+				JOIN Locations L ON (V.immatriculation = L.immatriculation) <br>
+				BETWEEN '2021-11-01' <br>
+				AND '2021-11-30'</p>
+
+			<p class="sql">DELETE FROM 'voitures' <br>
+			WHERE marque = 'bmw' </p>
+
+			<p class="sql">ALTER TABLE clients <br>
+			DROP code_postal </p>
+
+			<p class="sql">SELECT marque <br>
+			FROM voitures <br>
+			WHERE UPPER ('marque') LIKE 'p%' <br>
+			UNION <br> 
+			SELECT nom_prenom <br>
+			FROM clients
+			WHERE UPPER (nom_prenom) LIKE 'T%'</p>
+			</article>
+		</div>
+	</section>
+	</div>
+	</main>
+
+
+<!-- Pied de page -->
+
+	<footer>
+		<p class="pied">©opyright - 2021/2022</p>
+	</footer>
+
+</div>  <!-- Fin contenu général -->
+</body>
+</html>

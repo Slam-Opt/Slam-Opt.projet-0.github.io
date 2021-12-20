@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EXERCICE MOT DE PASS</title>
+	<script type="text/javascript">
+		function accès(){
+			var nom_utilisateur = prompt("Identifiant : ");
+			var mot_passe = prompt("Mot de passe : ");
+
+			if( nom_utilisateur == "admin" && mot_passe == "admin_GSR")
+			{
+				alert("Accès autorisé");  // n'affiche pas le mot sur la page
+				// différences entre alert et document.write
+				document.write("Connexion réussie")  // affiche l'infos sur une page
+
+				// document.location.href = "page2.html"   : attérie dans la page voulue
+			}
+
+			else
+			{
+				alert("Accès refusé");
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<input type="button" name="c" onclick="accès()" value="Se connecter">
+
+
+</body>
+</html>
