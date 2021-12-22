@@ -486,6 +486,13 @@ p[class="nom"]
 }
 
 
+p[class="statut"]
+{
+	font-size: 1.2rem;
+	padding: 10px 17px;
+}
+
+
 p[class="profil-titre"], p[class="qualification-titre"]
 {
 	padding: 10px 17px;
@@ -1470,3 +1477,131 @@ section[class="technologique"], section[class="juridique"]
 	width: 100%;
 }
 
+
+article[class="veille"]
+{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 56vh;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	overflow: auto;
+}
+
+
+p[class="veille-titre"]
+{
+	padding: 10px 17px;
+	margin: 0px;
+	font-size: 1.1rem;
+	width: 100%;
+}
+
+p[class="veille"]
+{
+	padding: 10px 17px;
+	margin: 0px;
+	font-size: 0.8rem;
+}
+
+
+a[class="veille"]
+{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+}
+
+
+/*-------------------------VEILLE JURIDIQUE / TECHNOLOGIQUE-----------------------*/
+
+
+article[class="juridique"]
+{
+	display: ;
+	flex-direction: ;
+	width: 100%;
+	height: 56vh;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	overflow: auto;
+}
+
+
+nav[class="juridique"]
+{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+ul[class="juridique"]
+{
+	list-style-type: none;
+}
+
+li[class="juridique"]
+{
+	margin-top: 15px;
+	display: flex;
+	flex: 1 1 auto;
+}
+
+img[class="juridique"]
+{
+	width: 15%;
+}
+
+img[class="juridique-zdnet"]
+{
+	width: 15%;
+}
+
+img[class="juridique-cert"]
+{
+	width: 7%;
+	margin-left: 22px;
+}
+
+a[class="juridique"]
+{
+	border: ;
+	height: 8vh;
+	width: 100%;
+	display: flex;
+	flex-direction: ;
+	justify-content: ;
+	align-items: center;
+	text-decoration: none;
+}
+
+
+figcaption[class="juridique"]
+{
+	display: ;
+	justify-content: ;
+	align-items: ;
+	margin-left: 10px;
+	width: 95%;
+}
+
+figcaption[class="juridique-cert"]
+{
+	display: ;
+	justify-content: ;
+	align-items: ;
+	margin-left: 50px;
+	width: 90%;
+}
+
+h1[class="juridique"]
+{
+	margin-left: 20px;
+	height: 6vh;
+	display: flex;
+	align-items: center;
+}
