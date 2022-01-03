@@ -25,6 +25,16 @@ div[class="general"]
 }
 
 
+P[class="pied"]
+{
+	display: flex;
+	flex-direction: column;
+	width: 19.5%;
+	justify-content: center;
+	align-items: center;
+}
+
+
 /*----------------------------------EN TÊTE -----------------------------*/
 
 header       
@@ -401,6 +411,8 @@ article[class="portrait"]
 	width: 100%;
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 
@@ -414,48 +426,40 @@ p[class="portrait"]
 
 label[class="tel-texte"]
 {
-	padding: 0px;
-	margin: 0px;
+
 	height: 2rem;
 	font-size: 1.2rem;
 	display: flex;
 	align-items: center;
-	padding: 5px 5px 5px 15px;
+	margin-left: 15px;
 }
 
 label[class="tel"]
 {
-	padding: 0px;
-	margin: 0px;
 	height: 1.5rem;
 	font-size: 0.8rem;
 	display: flex;
 	align-items: center;
-	padding: 5px 5px 5px 15px;
 }
 
 label[class="etablissement"]
 {
-	padding: 0px;
-	margin: 0px;
 	height: 3rem;
 	font-size: 1.2rem;
 	display: flex;
 	align-items: center;
-	padding: 5px 5px 5px 15px;
+	margin-left: 15px;
 }
 
 
 
 label[class="portrait"]
 {
-	padding: 0px;
-	margin: 0px;
+	
 	height: 1.5rem;
 	font-size: 0.8rem;
 	display: flex;
 	align-items: center;
-	padding: 5px 5px 5px 15px;
 }
 
 a[class="portrait"]
@@ -464,19 +468,18 @@ a[class="portrait"]
 	margin: 0px;
 	height: 4rem;
 	display: flex;
+	justify-content: center;
 	align-items: center;
-	padding: 5px 5px 5px 15px;
 }
 
 
 
 h3[class="portrait"]
 {
-	padding: 5px 5px 5px 15px;
 
 }
 
-/*---------------SECTION PAGE ACCUEIL ------------------*/
+/*---------------SECTION  ACCUEIL ------------------*/
 
 
 p[class="nom"]
@@ -556,8 +559,88 @@ span[class="profil"], span[class="qualification"]
 }
 
 
+/*-------------- CV -----------------------*/
 
-/*--------------PAGE CONTACT -----------------------*/
+article[class="competence"]
+{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	margin-left: 50px;
+}
+
+p[class="competence"]
+{
+	font-size: 1.3em;
+	font-weight: bold;
+	color: #26619C;
+	margin-left: 10px;
+}
+
+p[class="informatiques"], p[class="anglais"]
+{
+	margin-left: 10px;
+	font-size: 1rem;
+	font-weight: bold;
+}
+
+
+ul[class="competence"]
+{
+	display: flex;
+	flex-direction: column;
+	margin-left: 45px;
+}
+
+
+li[class="competence"]
+{
+	list-style-type: none;
+	
+}
+
+a[class="projets"]
+{
+	display: flex;
+	text-decoration: none;
+}
+
+
+span[class="italic"]
+{
+	font-style: italic;
+}
+
+span[class="gras"]
+{
+	font-weight: bold;
+}
+
+span[class="gras-nom"]
+{
+	font-weight: bold;
+	font-size: 1.4em;
+}
+
+span[class="gras-italic"]
+{
+	font-style: italic;
+	font-weight: bold;
+}
+
+span[class="gras-titre"]
+{
+	font-size: 1.3em;
+	font-weight: bold;
+	color: #26619C;
+}
+
+
+
+
+
+
+/*-------------- CONTACT -----------------------*/
 
 div[class="contact"]
 {
@@ -1031,9 +1114,11 @@ img[id="imagetp1"]{
 
 section[class="css"]
 {
-	border:  ;
+	border: solid blue ;
+	display: flex;
+	flex-direction: column;
 	overflow-y: auto;
-	height: 66vh;
+	height: 64vh;
 }
 
 article[class="css"]
@@ -1052,7 +1137,7 @@ div[class="div-css"]
 	border: ;
 	display: flex;
 	flex-direction: column;
-	height: 66vh;
+	height: 64vh;
 	overflow-y: auto;
 }
 
@@ -1089,7 +1174,7 @@ div.conteneurtp2{
 
 div[class="tableau-tp3"]
 {
-	height: 56vh;
+	height: 55vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -1179,7 +1264,7 @@ a.navigation{
 
 img[class="pays"]
 {
-	width: 81%;   /* L'image influence la taille du tableau */
+	width: 76%;   /* L'image influence la taille du tableau */
 }
 
 
@@ -1347,7 +1432,7 @@ article[class="php"]
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	height: 56vh;
+	height: 54vh;
 }
 
 
@@ -1490,29 +1575,57 @@ article[class="veille"]
 	overflow: auto;
 }
 
+article[class="nav-veilles"]
+{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+
+ul[class="veilles"]
+{
+	display: flex;
+	flex-direction: column;
+	height: 50px;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+
+li[class="veilles"]
+{
+	list-style-type: none;
+	
+}
+
+
+a[class="veilles"]
+{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+}
+
+
 
 p[class="veille-titre"]
 {
-	padding: 10px 17px;
-	margin: 0px;
+	
+	
 	font-size: 1.1rem;
 	width: 100%;
 }
 
 p[class="veille"]
 {
-	padding: 10px 17px;
-	margin: 0px;
+	
+
 	font-size: 0.8rem;
-}
-
-
-a[class="veille"]
-{
-	width: 100%;
-	display: flex;
-	align-items: center;
-	text-decoration: none;
 }
 
 
@@ -1524,7 +1637,7 @@ article[class="juridique"]
 	display: ;
 	flex-direction: ;
 	width: 100%;
-	height: 56vh;
+	height: 55vh;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
@@ -1604,4 +1717,440 @@ h1[class="juridique"]
 	height: 6vh;
 	display: flex;
 	align-items: center;
+}
+
+
+/*-------------------------FACTURE AUTOMATIQUE-----------------------*/
+
+/* - Corps de la facture - */
+.facture{
+	font-family: comic sans ms;
+	width: ;
+	margin: 0 auto;
+	background-color: lightblue;
+	border-top: 16px solid grey;
+	border-bottom: 16px solid grey;
+	border-radius: 12px;
+}
+
+.text_area{
+	border-bottom: 1px solid black;
+}
+
+
+/* - En-tête- */
+
+
+.entete-facture{
+	background-color: #008E8E;
+	padding-bottom: 18px;
+}
+
+
+/* >> Partie gauche */
+
+
+.gauche{
+	display: flex;
+	flex-direction: column;
+}
+
+img[class="automatique"] {
+	margin: 2em;
+	margin-right: 1em;
+	border-radius: 50%;
+}
+
+.info_co{
+	margin-left: -1.4em;
+}
+
+ul[class="info_co"] {
+	list-style: none;
+}
+
+span.info{
+	font-size: 12px;
+}
+
+
+/* >> Partie droite */
+
+
+.droite{
+	margin-top: auto;
+	float: right;
+	padding: 14px;
+	padding-top: 1em;
+	text-align: center;
+}
+
+span.titre{
+	font-weight: bold;
+	font-size: 24px;
+	color: #969696;
+}
+
+#date, #n_facture{
+	text-align: center;
+}
+
+
+/* - Contenu - */
+
+
+.contenu{
+	padding-top: 12px;
+}
+
+
+/* >> Destination & Condition */
+
+
+.destination{
+	font-size: 12px;
+	margin-bottom: 12px;
+}
+
+span.condition{
+	float: right;
+	font-size: 12px;
+	margin-right: 16px;
+	margin-bottom: 6px;
+	font-style: italic;
+}
+
+span.titre_dest{
+	font-size: 14px;
+	font-weight: bold;
+}
+
+
+/* >> Inventaire */
+
+
+.inventaire{
+	font-size: 10px;
+	text-align: right;
+}
+
+.inventaire tr td input{
+	text-align: right;
+}
+
+.table_inv{
+	height: 8em;
+	margin: 0 auto;
+}
+
+table[class="automatique"] td input{
+	min-width: 1px;
+	max-width: 100%;
+	width: 99%;
+	border-style: none;
+	background-color: transparent;
+}
+
+.table_inv tr td[class="automatique"] {
+	border-right: 1px solid gray;
+	border-left: 1px solid gray;
+}
+
+table tr td .desc{
+	text-align: left;
+}
+
+.entete_inv{
+	text-align: center;
+	background-color: #008E8E;
+	color: white;
+}
+
+.firstrow td[class="automatique"] {
+	border-top: 1px solid gray;
+}
+
+.lastrow td[class="automatique"] {
+	border-bottom: 1px solid gray;
+}
+
+.inventaire .row:nth-child(even){
+	background-color: #fff;
+}
+
+.inventaire .row:nth-child(odd){
+	background-color: #e8e8e8;
+}
+#solde{
+	font-weight: bold;
+	font-size: 16px;
+}
+
+
+/*-------------------------MODULE DE FACTURATION-----------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------ MENU DÉROULANT ----------------------*/
+
+nav[class="deroulant"] > ul
+{
+	margin: 0px;
+	padding: 0px;
+}
+
+nav[class="deroulant"] li
+{
+	list-style-type: none;
+}
+
+nav[class="deroulant"] > ul > li
+{
+	float: left;
+}
+
+.sous-menu 
+{
+	display: none;   /*On cache les sous menus */
+}
+
+
+nav[class="deroulant"] input[type="checkbox"]
+{
+	display: none;
+}
+
+.menu-mobile
+{
+	display: none;   /*On cache le menu mobile */
+}
+
+
+nav[class="deroulant"] 
+{
+	width: 100%;
+	background-color: #424558;
+}
+
+
+nav[class="deroulant"] > ul > li
+{
+	float: left;
+	position: relative;
+}
+
+nav[class="deroulant"] ul::after
+{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+nav[class="deroulant"] a
+{
+	display: inline-block;
+	text-decoration: none;
+}
+
+nav[class="deroulant"] > ul > li > a
+{
+	padding: 20px 30px;
+	color: #FFF;
+}
+
+nav[class="deroulant"] li:hover .sous-menu
+{
+	display: inline-block;
+	position: absolute;
+	top: 100%;
+	left: 0px;
+	padding: 0px;z-index: 100000;
+}
+
+.sous-menu li
+{
+	border-bottom: 1px solid #CCC;
+}
+
+.sous-menu li a
+{
+	padding: 15px 30px;
+	font-size: 13px;
+	color: #222538;
+	width: 270px;
+}
+
+.menu-html:hover{
+	border-top: 5px solid #e44d26;
+	background-color: RGBa(228, 77, 38, 0.15);
+}
+
+.menu-css:hover{
+	border-top: 5px solid #e44d26;
+	background-color: RGBa(000, 112, 192, 0.15);
+}
+
+.menu-js:hover{
+	border-top: 5px solid #e44d26;
+	background-color: RGBa(241, 211, 79, 0.15);
+}
+
+.menu-contact:hover{
+	border-top: 5px solid #e44d26;
+	background-color: RGBa(220, 220, 220, 0.15);
+}
+
+nav[class="deroulant"] > ul > li:hover a
+{
+	padding: 15px 30px 20px 30px;
+}
+
+.menu-html .sous-menu{
+	background-color: RGB(230, 100, 40);
+}
+
+.menu-css .sous-menu{
+	background-color: RGB(000, 160, 240);
+}
+
+.menu-js .sous-menu{
+	background-color: RGB(251, 216, 99);
+}
+
+
+.sous-menu li:hover a{
+	color: #EEE;
+	font-weight: bold;
+}
+
+.menu-html .sous-menu li: hover{
+	background-color: RGB(210, 77, 60);
+}
+
+.menu-css .sous-menu li: hover{
+	background-color: RGB(000, 115, 200);
+}
+
+.menu-js .sous-menu li: hover{
+	background-color: RGB(200, 165, 75);
+}
+
+
+nav[class="deroulant"] input[type=checkbox]:checked ~ ul{
+	display: block;
+}
+
+
+@media screen and (max-width:  680px)
+{
+	.menu-mobile 
+	{
+		display: block;
+		color: #fff;
+		background-color: rgba(29, 197, 151, 0.97);
+		text-align: center;	
+		padding: 12px 0;
+	}
+
+	nav[class="deroulant"] ul{
+		display: none;
+	}
+
+	nav[class="deroulant"] ul li, nav[class="deroulant"] ul li a
+	{
+		width: 100%;
+		text-align: center;
+	}
+
+	nav[class="deroulant"] ul li a, nav[class="deroulant"] ul li:hover a
+	{
+		padding: 10px 0px 10px 0px;
+	}
+
+	nav[class="deroulant"] li:hover .sous-menu{
+		display: block;
+		position: static;
+	}
+}
+
+
+
+/*----------------------------QCM--------------------------------*/
+
+section[class="qcm"]
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: ;
+	align-items: ;
+	min-height: 55vh;
+}
+
+form[class="qcm"]
+{
+	display: flex;
+	flex-direction: column;
+	font-size: 0.8rem;
+}
+
+label[class="qcm"]
+{
+	padding: ;
+	margin: auto;
+	width: 45%;
+	padding: 9px ;
+}
+
+
+p[class="t-qcm"]
+{
+	border: ;
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: #16B84E;
+	font-weight: bolder;
+	font-style: italic;
+}
+
+ul[class="qcm"]
+{
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	width: 32%;
+}
+
+
+table[class="boutons"]
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: ;
+	width: 100%;
+	margin-top: 1.5rem;
+}
+
+h3[class="titre"]
+{
+	display: flex;
+	flex-direction: ;
+	justify-content: flex-end;
+	width: 100%;
+	height: 2em;
+	color: #7E3300;
 }

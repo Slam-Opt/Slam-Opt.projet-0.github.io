@@ -5,7 +5,7 @@
 	<title>FACTURE AUTOMATIQUE</title>
 	<link rel="stylesheet" type="text/css" href="portfolio.css">
 </head>
-<body>
+<body onload="onload()">
 
 <div class="general">   <!-- Contenu général -->
 
@@ -44,18 +44,169 @@
 	<main>
 	<div class="projets">
 		<section class="gestionnaire">
-			<nav class="projets">
-				<ul class="projets">
-					<li class="projets">
-						<a href="#" class="projets"><h1 class="projets">FACTURE AUTOMATIQUE</h1></a></li>
-				</ul>
-			</nav>
+			
 
 			<article class="php">
 
-				<p class="php-titre"><span class="profil">Profil </span></p>
-				
-				<p class="php">Je suis actuellement en deuxième année de BTS SIO (Services Informatiques aux Organisations) en spécialité SLAM (Solutions Logicielles et Applications Métiers) au Lycée Parc de Vilgénis à Massy et diplômé d'un Baccalauréat ... (mention Bien).</p>
+				<form class="automatique">
+		<div class="facture">
+			<div class="entete-facture">
+			<div class="gauche">
+	<table class="automatique">
+		<tr class="automatique" >
+			<td class="automatique"><img src="ppfb.png" height="64" class="automatique"></td>
+			<td class="automatique">
+				<ul class="info_co">
+					<li><span class="nom">Nom de la compagnie</span></li>
+					<li><span class="info">Adresse postale</span></li>
+					<li><br><span class="info">Détails du contact</span></li>
+				</ul>
+			</td>
+		</tr>
+	</table>
+			</div>
+			<div class="droite">
+	<table class="automatique" width="40%">
+		<tr class="automatique">
+			<td width="160px" class="automatique"><span class="titre">FACTURE</span></td>
+		</tr>
+		<tr class="automatique">
+			<td class=text_area><br><input type="text" name="date" id="date" placeholder="Date" class="automatique"></td>
+		</tr>
+		<tr class="automatique">
+			<td class=text_area><br><input type="text" name="n_facture" id="n_facture" placeholder="N° de facture" class="automatique"></td>
+		</tr>
+			</table>
+		</div>
+		</div>
+		<div class="contenu">
+<span class="condition">Conditions de paiement, par exemple: dû dans X jours</span>
+		<div class="destination">
+	<table width="40%" border="0" style="margin: 0 auto;" class="automatique">
+		<tr class="automatique">
+			<td class="text_area"><span class="titre_dest">Destinataire<span></td>
+			<td width="24px" class="automatique"></td>
+			<td class="text_area"><span class="titre_dest">Envoyez à</span></td>
+		</tr>
+		<tr class="automatique">
+			<td class="automatique">Nom</td>
+			<td class="automatique"></td>
+			<td class="automatique">Nom</td>
+		</tr>
+		<tr>
+			<td class="automatique">Nom de la société</td>
+			<td class="automatique"></td>
+			<td class="automatique">Nom de la société</td>
+		</tr>
+		<tr class="automatique">
+			<td class="automatique">Adresse postale</td>
+			<td class="automatique"></td>
+			<td class="automatique">Adresse postale</td>
+		</tr>
+		<tr class="automatique">
+			<td class="automatique">Téléphone</td>
+			<td class="automatique"></td>
+			<td class="automatique">Téléphone</td>
+		</tr>
+		<tr class="automatique">
+			<td class="automatique">Email</td>
+			<td class="automatique"></td>
+			<td class="automatique">Email</td>
+		</tr>
+	</table>
+	</div>
+	<div class="inventaire">
+	<table class="table_inv" id="table_inv" width="96%" border="0" cellspacing="0">
+		<tr class="entete_inv">
+			<th width="600px" class="automatique">DESCRIPTION</th>
+			<th width="140px" class="automatique">QUANTITÉ</th>
+			<th width="140px" class="automatique">PRIX UNITAIRE</th>
+			<th width="80px" class="automatique">TOTAL</th>
+		</tr>
+
+		<!-- DEBUT DE LA PARTIE A MODIFIER -->
+
+		<tr class="row firstrow">
+			<td class="automatique"><input type="text" name="desc"  class="desc" value ="desc1"></td>
+			<td class="automatique"><input type="text" name="qte"  class="qte" value ="0"></td>
+			<td class="automatique"><input type="text" name="prix"  class="prix" value ="0"></td>
+			<td class="automatique"><input type="text" name="total"  class="totalLigne" readonly="readonly" value="0.00"></td>
+		</tr>
+		<tr class="row">
+			<td class="automatique"><input type="text" name="desc"  class="desc" value ="desc2"></td>
+			<td class="automatique"><input type="text" name="qte" class="qte" value ="0"></td>
+			<td class="automatique"><input type="text" name="prix"  class="prix" value ="0"></td>
+			<td class="automatique"><input type="text" name="total"  class="totalLigne" readonly="readonly" value="0.00"></td>
+		</tr>
+		<tr class="row" id="modeLigne">
+			<td class="automatique"><input type="text" name="desc" class="desc" value ="desc3"></td>
+			<td class="automatique"><input type="text" name="qte"  class="qte" value ="0"></td>
+			<td class="automatique"><input type="text" name="prix" class="prix" value ="0"></td>
+			<td class="automatique"><input type="text" name="total" class="totalLigne"  readonly="readonly" value="0.00"></td>
+		</tr>
+		
+	</table>
+	<table class="calcul_table" width="96%" border="0" style=" margin: 0 auto;" cellspacing="0">
+		<tr class="calcul">
+			<td style="text-align: left;" class="automatique">Remarques, notes et instructions de paiement</td>
+			<td class="automatique"></td>
+			<td width="540px" class="automatique">SOUS-TOTAL</td>
+			<td width="80px" class="automatique"><input type="text" name="sous-total" id="st1" class="input" value="0.00"></td>
+		</tr>
+		<tr class="automatique">
+			<td class="automatique"></td>
+			<td class="automatique"></td>
+			<td class="automatique">REMISE</td>
+			<td class="automatique"><input type="text" name="remise" id="r1" class="input" value="10.00"></td>
+		</tr>
+		<tr class="automatique">
+			<td class="automatique"></td>
+			<td class="automatique"></td>
+			<td class="automatique">SOUS-TOTAL MOINS LES REMISES</td>
+			<td class="automatique"><input type="text" name="st_remise" id="st_r1" value="0.00" readonly="readonly"></td>
+		</tr>
+		<tr class="automatique">
+			<td class="automatique"></td>
+			<td class="automatique"></td>
+			<td class="automatique">TAUX D'IMPOSITION</td>
+			<td class="automatique"><input type="text" name="taux_impot" id="ti1" class="input" value="10.00%"></td>
+		</tr>
+		<tr class="automatique">
+			<td class="automatique"></td>
+			<td class="automatique"></td>
+			<td class="automatique">TAXE TOTALE</td>
+			<td class="automatique"><input type="text" name="taxe_total" id="tt1" value="0.00" readonly="readonly"></td>
+		</tr>
+		<tr class="automatique">
+			<td class="automatique"></td>
+			<td class="automatique"></td>
+			<td class="automatique">EXPEDITO, MANUTENTION</td>
+			<td class="automatique"><input type="text" name="exp_man" id="e_m1" class="input" value="5.00"></td>
+		</tr>
+	</table>
+	<table width="96%" style="margin: 0 auto;" cellspacing="0" class="automatique">
+		<tr class="automatique">
+			<td class="automatique"></td>
+			<td width="140px" class="automatique"></td>
+			<td width="140px" style="border-top: 1px solid black; font-size: 16px;" class="automatique">SOLDE DU</td>
+			<td style="background-color: lightpink; border-top: 1px solid black;" width="80px" class="automatique"><input type="text" name="solde"
+			id="solde" value="0.00€" readonly="readonly" class="automatique"></td>
+		</tr>
+		<tr class="automatique">
+			<td class="automatique"></td>
+			<td class="automatique"></td>
+			<td class="automatique"></td>
+			<td style="background-color: lightpink; border-top: 1px solid black" class="automatique"> </td>
+		</tr>
+	</table>
+	</div>
+	</div>
+		<input type="button" value="Calculer" onclick="calculate()" class="automatique">
+		<input type="reset" value="Annuler">
+		<input type="button" value="Ajouter une ligne" onclick="ajouterLigne()" class="automatique">
+		<input type="button" value="Remplir automatiquement" onclick="remplir()" class="automatique">		
+	</div>
+</form>
 			</article>
 		</div>
 		</section>
