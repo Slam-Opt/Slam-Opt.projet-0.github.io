@@ -55,7 +55,7 @@
 			</nav>
 
 			<article class="gestionnaire">
-				<form method="post" action="pagephp.php">
+				<form method="post" action="pagephp.php" class="form">
 					<p>
 						<fieldset>
 							<legend>Mon projet</legend>
@@ -66,44 +66,44 @@
 
 						<fieldset>
 							<legend>Mes coordonnées</legend>
-							<label for="prenom">Mon prénom </label><input type="text" name="prenom"> <br>
-							<label for="classe">Ma classe  </label>
-								<select name="classe"> 
-									<option>Veuillez choisir une option</option>
+							<label for="prenom" class="cordo">Mon prénom </label><input type="text" name="prenom"> <br>
+							<label for="classe" class="cordo">Ma classe  </label>
+								<select name="classe" class="bts"> 
+									<option class="bts">Veuillez choisir une option</option>
 									<option value="SISR">BTS SIO SISR</option> 
 									<option value="SLAM">BTS SLAM</option>
 								</select> <br>
-							<label for="email">Mon mail </label><input type="email" name="email"> <br>
-							<label for="passe">Mon mot de passe </label><input type="password" name="passe">
+							<label for="email" class="cordo">Mon mail </label><input type="email" name="email"> <br>
+							<label for="passe" class="cordo">Mon mot de passe </label><input type="password" name="passe">
 						</fieldset>
 
 						<fieldset>
 							<legend>Disponibilités</legend>
 
-							<label for="dispo">Mes disponibilités : </label>
+							<label for="dispo" class="form">Mes disponibilités : </label>
 
 							<input type="checkbox" name="dispo">
-							<label for="dispo">Lundi 10 juin</label>
+							<label for="dispo" class="form">Lundi 10 juin</label>
 
 							<input type="checkbox" name="dispo">
-							<label for="dispo">Mardi 11 juin</label>
+							<label for="dispo" class="form">Mardi 11 juin</label>
 
 							<input type="checkbox" name="dispo">
-							<label for="dispo"> Mercredi 12 juin</label> <br>
+							<label for="dispo" class=""> Mercredi 12 juin</label> <br>
 
-							<label for="dispo">J'apporterai : </label>
-
-							<input type="radio" name="dispo">
-							<label for="dispo">Une entrée</label>
+							<label for="dispo" class="">J'apporterai : </label>
 
 							<input type="radio" name="dispo">
-							<label for="dispo">Un plat</label>
+							<label for="dispo" class="">Une entrée</label>
 
 							<input type="radio" name="dispo">
-							<label for="dispo">Un dessert</label> <br>
+							<label for="dispo" class="">Un plat</label>
 
-							<label for="dispo"> Message </label> <br>
-							<textarea></textarea>
+							<input type="radio" name="dispo">
+							<label for="dispo" class="">Un dessert</label> <br>
+
+							<label for="dispo" class="form"> Message </label> <br>
+							<textarea class="text"></textarea>
 						</fieldset>
 					</p>
 				</form>
