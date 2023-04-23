@@ -20,7 +20,7 @@ body
 
 div[class="general"] 
 {
-	max-width: 1300px;
+	/* max-width: 1200px; */
 	margin: 0 auto;
 }
 
@@ -39,7 +39,7 @@ P[class="pied"]
 
 header       
 {
-	height: 80px;
+	height: 150px;
 	padding: 10px;
 	background-color: lightgrey;
 	font-size: 1rem;
