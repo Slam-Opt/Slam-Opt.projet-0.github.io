@@ -3,90 +3,206 @@
 <head>
 	<meta charset="utf-8">
 	<title>INDEX - PORTFOLIO</title>
-	<link rel="stylesheet" type="text/css" href="portfolio.css">
+	<!-- <link rel="stylesheet" type="text/css" href="portfolio.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
+    <style>
+        body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+    </style>
 
-<div class="general">   <!-- Contenu général -->
 
 <!-- Entête -->
 
-	<header class="entete">
-			<img src="logo.jpg" class="entete">
-		<nav class="entete">
-				<ul class="entete">
-					<li class="entete"><a href="index.html" class="sous-entete">ACCUEIL</a></li>
-					<li class="entete"><a href="cv.html" class="sous-entete">CV </a></li>
-					<li class="projet"><a href="projets.html" class="sous-entete">PROJETS / TRAVAUX</a></li>
-					<li class="veill"><a href="veilles.html" class="sous-entete">VEILLES</a></li>
-					<li class="entete"><a href="contact.html" class="sous-entete">CONTACT </a> </li>
-					<li class="entete"><a href="Epreuve_E4_SLAM.pdf" class="sous-entete" target="_blank">DIAPO E4 </a> </li>
+    <style>
+        * { margin: 0px; padding: 0px; box-sizing: border-box; }
+        
+        #header {display: grid; position: sticky; top: 0rem;  transition: top 0.3s; background-color: #2F4F4F;}
+        #header .sous-grille {display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto; column-gap: 20px;}
+        #header .sous-grille .cellule { display: grid;}
+        #header .sous-grille .cellule .carte { margin-left: 64px; margin-right: 64px;}
+    
+        #header .sous-grille .cellule .carte .menu { display: grid;}
+        #header .sous-grille .cellule .carte .menu ul { display: flex; list-style-type: none;}
+        #header .sous-grille .cellule .carte .menu ul li { display: grid;}
+        #header .sous-grille .cellule .carte .menu .dropdown { display: grid;}
 
-				</ul>
-			</nav>
-	</header>
+        #header .sous-grille .cellule .carte .menu ul li a { text-align: center; padding: 15px; text-decoration: none; 
+            font-size: 17px; color: white; outline: none;}
+            #header .sous-grille .cellule .carte .menu .dropdown a { text-align: center; padding: 15px; text-decoration: none; 
+            font-size: 17px; color: white; outline: none;}
 
-<!-- Menu de navigation -->
-	<div class="nav-et-main">
-		<aside class="laterale-gauche">
-			<article class="portrait">
-				<p class="logo-html"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/2187c071614535.5bcb5cb2a4495.gif" height="180px"></p>
-			</article> 
+    
+        #header .sous-grille .cellule .carte .menu ul li a:hover { color:  orangered;}
+        #header .sous-grille .cellule .carte .menu ul li a.active { color:  orangered;}
+    
+        #header .sous-grille .cellule.droite .carte .menu ul { justify-content: flex-end;}
 
-			<article class="portrait">
-			<label class="tel-texte">Téléphone </label>
-			<label class="tel"><span>(+33)01 20 20 33 33</span></label> 
-			<label class="etablissement">Établissement</label>
-			<label class="portrait">Lycée Parc de Vilgénis </label>
-			<label class="portrait">80, rue de Versailles </label>
-			<label class="portrait">BP 112, 91305 Massy </label>
-			<label class="portrait">France</label>
-		</article>
-			<a href="#" class="portrait"><span>Plan - Accès</span></a> <br>
-		</aside>
+        html{ box-sizing: border-box;}
+    </style>
+    
+    <header id="header">
+        <div class="sous-grille">
+            <div class="cellule gauche">
+                <div class="carte">
+                    <nav class="colonne menu navbar">
+                        <ul class="contenu">
+                            <!-- Le chemin d'accès "" est valide et indique la route par défaut. Assurez-vous qu'il n'y a pas d'espaces autour du chemin d'accès vide. -->
+                            <!-- <li><a href="#"><i class="fa fa-home"></i>
+                                <p>HOME</p></a></li>
+                            <li><a href="#"><i class="fa fa-user "></i>
+                                <p>CV</p></a></li>
+                            <li><a href="#"><i class="fa fa-eye "></i>
+                                <p>PROJETS</p></a></li>
+                            <li><a href="#"><i class="fa fa-envelope"></i>
+                                <p>CONTACT</p></a></li> -->
+                        </ul>
+                    </nav>
+                </div>
+            </div>
 
-<!-- Contenu principal de la page -->
+           
+            <div class="cellule droite">
+                <div class="carte">
+                    <nav class="colonne menu navbar">
+                        <ul class="contenu">
+                            <li><a href="#" class="active"><i class="fa fa-home"></i><p>ACCUEIL</p></a></li>
+                            <li><a href="cv.html"><i class="fa fa-user "></i><p>CV</p></a></li>
+                            <div class="dropdown"><a href="#"><i class="fa fa-eye "></i><p>PROJETS</p></a>
+                                <style>
+                                    #header .dropdown {  position: relative; display: inline-block;}
+                                    #header .dropdown-content {display: none ; position: absolute; background-color: #2F4F4F;
+                                        width: 110px; flex-direction: column; border: 1px solid white; }
+                                    #header .dropdown-content a {display: flex ;}
+                                    #header .dropdown:hover .dropdown-content {display: flex; flex-direction: column; background-color: #2F4F4F; top: 69px;}
+                                    #header .dropdown-content a:hover {background-color: #40826D;}
 
-	<main>
-	<div class="centrale">
-		<section class="centrale">
-				<div class="nom">
-					<p class="nom"><span class="nom">Euloge AMOUGOU</span> </p>
-					<p class="statut">Étudiant</p>
-					<div class="statut">
-						<p class="applications">Développement d'applications</p>
-						<p class="web">Développement web </p>
-					</div>
-				</div>
-		</section>
+                                </style>
+                                <div class="dropdown-content">
+                                    <a href="ppe.html">PPE</a>
+                                    <a href="tp.html">TP</a>
+                                </div>
+                            </div>
+                            <li><a href="contact.html"><i class="fa fa-envelope"></i><p>CONTACT</p></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
 
-		<section class="centrale">
+    <style>
+            #section_1 {display: grid; grid-template-columns: 1fr 1fr; column-gap: 20px;}
+            #section_1 .sous-grille {display: grid; }
+            #section_1 .sous-grille .cellule { display: grid; }
+            #section_1 .sous-grille .cellule .carte { margin: 64px; border: 1px solid;}
+            #section_1 .sous-grille .cellule .carte.droite { display: flex; flex-direction: column; justify-content: center; 
+                align-items: center;  border: 1px solid #8B4513; }
+            #section_1 .sous-grille .cellule .carte.droite h1 { font-size: 60px; padding: 10px; }
+            #section_1 .sous-grille .cellule .carte.droite p { font-size: 30px;}
 
-				<p class="profil-titre"><span class="profil">Profil </span></p>
-				
-				<p class="profil">Je suis actuellement en deuxième année de BTS SIO (Services Informatiques aux Organisations) en spécialité SLAM (Solutions Logicielles et Applications Métiers) au Lycée Parc de Vilgénis à Massy et diplômé d'un Baccalauréat ... (mention Bien).</p>
-		</section>
+            #section_1 .sous-grille .cellule .carte.gauche { display: flex; flex-direction: column; justify-content: center; align-items: center;}
+            #section_1 .sous-grille .cellule .carte.gauche p {display: flex; flex-direction: column; 
+                justify-content: center; align-items: center; }
+            #section_1 .sous-grille .cellule .carte.gauche p img {display: flex; flex-direction: column;}
 
-		<section class="centrale">
-		
+            /* #section_1 .sous-grille.gauche {background-color: ;} */
+    </style>
+    <section id="section_1" >
+        <div class="sous-grille gauche">
+            <div class="cellule ">
+                <div class="carte gauche">
+                    <p>
+                        <img src="profil.jpg" alt="photo" >
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="sous-grille">
+            <div class="cellule ">
+                <div class="carte droite">
+                    <h1>Euloge AMOUGOU.</h1>
+                    <p>Développeur web et mobile.</p>
+                </div>
+            </div>
+        </div>
 
-				<p class="qualification-titre"><span class="qualification">Qualification</span> </p>
-				
-				<p class="qualification">Je suis actuellement en deuxième année de BTS SIO (Services Informatiques aux Organisations) en spécialité SLAM (Solutions Logicielles et Applications Métiers) au Lycée Parc de Vilgénis à Massy et diplômé d'un Baccalauréat ... (mention Bien).</p>
-			
-		</section>
-	</div>
+        <script>
+            var prevScrollY = window.pageYOffset;
+            var header = document.getElementById("header");
+            
+            window.onscroll = function() {
+              var currentScrollY = window.pageYOffset;
+              if (prevScrollY > currentScrollY) {
+                header.style.top = "0";
+              } else {
+                header.style.top = "-34px";
+              }
+              prevScrollY = currentScrollY;
+            }
+            </script>
+            
+    </section>
 
-	</main>
-
-	</div>
-
+        <style>
+            #section {display: grid; }
+            /* #section .sous-grille {border: 1px solid blue;} */
+            /* #section .sous-grille .cellule {border: 1px solid green;} */
+            #section .sous-grille .cellule .carte { margin: 64px; }
+            #section .sous-grille .cellule .carte ul { display: grid; list-style-type: none; }
+            #section .sous-grille .cellule .carte ul li{ padding-top: 10px;  }
+            #section .sous-grille .cellule .carte.formation ul :first-child {margin-bottom: 20px;}
+            #section .sous-grille .cellule .carte.formation ul li{padding: 40px; background-color: #EDEDED; }
+            #section .sous-grille .cellule .carte.formation ul li span {color:  #FF0000; font-weight: bold; font-size: 16px;}
+            #section .sous-grille .cellule .carte.formation ul h4 {font-size: 20px;}
+            #section .sous-grille .cellule .carte h1 {margin-bottom: 15px;}
+        </style>
+        <section id="section">
+            <div class="sous-grille formation">
+                <div class="cellule formation">
+                    <div class="carte formation" >
+                        <h1 style="font-size: 30px;">À propos de moi</h1>
+                        <!-- <hr style="width:180px"> -->
+                        <ul>
+                            <li>
+                                
+                                <div>
+                                    <h4>Recherche contrat de professionnalisation </h4>
+                                    <p>Je suis en Licence Professionnelle : Développement web et mobile. </p>
+                                </div> <br>
+                                <div>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque ea cum ad quisquam! 
+                                    Illo quis eius exercitationem deserunt sequi eos accusantium obcaecati repellat error tempore! Provident quaerat eligendi accusamus consectetur.
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque ea cum ad quisquam! 
+                                    Illo quis eius exercitationem deserunt sequi eos accusantium obcaecati repellat error tempore! Provident quaerat eligendi accusamus consectetur.
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque ea cum ad quisquam! 
+                                    Illo quis eius exercitationem deserunt sequi eos accusantium obcaecati repellat error tempore! Provident quaerat eligendi accusamus consectetur.
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque ea cum ad quisquam! 
+                                    Illo quis eius exercitationem deserunt sequi eos accusantium obcaecati repellat error tempore! Provident quaerat eligendi accusamus consectetur.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 <!-- Pied de page -->
+    <style>
+        footer {display: grid; background-color: #2F4F4F;}
+        footer .sous-grille {display: grid; grid-template-columns: 1fr; grid-template-rows: auto;}
+        footer .sous-grille .cellule { display: grid;}
+        footer .sous-grille .cellule .carte {display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 64px;}
+        footer .sous-grille .cellule .carte p {color: white;}
 
+    </style>
 	<footer>
-		<p class="pied">©opyright - 2021/2022</p>
+        <div class="sous-grille">
+            <div class="cellule creation">
+                <div class="carte">
+                    <p class="pied">©opyright - 2021/2023</p>
+                </div>
+            </div>
+        </div>
 	</footer>
-
-</div>  <!-- Fin contenu général -->
 </body>
 </html>

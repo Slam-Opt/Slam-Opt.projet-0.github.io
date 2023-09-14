@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Pojets Perso. Encadrés</title>
+	<!-- <link rel="stylesheet" type="text/css" href="portfolio.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <style>
+        body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+    </style>
+
+
+<!-- Entête -->
+
+<style>
+    * { margin: 0px; padding: 0px; box-sizing: border-box; }
+    
+    #header {display: grid; position: sticky; top: 1rem;  transition: top 0.3s; background-color: #2F4F4F;}
+    #header .sous-grille {display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto; column-gap: 20px;}
+    #header .sous-grille .cellule { display: grid;}
+    #header .sous-grille .cellule .carte { margin-left: 64px; margin-right: 64px;}
+
+    #header .sous-grille .cellule .carte .menu { display: grid;}
+    #header .sous-grille .cellule .carte .menu ul { display: flex; list-style-type: none;}
+    #header .sous-grille .cellule .carte .menu ul li { display: grid;}
+    #header .sous-grille .cellule .carte .menu .dropdown { display: grid;}
+
+    #header .sous-grille .cellule .carte .menu ul li a { text-align: center; padding: 15px; text-decoration: none; 
+        font-size: 17px; color: white; outline: none;}
+        #header .sous-grille .cellule .carte .menu .dropdown a { text-align: center; padding: 15px; text-decoration: none; 
+        font-size: 17px; color: white; outline: none;}
+
+
+    #header .sous-grille .cellule .carte .menu ul li a:hover { color:  orangered;}
+    #header .sous-grille .cellule .carte .menu ul li a.active { color:  orangered;}
+
+    #header .sous-grille .cellule.droite .carte .menu ul { justify-content: flex-end;}
+
+    html{ box-sizing: border-box;}
+</style>
+    
+    <header id="header">
+        <div class="sous-grille">
+            <div class="cellule gauche">
+                <div class="carte">
+                    <nav class="colonne menu navbar">
+                        <ul class="contenu">
+                            <!-- Le chemin d'accès "" est valide et indique la route par défaut. Assurez-vous qu'il n'y a pas d'espaces autour du chemin d'accès vide. -->
+                            <!-- <li><a href="#"><i class="fa fa-home"></i>
+                                <p>HOME</p></a></li>
+                            <li><a href="#"><i class="fa fa-user "></i>
+                                <p>CV</p></a></li>
+                            <li><a href="#"><i class="fa fa-eye "></i>
+                                <p>PROJETS</p></a></li>
+                            <li><a href="#"><i class="fa fa-envelope"></i>
+                                <p>CONTACT</p></a></li> -->
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+    
+            <div class="cellule droite">
+                <div class="carte">
+                    <nav class="colonne menu navbar">
+                        <ul class="contenu">
+                            <li><a href="index.html"><i class="fa fa-home"></i><p>ACCUEIL</p></a></li>
+                            <li><a href="cv.html"><i class="fa fa-user "></i><p>CV</p></a></li>
+                            <div class="dropdown active"><a href="#"><i class="fa fa-eye "></i><p>PROJETS</p></a>
+                                <style>
+                                    #header .dropdown {  position: relative; display: inline-block;}
+                                    #header .dropdown-content {display: none ; position: absolute; background-color: #2F4F4F;
+                                        width: 110px; flex-direction: column; border: 1px solid white; }
+                                    #header .dropdown-content a {display: flex ;}
+                                    #header .dropdown:hover .dropdown-content {display: flex; flex-direction: column; background-color: #2F4F4F; top: 69px;}
+                                    #header .dropdown-content a:hover {background-color: #40826D;}
+
+                                </style>
+                                <div class="dropdown-content">
+                                    <a href="#">PPE</a>
+                                    <a href="tp.html">TP</a>
+                                </div>
+                            </div>
+                            <li><a href="contact.html"><i class="fa fa-envelope"></i><p>CONTACT</p></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    
+    <style>
+        #main {display: grid; grid-template-columns: 1fr 4fr; min-height: 40vw;  }
+    </style>
+    <main id="main">
+        <style>
+            aside {display: grid;background-color: #CECECE;}
+            aside .sous-grille {display: grid;;}
+            aside .sous-grille .cellule {display: grid;}
+            aside .sous-grille .cellule .carte {display: flex; flex-direction: column; justify-content: center; 
+                align-items: center; margin: 64px; font-size: 14px;  }
+            aside .sous-grille .cellule .carte nav { display: flex; flex-direction: column; 
+                width: 240px; height: 30rem; justify-content: center; align-items: center;}
+                aside .sous-grille .cellule .carte nav a { text-decoration: none; font-size: 16px; padding: 20px; width: 200px; color:black;}
+                aside .sous-grille .cellule .carte nav a:hover {background-color: #2F4F4F;  color:  white;}
+
+        </style>
+        <aside>
+            <div class="sous-grille">
+                <div class="cellule ">
+                    <div class="carte ">
+                        <nav>
+                            <!-- <a href="#" class="active">Home</a> -->
+                            <a href="tp_ppe.html">Menu déroulant</a>
+                            <a href="#">Module de facturation</a>
+                            <a href="#">Facture automatique</a>
+                            <a href="#">QCM</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <style>
+            #section {display: grid;  }
+            #section .sous-grille {display: grid;}
+            #section .sous-grille .cellule {display: grid;}
+            #section .sous-grille .cellule .carte {display: flex; flex-direction: column; justify-content: center; 
+                align-items: center; margin: 64px; font-size: 50px; border: 1px solid #8B4513; }
+                 /* Animation pour écrire progressivement le texte */
+            @keyframes typing {
+                from {
+                    width: 0;
+                }
+                to {
+                    width: 100%;
+                }
+            }
+
+            /* Style pour l'animation de texte */
+            #section .sous-grille .cellule .carte h1 {
+                overflow: hidden; /* Cache le texte en dehors de la zone */
+                white-space: nowrap; /* Empêche le saut de ligne */
+                animation: typing 1s steps(20, end); /* Utilise l'animation "typing" sur 4 secondes */
+            }
+    </style>
+        </style>
+        <section id="section">
+            <div class="sous-grille">
+                <div class="cellule ">
+                    <div class="carte ">
+                        <h1>Projets Personnalisés Encadrés</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+
+
+<!-- Pied de page -->
+    <style>
+        footer {display: grid; background-color: #2F4F4F;}
+        footer .sous-grille {display: grid; grid-template-columns: 1fr; grid-template-rows: auto;}
+        footer .sous-grille .cellule { display: grid;}
+        footer .sous-grille .cellule .carte {display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 64px;}
+        footer .sous-grille .cellule .carte p {color: white;}
+
+    </style>
+	<footer>
+        <div class="sous-grille">
+            <div class="cellule creation">
+                <div class="carte">
+                    <p class="pied">©opyright - 2021/2023</p>
+                </div>
+            </div>
+        </div>
+	</footer>
+</body>
+</html>

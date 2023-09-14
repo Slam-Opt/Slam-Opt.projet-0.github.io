@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Travaux pratiques - MySQL</title>
+	<!-- <link rel="stylesheet" type="text/css" href="portfolio.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <style>
+        body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+    </style>
+
+
+<!-- Entête -->
+
+<style>
+    * { margin: 0px; padding: 0px; box-sizing: border-box; }
+    
+    #header {display: grid; position: sticky; top: 0rem;  transition: top 0.3s; background-color: #2F4F4F;}
+    #header .sous-grille {display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto; column-gap: 20px;}
+    #header .sous-grille .cellule { display: grid;}
+    #header .sous-grille .cellule .carte { margin-left: 64px; margin-right: 64px;}
+
+    #header .sous-grille .cellule .carte .menu { display: grid;}
+    #header .sous-grille .cellule .carte .menu ul { display: flex; list-style-type: none;}
+    #header .sous-grille .cellule .carte .menu ul li { display: grid;}
+    #header .sous-grille .cellule .carte .menu .dropdown { display: grid;}
+
+    #header .sous-grille .cellule .carte .menu ul li a { text-align: center; padding: 15px; text-decoration: none; 
+        font-size: 17px; color: white; outline: none;}
+        #header .sous-grille .cellule .carte .menu .dropdown a { text-align: center; padding: 15px; text-decoration: none; 
+        font-size: 17px; color: white; outline: none;}
+
+    #header .sous-grille .cellule .carte .menu ul li a:hover { color:  orangered;}
+    #header .sous-grille .cellule .carte .menu ul li a.active { color:  orangered;}
+
+    #header .sous-grille .cellule.droite .carte .menu ul { justify-content: flex-end;}
+    #header .sous-grille .cellule.gauche h1 { margin: auto;}
+
+    #header .sous-grille .cellule.droite .carte .menu .contenu li i { padding: 10px;}
+    #header .sous-grille .cellule.droite .carte .menu .dropdown i {padding: 10px;}
+
+    html{ box-sizing: border-box; margin-top: 10px;}
+</style>
+    
+    <header id="header" style="z-index: 2;">
+        <div class="sous-grille">
+            <div class="cellule gauche">
+                <h2 style="color: white; font-style: italic; margin-left: 64px; margin-right: 64px; padding: 15px;" >Requêtes SQL</h2>
+                <div class="carte">
+                    <nav class="colonne menu navbar">
+                        <ul class="contenu header-2">
+                            <!-- <li><a><p>PRÉSENTATION DES MÉTIERS DE L'INFORMATIQUE</p></a></li> -->
+                            <li><a href="tp_html.html">HTML</a></li>
+                            <li><a href="tp_formulaire.html">Formulaire</a></li>
+                            <li><a href="tp_iframe.html">iFrame</a></li>
+                            <li><a href="tp_css.html">CSS</a></li>
+                            <li><a href="tp_javascript.html">JavaScript</a></li>
+                            <li><a href="tp_mysql.html" class="active">MySQL</a></li>
+                            <li><a href="tp_php.html">PHP</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+    
+            <div class="cellule droite">
+                <div class="carte">
+                    <nav class="colonne menu navbar">
+                        <ul class="contenu">
+                            <li><a href="index.html"><i class="fa fa-home"></i><p>ACCUEIL</p></a></li>
+                            <li><a href="cv.html"><i class="fa fa-user "></i><p>CV</p></a></li>
+                            <div class="dropdown active"><a href="#"><i class="fa fa-eye "></i><p>PROJETS</p></a>
+                                <style>
+                                    #header .dropdown {  position: relative; display: inline-block; height: 7rem;}
+                                    #header .dropdown-content {display: none ; position: absolute; background-color: #2F4F4F;
+                                        width: 110px; flex-direction: column; border: 1px solid white; }
+                                    #header .dropdown-content a {display: flex ;}
+                                    #header .dropdown:hover .dropdown-content {display: flex; flex-direction: column; background-color: #2F4F4F; top: 112px;}
+                                    #header .dropdown-content a:hover {color: orangered; background-color: #40826D;}
+                                </style>
+                                <div class="dropdown-content">
+                                    <a href="ppe.html">PPE</a>
+                                    <a href="#" class="active">TP</a>
+                                </div>
+                            </div>
+                            <li><a href="contact.html"><i class="fa fa-envelope"></i><p>CONTACT</p></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <script>
+            var prevScrollY = window.pageYOffset;
+            var header = document.getElementById("header");
+            
+            window.onscroll = function() {
+            var currentScrollY = window.pageYOffset;
+            if (prevScrollY > currentScrollY) {
+                header.style.top = "0";
+            } else {
+                header.style.top = "-34px";
+            }
+            prevScrollY = currentScrollY;
+            }
+        </script>
+    </header>
+
+    <header id="header">
+        <div class="sous-grille">
+    
+        </div>
+        <script>
+            var prevScrollY = window.pageYOffset;
+            var header = document.getElementById("header");
+            
+            window.onscroll = function() {
+            var currentScrollY = window.pageYOffset;
+            if (prevScrollY > currentScrollY) {
+                header.style.top = "0";
+            } else {
+                header.style.top = "-43px";
+            }
+            prevScrollY = currentScrollY;
+            }
+        </script>
+    </header>
+
+    
+    <style>
+        #main {display: grid;  min-height: 40vw;}
+    </style>
+    <main id="main">
+        <style>
+            #section {display: grid; }
+            #section .sous-grille {display: grid; }
+            /*#section .sous-grille .cellule {display: ; border: 1px solid green;} */
+            #section .sous-grille .cellule .carte {display: grid; margin: 64px;
+                /* background-color: #f5f5f5;  */
+              }
+            #section .sous-grille .cellule .carte .contenu.text {margin: 20px;}
+            #section .sous-grille .cellule .carte .contenu h1 {display: flex; flex-direction: column; padding: 20px; background-color: #CECECE; }
+            #section .sous-grille .cellule .carte .contenu p {display: flex; flex-direction: column; padding: 20px; margin: auto; background-color: white; }
+            #section .sous-grille .cellule .carte .contenu div {display: flex; flex-direction: column;}
+        </style>
+        <section id="section">
+            <div class="sous-grille"> 
+                <div class="cellule ">
+                    <style>
+                        #section .sous-grille .cellule .carte .contenu h1 {margin-bottom: 20px;}
+                        #section .sous-grille .cellule .carte .contenu .requetes { display: grid;}
+                        #section .sous-grille .cellule .carte .contenu .requetes  ul {display: grid; border: 1px solid #CECECE;}
+                        
+                        article[class="sql"]{
+                            width: 100%;
+                            /* height: 56vh; */
+                            columns: 3 auto;     /*Pour faire fonctionner le multicolonage, il ne faut pas utiliser le 'flexbox'*/
+                            font-size: 0.7rem;
+                            padding: 10px 17px;
+                            /* overflow: auto; */
+                        }
+
+
+                        h1[class="sql"]{
+                            color: orangered;
+                            margin: 20px;
+                            font-size: 16px;
+                        }
+
+                    </style>
+                    <div class="carte">
+                        <div class="contenu text">
+                            <!-- <h1>Le 08/11/2021</h1> -->
+                            <div class="requetes">
+                                <ul>
+                                    <article class="sql">
+                                        <h1 class="sql">TP DU 08/11/2021 </h1>
+                                        <p class="sql"> SELECT * <br>
+                                        FROM voitures <br>
+                                    WHERE couleur = 'Noir' </p>
+                        
+                                    <p class="sql"> SELECT * <br>
+                                        FROM clients <br>
+                                    WHERE ville = 'Paris' </p>
+                        
+                                    <p class="sql"> SELECT immatriculation, marques <br>
+                                        FROM voitures <br>
+                                    WHERE couleur = 'Noir' </p>
+                        
+                                    <p class="sql"> SELECT * <br>
+                                        FROM voitures <br>
+                                    WHERE kilometrage < 10000 </p>
+                        
+                                    <p class="sql"> SELECT * <br>
+                                        FROM voitures <br>
+                                    WHERE marque = 'Mercedes' </p>
+                        
+                                    <p class="sql"> SELECT * <br>
+                                        FROM locations <br>
+                                    WHERE code_client = 101 </p>
+                        
+                                    <p class="sql"> SELECT * <br>
+                                        FROM locations <br>
+                                    WHERE id_locations = 1001 </p>
+                        
+                                    <h1 class="sql">TP DU 23/11/2021 </h1>
+                        
+                                    <p class="sql"> SELECT * <br>
+                                        FROM voitures <br>
+                                    ORDER BY immatriculation </p>
+                        
+                                    <p class="sql"> SELECT * <br>
+                                        FROM voitures <br>
+                                    ORDER BY marque, modele</p>
+                        
+                                    <p class="sql"> SELECT LOWER ('marque'), LOWER ('modele') <br>
+                                        FROM voitures <br>
+                                    WHERE marque = 'Mercedes' </p>
+                        
+                                    <p class="sql"> SELECT UPPER ('marque'), UPPER ('modele') <br>
+                                        FROM voitures <br>
+                                    WHERE marque = 'Mercedes' </p>
+                        
+                                    <p class="sql"> ALTER TABLE voitures <br>
+                                        ADD prix_achat <br>
+                                    VARCHAR (255) </p>
+                        
+                                    <p class="sql"> SELECT * <br>
+                                        FROM voitures <br>
+                                    WHERE prix_achat BETWEEN 15000 AND 20000 </p>
+                        
+                                    <p class="sql"> SELECT * <br>
+                                        FROM voitures <br>
+                                    WHERE prix_achat < 20000 AND prix_achat > 15000</p>
+                        
+                                    <p class="sql"> AVG('kilometrage') <br>
+                                        FROM voitures <br>
+                                    WHERE marque = 'Mercedes' </p>
+                        
+                                    <p class="sql"> COUNT(*) <br>
+                                        FROM voitures <br>
+                                    WHERE marque = 'Mercedes' </p>
+                        
+                                    <p class="sql"> COUNT(*) <br>
+                                        FROM voitures <br>
+                                    WHERE couleur = 'Noir' </p>
+                        
+                                    <p class="sql"> COUNT(*) <br>
+                                        FROM voitures <br>
+                                    GROUP BY = marque </p>
+                        
+                                    <p class="sql"> SELECT marque, COUNT(*) <br>
+                                        FROM voitures <br>
+                                    GROUP BY marque </p>
+                        
+                                    <p class="sql">SELECT MAX ('kilometrage')<br>
+                                        FROM voitures </p>
+                        
+                                    <p class="sql"> SELECT marque, modele, immatriculation <br>
+                                        FROM voitures <br>
+                                        WHERE kilometrage < 10000 </p>
+                        
+                                    <p class="sql"> SELECT * <br>
+                                        FROM clients <br>
+                                        WHERE ville = 'Massy'
+                                        OR ville = 'Boulogne' </p>
+                        
+                                    <p class="sql">SELECT SUM (prix_achat)<br>
+                                        FROM voitures 
+                                        WHERE marque = 'Mercedes' </p>
+                        
+                                    <p class="sql">SELECT code_client, ville <br>
+                                        FROM clients <br>
+                                    WHERE nom_prenom LIKE 'T%'</p>
+                        
+                                    <p class="sql">INSERT INTO voitures (immatriculation, marque, modele, kilometrage, carburant, couleur, nbr_places, nbr_portes, prix_achat) <br>
+                                    VALUES ('F0000T', 'Mercedes', 'Audi', '2000', 'Essence', 'Noir', '5', '5', '3000')</p>
+                        
+                                    <h1 class="sql">TP DU 30/11/2021 </h1>
+                        
+                                    <p class="sql">SELECT * <br>
+                                    FROM employee <br>
+                                    WHERE first_name LIKE 'B%' </p>
+                        
+                                    <p class="sql">SELECT * <br>
+                                    FROM employee <br>
+                                    WHERE first_name LIKE '%o%'</p>
+                        
+                                    <p class="sql">SELECT * <br>
+                                    FROM employee <br>
+                                    WHERE first_name LIKE '%n' </p>
+                        
+                                    <p class="sql">SELECT * <br>
+                                    FROM employee <br>
+                                    WHERE first_name LIKE '__n'</p>
+                        
+                                    <p class="sql">SELECT * <br>
+                                    FROM employee <br>
+                                    WHERE first_name LIKE 'j__' </p>
+                        
+                                    <p class="sql">SELECT * <br>
+                                    FROM employee <br>
+                                    WHERE salary > 3000000 </p>
+                        
+                                    <p class="sql">SELECT * <br>
+                                    FROM employee <br>
+                                    WHERE salary > 3000000 <br>
+                                    AND Departement = 'finance' </p>
+                        
+                                    <p class="sql">SELECT * <br>
+                                    FROM employee <br>
+                                    WHERE salary BETWEEN 2000000 AND 5000000 </p>
+                        
+                                    <p class="sql">SELECT * <br>
+                                    FROM employee <br>
+                                    WHERE YEAR(Joining_date) = 2019 </p>
+                        
+                                    <p class="sql">SELECT * <br>
+                                    FROM employee <br>
+                                    WHERE First_name = 'bob'
+                                    OR 'alex' </p>
+                        
+                                    <p class="sql">UPDATE voitures <br>
+                                    SET kilometrage = 100000 </p>
+                        
+                                    <p class="sql">UPDATE voitures <br>
+                                    SET prix_achat = 50000 <br>
+                                    WHERE marque = 'bmw'</p>
+                        
+                                    <p class="sql">UPDATE clients <br>
+                                    SET adresse = "21 Avenue de Strasbourg" <br>
+                                    WHERE nom_prenom = 'Thomas P' </p>
+                        
+                                    <p class="sql">SELECT V.marque <br>
+                                        FROM voitures V <br>
+                                        JOIN Locations L ON (V.immatriculation = L.immatriculation) <br>
+                                    WHERE L.code_client = '1001'</p>
+                        
+                                    <p class="sql">SELECT V.kilometrage, V.modele, V.marque <br>
+                                        FROM voitures V <br>
+                                        JOIN Locations L ON (V.immatriculation = L.immatriculation) <br>
+                                        BETWEEN '2021-11-01' <br>
+                                        AND '2021-11-30'</p>
+                        
+                                    <p class="sql">DELETE FROM 'voitures' <br>
+                                    WHERE marque = 'bmw' </p>
+                        
+                                    <p class="sql">ALTER TABLE clients <br>
+                                    DROP code_postal </p>
+                        
+                                    <p class="sql">SELECT marque <br>
+                                    FROM voitures <br>
+                                    WHERE UPPER ('marque') LIKE 'p%' <br>
+                                    UNION <br> 
+                                    SELECT nom_prenom <br>
+                                    FROM clients
+                                    WHERE UPPER (nom_prenom) LIKE 'T%'</p>
+                                    </article>
+                                </ul>
+                            </div>
+                        </div>                   
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+<!-- Pied de page -->
+    <style>
+        footer {display: grid; background-color: #2F4F4F;}
+        footer .sous-grille {display: grid; grid-template-columns: 1fr; grid-template-rows: auto;}
+        footer .sous-grille .cellule { display: grid;}
+        footer .sous-grille .cellule .carte {display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 64px;}
+        footer .sous-grille .cellule .carte p {color: white;}
+
+    </style>
+	<footer>
+        <div class="sous-grille">
+            <div class="cellule creation">
+                <div class="carte">
+                    <p class="pied">©opyright - 2021/2023</p>
+                </div>
+            </div>
+        </div>
+	</footer>
+</body>
+</html>

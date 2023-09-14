@@ -2,98 +2,198 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>CONTACT</title>
-	<link rel="stylesheet" type="text/css" href="portfolio.css">
+	<title>Contact</title>
+	<!-- <link rel="stylesheet" type="text/css" href="portfolio.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
+    <style>
+        body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+    </style>
 
-<div class="general">   <!-- Contenu général -->
 
 <!-- Entête -->
 
-	<header class="entete">
-		<img src="logo.jpg" class="entete">
-		<nav class="entete">
-			<ul class="entete">
-				<li class="entete"><a href="index.html" class="sous-entete">ACCUEIL</a></li>
-				<li class="entete"><a href="cv.html" class="sous-entete">CV </a></li>
-				<li class="projet"><a href="projets.html" class="sous-entete">PROJETS / TRAVAUX</a></li>
-				<li class="veill"><a href="veilles.html" class="sous-entete">VEILLES</a></li>
-				<li class="entete"><a href="contact.html" class="sous-entete">CONTACT </a> </li>
-			</ul>
-		</nav>
-	</header>
+<style>
+    * { margin: 0px; padding: 0px; box-sizing: border-box; }
+    
+    #header {display: grid; position: sticky; top: 0rem;  transition: top 0.3s; background-color: #2F4F4F;}
+    #header .sous-grille {display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto; column-gap: 20px;}
+    #header .sous-grille .cellule { display: grid;}
+    #header .sous-grille .cellule .carte { margin-left: 64px; margin-right: 64px;}
 
-<!-- Menu de navigation -->
-	<div class="nav-et-main">
-		<aside class="laterale-gauche">
-			<article class="portrait">
-				<p class="logo-html"><img src="data:image/png;base64,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" height="180px"></p>
-			</article>
-		</aside>
+    #header .sous-grille .cellule .carte .menu { display: grid;}
+    #header .sous-grille .cellule .carte .menu ul { display: flex; list-style-type: none;}
+    #header .sous-grille .cellule .carte .menu ul li { display: grid;}
+    #header .sous-grille .cellule .carte .menu .dropdown { display: grid;}
 
-<!-- Contenu principal de la page -->
+    #header .sous-grille .cellule .carte .menu ul li a { text-align: center; padding: 15px; text-decoration: none; 
+        font-size: 17px; color: white; outline: none;}
+        #header .sous-grille .cellule .carte .menu .dropdown a { text-align: center; padding: 15px; text-decoration: none; 
+        font-size: 17px; color: white; outline: none;}
 
-	<main>
-	<div class="contact">
-		<section class="centrale">
-			
-				<form method="" action="" class="contact">
 
-				<h1 class="titre"> Me contacter :</h1>
+    #header .sous-grille .cellule .carte .menu ul li a:hover { color:  orangered;}
+    #header .sous-grille .cellule .carte .menu ul li a.active { color:  orangered;}
 
-					<table width="" class="contact">
-						<tr class="contact"><td class="label-contact"><label class="contact">Entreprise</label></td>
-							<td class="input-contact"><input type="text" name="nom" placeholder="Entreprise / Organisation / Raison sociale" class="contact"></td>
-						</tr>
+    #header .sous-grille .cellule.droite .carte .menu ul { justify-content: flex-end;}
 
-						<tr class="contact"><td class="label-contact"><label class="contact">Nom</label></td>
-							<td class="input-contact"><input type="text" name="nom" placeholder="Nom" class="contact"></td>
-						</tr>
+    html{ box-sizing: border-box;}
+</style>
+    
+    <header id="header">
+        <div class="sous-grille">
+            <div class="cellule gauche">
+                <div class="carte">
+                    <nav class="colonne menu navbar">
+                        <ul class="contenu">
+                            <!-- Le chemin d'accès "" est valide et indique la route par défaut. Assurez-vous qu'il n'y a pas d'espaces autour du chemin d'accès vide. -->
+                            <!-- <li><a href="#"><i class="fa fa-home"></i>
+                                <p>HOME</p></a></li>
+                            <li><a href="#"><i class="fa fa-user "></i>
+                                <p>CV</p></a></li>
+                            <li><a href="#"><i class="fa fa-eye "></i>
+                                <p>PROJETS</p></a></li>
+                            <li><a href="#"><i class="fa fa-envelope"></i>
+                                <p>CONTACT</p></a></li> -->
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+    
+            <div class="cellule droite">
+                <div class="carte">
+                    <nav class="colonne menu navbar">
+                        <ul class="contenu">
+                            <li><a href="index.html"><i class="fa fa-home"></i><p>ACCUEIL</p></a></li>
+                            <li><a href="cv.html"><i class="fa fa-user "></i><p>CV</p></a></li>
+                            <div class="dropdown"><a href="#"><i class="fa fa-eye "></i><p>PROJETS</p></a>
+                                <style>
+                                    #header .dropdown {  position: relative; display: inline-block;}
+                                    #header .dropdown-content {display: none ; position: absolute; background-color: #2F4F4F;
+                                        width: 110px; flex-direction: column; border: 1px solid white; }
+                                    #header .dropdown-content a {display: flex ;}
+                                    #header .dropdown:hover .dropdown-content {display: flex; flex-direction: column; background-color: #2F4F4F; top: 69px;}
+                                    #header .dropdown-content a:hover {background-color: #40826D;}
 
-						<tr class="contact"><td class="label-contact"><label class="contact">Prénom</label></td>
-							<td class="input-contact"><input type="text" name="prenom" placeholder="Prénom" class="contact"></td>
-						</tr>
+                                </style>
+                                <div class="dropdown-content">
+                                    <a href="ppe.html">PPE</a>
+                                    <a href="tp.html">TP</a>
+                                </div>
+                            </div>
+                            <li><a href="#" class="active"><i class="fa fa-envelope"></i><p>CONTACT</p></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
 
-						<tr class="contact"><td class="label-contact"><label class="contact">Email</label></td>
-							<td class="input-contact"><input type="email" name="mail" placeholder="exemple@email.com" class="contact"></td>
-						</tr>
+    
+    
+        
+        <style>
+            #section {display: grid; }
+            /* #section .sous-grille {border: 1px solid blue;} */
+            /* #section .sous-grille .cellule {border: 1px solid green;} */
+            #section .sous-grille .cellule .carte { margin: 64px; }
+            #section .sous-grille .cellule .carte ul { display: grid; list-style-type: none; }
+            #section .sous-grille .cellule .carte ul li{ padding-top: 10px;  }
+            #section .sous-grille .cellule .carte.formation ul :first-child {margin-bottom: 20px;}
+            #section .sous-grille .cellule .carte.formation ul li{padding: 40px; background-color: #EDEDED; }
+            #section .sous-grille .cellule .carte.formation ul li span {color:  #FF0000; font-weight: bold; font-size: 16px;}
+            #section .sous-grille .cellule .carte.formation ul h4 {font-size: 20px;}
+            #section .sous-grille .cellule .carte h1 {margin-bottom: 15px;}
+        </style>
+        
 
-						<tr class="contact"><td class="label-contact"><label class="contact">Téléphone</label></td>
-							<td class="input-contact"><input type="tel" name="tel" placeholder="(+33) 01 80 01 80 01" class="contact"></td>
-						</tr>
+        <style>
+            #section .sous-grille .cellule .carte.competences ul { display: grid; list-style-type: none; column-gap: 20px;
+                 grid-template-columns: 1fr 1fr 1fr 1fr; }
+            #section .sous-grille .cellule .carte.competences ul h4 {display: flex; text-align: center; padding: 20px; 
+                font-size: 20px; color: white; background-color: #2F4F4F; }
+            #section .sous-grille .cellule .carte.competences ul article {padding: 20px;  border: 1px solid #8B4513;  }
+            #section .sous-grille .cellule .carte.carte.competences ul li{padding: 40px; }
+            /* #section .sous-grille.competences {border: 1px solid #8B4513; } */
+        </style>
+        
 
-						<tr class="contact"><td class="label-contact"><label class="contact">Site web</label></td>
-							<td class="input-contact"><input type="url" name="web" placeholder="www.siteweb.com" class="contact"></td>
-						</tr>
+        <style>
+            #section .sous-grille .cellule .carte.langages ul {padding: 40px; }
+            #section .sous-grille .cellule .carte.langages ul li {display: flex; justify-content: center;}
+            #section .sous-grille .cellule .carte.langages ul li p {display: flex; justify-content: center; align-content: center; width: 70px; height: 4.5rem; border-radius: 50%;
+            box-shadow: 0 15px 24px ;}
+            #section .sous-grille .cellule .carte.langages ul li p img {width: 100%; border-radius: 50%;}
+            #section .sous-grille .cellule .carte.langages ul li div {display: flex; flex-direction: column; justify-content: center; align-items:flex-end;}
+            #section .sous-grille .cellule .carte.langages ul li div p {display: flex; flex-direction: column; justify-content: center; align-content: center; text-align: center;}
 
-						<tr class="contact"><td class="label-contact"><label class="contact">Message</label></td>
-							<td class="input-contact"><textarea placeholder="Votre message ici" class="contact"></textarea> </td>
-						</tr>
-					</table>
+            #section .sous-grille.langages {background-color: #EDEDED;   }
+        </style>
+       
+    </div>
 
-					<table class="contact">
-						<tr>
-							<td>
-								<button type="submit" value="Envoyer" id="envoie">Envoyer</button>
-								<button type="reset" value="Effacer" id="effacement">Effacer</button>
-							</td>
-						</tr>
-					</table>
-				</form>
-		</section>
-	</div>
 
-	</main>
+    <style>
+        #section .sous-grille .cellule .carte.contact {padding: 40px; border: 1px solid #8B4513;}
+        #section .sous-grille .cellule .carte.contact form{padding: 40px; border: 1px solid #8B4513;}
+        #section .sous-grille .cellule .carte.contact form input[type=text], select, textarea { width: 100%; padding: 12px; border: 1px solid #ccc; 
+            border-radius: 4px; box-sizing: border-box; margin-top: 6px; margin-bottom: 16px; resize: vertical }
+        #section .sous-grille .cellule .carte.contact form button { background-color: #2F4F4F;; color: white; padding: 12px 20px; border: none; 
+            border-radius: 4px; cursor: pointer; }
+        #section .sous-grille .cellule .carte.contact form button:hover { background-color: #45a049;}
+        #section .sous-grille .cellule .carte.contact ul {display: flex; flex-direction: column;}
+        #section .sous-grille .cellule .carte.contact ul li {display: flex; padding: 3px 7px; margin-top: 6px; }
+    </style>
+    <section id="section">
+        <div class="sous-grille">
+            <div class="cellule ">
+                <div class="carte contact">
+                    <h1 style="font-size: 30px;">CONTACT</h1>
+                    <!-- <hr style="width:140px"> -->
+                    <div style=" margin-top: 6px; margin-bottom: 16px; ">
+                        <ul>
+                            <li><p><i class="fa fa-map-marker"></i> Paris, FRANCE</p></li>
+                            <li><p><i class="fa fa-phone-alt fa-fw"></i> Téléphone: +00 151515</p></li>
+                            <li><p><i class="fa fa-envelope fa-fw"> </i> Email: contact@email.com</p></li>
+                        </ul>
+                    </div><br>
+                    <p style="text-align: center;"></p>
+                    <form action="/action_page.php" target="_blank" id="contact">
+                        <p><input type="text" placeholder="Nom" required name="Nom"></p>
+                        <p><input type="text" placeholder="Email" required name="Email"></p>
+                        <p><input type="text" placeholder="Objet" required name="Objet"></p>
+                        <p><input type="text" placeholder="Message" required name="Message"></p>
+                        <p>
+                          <button type="submit">
+                            <i class="fa fa-paper-plane"></i> ENVOYER
+                          </button>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
 
-	</div>
 
 <!-- Pied de page -->
+    <style>
+        footer {display: grid; background-color: #2F4F4F;}
+        footer .sous-grille {display: grid; grid-template-columns: 1fr; grid-template-rows: auto;}
+        footer .sous-grille .cellule { display: grid;}
+        footer .sous-grille .cellule .carte {display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 64px;}
+        footer .sous-grille .cellule .carte p {color: white;}
 
+    </style>
 	<footer>
-		<p class="pied">©opyright - 2021/2022</p>
+        <div class="sous-grille">
+            <div class="cellule creation">
+                <div class="carte">
+                    <p class="pied">©opyright - 2021/2023</p>
+                </div>
+            </div>
+        </div>
 	</footer>
-
-</div>  <!-- Fin contenu général -->
 </body>
 </html>

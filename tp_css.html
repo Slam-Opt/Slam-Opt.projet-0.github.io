@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Travaux pratiques - CSS</title>
+	<!-- <link rel="stylesheet" type="text/css" href="portfolio.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <style>
+        body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+    </style>
+
+
+<!-- Entête -->
+
+<style>
+    * { margin: 0px; padding: 0px; box-sizing: border-box; }
+    
+    #header {display: grid; position: sticky; top: 0rem;  transition: top 0.3s; background-color: #2F4F4F;}
+    #header .sous-grille {display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto; column-gap: 20px;}
+    #header .sous-grille .cellule { display: grid;}
+    #header .sous-grille .cellule .carte { margin-left: 64px; margin-right: 64px;}
+
+    #header .sous-grille .cellule .carte .menu { display: grid;}
+    #header .sous-grille .cellule .carte .menu ul { display: flex; list-style-type: none;}
+    #header .sous-grille .cellule .carte .menu ul li { display: grid;}
+    #header .sous-grille .cellule .carte .menu .dropdown { display: grid;}
+
+    #header .sous-grille .cellule .carte .menu ul li a { text-align: center; padding: 15px; text-decoration: none; 
+        font-size: 17px; color: white; outline: none;}
+        #header .sous-grille .cellule .carte .menu .dropdown a { text-align: center; padding: 15px; text-decoration: none; 
+        font-size: 17px; color: white; outline: none;}
+
+    #header .sous-grille .cellule .carte .menu ul li a:hover { color:  orangered;}
+    #header .sous-grille .cellule .carte .menu ul li a.active { color:  orangered;}
+
+    #header .sous-grille .cellule.droite .carte .menu ul { justify-content: flex-end;}
+    #header .sous-grille .cellule.gauche h1 { margin: auto;}
+
+    #header .sous-grille .cellule.droite .carte .menu .contenu li i { padding: 10px;}
+    #header .sous-grille .cellule.droite .carte .menu .dropdown i {padding: 10px;}
+
+    html{ box-sizing: border-box; margin-top: 10px;}
+</style>
+    
+    <header id="header" style="z-index: 2;">
+        <div class="sous-grille">
+            <div class="cellule gauche">
+                <h2 style="color: white; font-style: italic; margin-left: 64px; margin-right: 64px; padding: 15px;" >Mise en forme CSS</h2>
+                <div class="carte">
+                    <nav class="colonne menu navbar">
+                        <ul class="contenu header-2">
+                            <!-- <li><a><p>PRÉSENTATION DES MÉTIERS DE L'INFORMATIQUE</p></a></li> -->
+                            <li><a href="tp_html.html">HTML</a></li>
+                            <li><a href="tp_formulaire.html">Formulaire</a></li>
+                            <li><a href="tp_iframe.html">iFrame</a></li>
+                            <li><a href="tp_css.html" class="active">CSS</a></li>
+                            <li><a href="tp_javascript.html">JavaScript</a></li>
+                            <li><a href="tp_mysql.html">MySQL</a></li>
+                            <li><a href="tp_php.html">PHP</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+    
+            <div class="cellule droite">
+                <div class="carte">
+                    <nav class="colonne menu navbar">
+                        <ul class="contenu">
+                            <li><a href="index.html"><i class="fa fa-home"></i><p>ACCUEIL</p></a></li>
+                            <li><a href="cv.html"><i class="fa fa-user "></i><p>CV</p></a></li>
+                            <div class="dropdown active"><a href="#"><i class="fa fa-eye "></i><p>PROJETS</p></a>
+                                <style>
+                                    #header .dropdown {  position: relative; display: inline-block; height: 7rem;}
+                                    #header .dropdown-content {display: none ; position: absolute; background-color: #2F4F4F;
+                                        width: 110px; flex-direction: column; border: 1px solid white; }
+                                    #header .dropdown-content a {display: flex ;}
+                                    #header .dropdown:hover .dropdown-content {display: flex; flex-direction: column; background-color: #2F4F4F; top: 112px;}
+                                    #header .dropdown-content a:hover {color: orangered; background-color: #40826D;}
+
+                                </style>
+                                <div class="dropdown-content">
+                                    <a href="ppe.html">PPE</a>
+                                    <a href="#" class="active">TP</a>
+                                </div>
+                            </div>
+                            <li><a href="contact.html"><i class="fa fa-envelope"></i><p>CONTACT</p></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <script>
+            var prevScrollY = window.pageYOffset;
+            var header = document.getElementById("header");
+            
+            window.onscroll = function() {
+            var currentScrollY = window.pageYOffset;
+            if (prevScrollY > currentScrollY) {
+                header.style.top = "0";
+            } else {
+                header.style.top = "-34px";
+            }
+            prevScrollY = currentScrollY;
+            }
+        </script>
+    </header>
+
+    <header id="header">
+        <div class="sous-grille">
+    
+        </div>
+        <script>
+            var prevScrollY = window.pageYOffset;
+            var header = document.getElementById("header");
+            
+            window.onscroll = function() {
+            var currentScrollY = window.pageYOffset;
+            if (prevScrollY > currentScrollY) {
+                header.style.top = "0";
+            } else {
+                header.style.top = "-43px";
+            }
+            prevScrollY = currentScrollY;
+            }
+        </script>
+    </header>
+
+    
+    <style>
+        #main {display: grid;  min-height: 40vw;}
+    </style>
+    <main id="main">
+        <style>
+            #section {display: grid; }
+            #section .sous-grille {display: grid; }
+            /*#section .sous-grille .cellule {display: ; border: 1px solid green;} */
+            #section .sous-grille .cellule .carte {display: grid; margin: 64px; border: 1px solid #CECECE;  
+                /* background-color: #f5f5f5;  */
+              }
+            #section .sous-grille .cellule .carte.titre {border: 1px solid green; display: grid; margin: 64px;  border: 1px solid #8B4513; }
+            #section .sous-grille .cellule .carte .contenu {display: flex; flex-direction: column;  }
+            #section .sous-grille .cellule .carte .contenu.image {display: flex; flex-direction: column;    }
+            #section .sous-grille .cellule .carte .contenu.text {margin: 20px;}
+            #section .sous-grille .cellule .carte .contenu h1 {display: flex; flex-direction: column; padding: 20px; background-color: #CECECE; }
+            #section .sous-grille .cellule .carte .contenu p {display: flex; flex-direction: column; padding: 20px; margin: auto; background-color: white; }
+            #section .sous-grille .cellule .carte .contenu div {display: flex; flex-direction: column;  /*border: 1px solid  #CECECE; */}
+
+
+            #section .sous-grille .cellule .carte .contenu article{
+                display: flex; flex-direction: column; align-self: center; margin:auto; width: 450px;  }
+            #section .sous-grille .cellule .carte .contenu article img {display: flex; flex-direction: column; align-self: center; width: 100%;}
+        </style>
+        <section id="section">
+            <div class="sous-grille"> 
+                <div class="cellule ">
+                    <div class="carte ">
+                        <style>
+                            #section .sous-grille .cellule .carte .tp1 h1 {margin-bottom: 10px;}
+                            #section .sous-grille .cellule .carte .tp1 div {display: grid; grid-template-columns: 1fr 1fr 1fr; column-gap: 20px;}
+                            #section .sous-grille .cellule .carte .tp1 div :nth-child(3) {  border: 1px solid  #CECECE;}
+                            #section .sous-grille .cellule .carte .tp1 div :nth-child(3) img 
+                            {display: flex; flex-direction: column; margin: auto; width: 400px; }
+                            
+                            #section .sous-grille .cellule .carte .tp1 div :nth-child(3) figcaption
+                            {display: flex; flex-direction: column; 
+                                justify-content: center; align-items: center; padding: 10px; font-weight: bold; border: none; }
+                                
+                            #section .sous-grille .cellule .carte .tp1 div p span 
+                            {display: flex; flex-direction: column; 
+                                justify-content: center; align-items: center; padding: 10px; font-weight: bold; margin-bottom: 10px;}
+                        </style>
+                        <div class="contenu text tp1">
+                            <h1>TP n°1</h1>
+                            <div>
+                                <p style="background-color: #E1CE9A;">
+                                    <span>Article 1</span> dolor sit amet consectetur adipisicing elit. 
+                                    Sequi deserunt id pariatur nemo magnam cum consequuntur, 
+                                    amet beatae quasi odit placeat eos non accusamus sapiente, inventore voluptas incidunt, vero distinctio.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Sequi deserunt id pariatur nemo magnam cum consequuntur, 
+                                    amet beatae quasi odit placeat eos non accusamus sapiente, inventore voluptas incidunt, vero distinctio.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Sequi deserunt id pariatur nemo magnam cum consequuntur, 
+                                    amet beatae quasi odit placeat eos non accusamus sapiente, inventore voluptas incidunt, vero distinctio.
+                                </p>
+
+                                <p style="background-color: #FEE7F0;">
+                                    <span>Article 2</span>dolor sit amet consectetur adipisicing elit. 
+                                    Sequi deserunt id pariatur nemo magnam cum consequuntur, 
+                                    amet beatae quasi odit placeat eos non accusamus sapiente, inventore voluptas incidunt, vero distinctio.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Sequi deserunt id pariatur nemo magnam cum consequuntur, 
+                                    amet beatae quasi odit placeat eos non accusamus sapiente, inventore voluptas incidunt, vero distinctio.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Sequi deserunt id pariatur nemo magnam cum consequuntur, 
+                                    amet beatae quasi odit placeat eos non accusamus sapiente, inventore voluptas incidunt, vero distinctio.
+                                </p>
+
+                                <figure><br>
+                                    <img src="mickey.gif" alt="" >
+                                    <figcaption>Article 3</figcaption>
+                                </figure>
+                            </div>
+                        </div>                   
+                    </div>
+
+                    <div class="carte ">
+                        <div class="contenu text">
+                            <h1>TP n°2</h1>
+                            <style>
+                                #section .sous-grille .cellule .carte .contenu .css_tp2{border: solid red; border-radius: 30px; padding: 15px; margin-top: 10px;}
+                                #section .sous-grille .cellule .carte .contenu .css_tp2 .article_1
+                                {border: solid green; border-radius: 30px; padding: 15px; background-color: #FDE9E0;}
+                                #section .sous-grille .cellule .carte .contenu .css_tp2 .article_1 p {background-color: #FDE9E0;}
+
+                                #section .sous-grille .cellule .carte .contenu .css_tp2 .article_2 {border: solid green; border-radius: 30px; padding: 15px;}
+                                #section .sous-grille .cellule .carte .contenu .css_tp2 h4 { padding-left: 20px ; margin-top: 10px;}
+                                #section .sous-grille .cellule .carte .contenu .css_tp2 .conteneur {padding-top: 15px; background-color: white;}
+                            </style>
+                            <div class="css_tp2">
+                                <h4 style="font-size: 25px;"> Exemple de mise en forme de boîtes</h4>
+                                <div class="conteneur">
+                                    <h4 style="font-size: 20px; padding-bottom: 10px ;">
+                                        Voici un article sur <em>Michel de Montaigne</em>
+                                    </h4>
+                                    <div class="article_1">
+                                        <p>
+                                        Michel de Montaigne, de son nom complet Michel Eyquem de Montaigne, est né en 1533 en Dordogne dans une famille de riches commerçants anoblie. 
+                                        Son père veille à son éducation en suivant les principes humanistes développés par Erasme. 
+                                        Le jeune Montaigne est éduqué sans contraintes et se construit une solide culture livresque. 
+                                        Il se dirige vers des études de droit et devient magistrat à Bordeaux à l'âge de 22 ans. 
+                                        Il travaille au Parlement jusqu'en 1570 puis se retire dans son château pour y vivre en seigneur. 
+                                        C'est là qu'il rédige les Essais à partir de 1572 jusqu'à sa mort vingt ans plus tard, tout en continuant d'administrer son domaine seigneurial, 
+                                        entreprenant des voyages et s'occupant de la mairie de Bordeaux.
+                                        </p>
+                                    <p>
+                                        Les Essais sont publiés au fur et à mesure de l'écriture des livres et connaissent un fort succès. 
+                                        Leur contenu est directement lié à la vie que mène Montaigne, à ses expériences de la guerre, des voyages, 
+                                        à l'éducation qu'il a reçue. Il se portraitise lui-même en toute honnêteté, inventant un nouveau genre littéraire et 
+                                        un nouveau style, apparemment naturel mais très travaillé. Ses Essais livrent toute la sagesse humaniste à laquelle Montaigne 
+                                        était arrivé. Il meurt en 1592 à 59 ans.  
+                                    </p>
+                                        <p>
+                                            À vingt-et-un ans, Montaigne fut nommé conseiller au parlement de Bordeaux ; 
+                                            s’il eut été ambitieux, il eût pu arriver aux plus grands honneurs ; mais « les affaires publiques n’étaient pas de son gibier », dit-il. 
+                                            Pendant qu’il était conseiller à Bordeaux, il se lia d’une tendre amitié avec un autre conseiller de la cour, nommé Étienne La Boëtie. 
+                                            Ce jeune magistrat, qui mourut à l’âge de trente-deux ans, avait composé, dès l’âge de seize ans, un Traité de la servitude volontaire, 
+                                            qui lui avait acquis une grande réputation de savoir. Montaigne a immortalisé son nom par les belles pages qu’il a écrites sur l’amitié 
+                                            qui les unissait. « Si on me presse de dire pourquoi je l’aimais, je sens que cela ne se peut exprimer qu’en répondant : Parce que c’était lui, 
+                                            parce que c’était moi. Nous nous cherchions avant que de nous être vus ; nous nous embrassions par nos noms ; et à notre première rencontre, 
+                                            qui fut par hasard en une grande fête et compagnie de ville, nous nous trouvâmes si connus, si obligés entre nous, 
+                                            que rien dès lors ne nous fut si proche que l’un à l’autre. »
+                                        </p>
+                                    </div>
+    
+                                    <h4 style="font-size: 20px; padding-top: 20px; padding-bottom: 10px ;">Et voici un autre article sur <em>Montaigne</em></h4>
+                                    <div class="article_2">
+                                        <p class="p1a2"> 
+                                            On devine combien un cœur si tendre dut souffrir des malheurs de son temps. Il eut la douleur d’être témoin des massacres de 
+                                            la Saint Barthélemy (1572), des fureurs de la Ligue, des exécrables atrocités commises dans les guerres de religion. 
+                                            Il fut envoyé aux États généraux de Blois, à l’époque où le duc et le cardinal de Guise furent assassinés par Henri III. 
+                                            Le cœur rempli de dégoût, il préféra dès lors à tous les honneurs une vie paisible ; il se retira dans son manoir et contempla de là, 
+                                            en philosophe, les événements qui s’accomplissaient autour de lui. Là, auprès de sa femme et de sa fille, il se livra à la culture des lettres. 
+                                            Quelques amis lui conseillèrent d’écrire l’histoire de son temps. « L’histoire est dure à écrire, dit-il, et surtout l’histoire contemporaine. 
+                                            D’ailleurs, en fait d’ouvrage, j’ai l’haleine courte, et une narration étendue n’est point mon fait. 
+                                            J’aime mieux me faire historien au petit pied. Je me retire et me renfonce en moi-même, je raconte mes pensées et mes sentiments, 
+                                            devisant sur l’homme qui est un sujet ondoyant et divers. Voilà l’histoire telle que je me la suis faite, taillée à ma mesure,
+                                             n’ayant ni chronologie, ni date, ni patrie. » Cette histoire, ce sont ses confessions, auxquelles il donna le nom d’Essais.
+                                        </p>
+                            
+                                        <p class="p2a2">
+                                            Dans ce livre, Montaigne a voulu, avant tout, peindre l’homme en se peignant lui-même. Il y ajoute des réflexions personnelles 
+                                            qu’il émaille d’un grand nombre de citations grecques et latines ; ces citations rendent la lecture du livre un peu fatigante. 
+                                            La narration n’est point suivie, l’auteur commence un chapitre sur un sujet, mais bientôt il abandonne son idée, et le chapitre 
+                                            se termine sur un sujet tout à fait différent. Il parle de tout à propos de lui, et de lui à propos de tout ; il se pose mille questions, 
+                                            les résout à sa manière, sans donner toutefois sa solution pour la meilleure, et peut-être, un peu plus loin, la résoudra-t-il tout autrement.
+                                             Aussi Guez de Balzac a-t-il dit de lui, avec raison : « Montaigne sait bien ce qu’il dit, mais il ne sait pas ce qu’il va dire. » 
+                                             Du reste, dans ce désordre, il y a tant d’esprit, de science, de profondeur, de pensées ingénieuses et justes, qu’on est heureux de 
+                                             le suivre partout où il va ; il parle si agréablement qu’on regrette de le quitter ; c’est le causeur le plus instruit, 
+                                             le plus spirituel qu’on puisse rencontrer.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <style>
+                        div[class="tableau-tp3"]
+                        {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            margin-top: 30px;
+                        }
+
+                        table[class="tp3"] {
+                            border: 3px solid  #83A697;
+                            width: 1500px;
+                            background-color: #E1CE9A;
+
+                        }
+
+                        th[class="tp3"] {
+                            font-family: arial;
+                            font-size: 1.20em;
+                            text-align: center;
+                            border: 1px solid #000099;
+                            background-image: url('');
+                        }
+
+                        td[class="tp3"]
+                        {
+                            font-family: verdana;
+                            font-size: 0.80em;
+                            text-align: center;
+                            border: 1px solid #000099;
+                        }
+                    </style>
+                    <div class="carte ">
+                        <div class="contenu text">
+                            <h1>TP n°3</h1>
+                            <!-- <div> -->
+                                <div class="tableau-tp3">
+                                    <section class="tp3">
+                            
+                                    <table class="tp3">
+                                        <tr class="tp3">
+                                            <th class="tp3">Année 2011</th>
+                                            <th class="tp3">Année 2012</th>
+                                            <th class="tp3">Année 2013</th>
+                                        </tr>
+                    
+                                        <tr class="tp3">
+                                            <td class="tp3">100</td>
+                                            <td class="tp3">200</td>
+                                            <td class="tp3">150</td>
+                                        </tr>
+                                    </table>
+                                    </section>
+                                <!-- </div> -->
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Sequi deserunt id pariatur nemo magnam cum consequuntur, 
+                                    amet beatae quasi odit placeat eos non accusamus sapiente, inventore voluptas incidunt, vero distinctio.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Sequi deserunt id pariatur nemo magnam cum consequuntur, 
+                                    amet beatae quasi odit placeat eos non accusamus sapiente, inventore voluptas incidunt, vero distinctio.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Sequi deserunt id pariatur nemo magnam cum consequuntur, 
+                                    amet beatae quasi odit placeat eos non accusamus sapiente, inventore voluptas incidunt, vero distinctio.
+                                </p>
+                            </div>
+                        </div>          
+                    </div>
+
+                    <style>
+                    table[class="tp4"]
+                    {
+                        border: 3px solid #C7D0CC;
+                        width: 1500px;
+                        background-color: #C7D0CC;
+                        margin: auto ;
+                    }
+
+
+                    th[class="titretableau"]
+                    {
+                        font-family: arial;
+                        font-size: 1.20em;
+                        text-align: center;
+                        border: 1px solid #000099;
+                        background-image: url('');
+                        height: 10vw;
+                    }
+
+                    td[class="pays"], td[class="texte"]
+                    {
+                        font-family: verdana;
+                        font-size: 0.80em;
+                        text-align: center;
+                        border: 1px solid #000099;
+                        width: 50%;
+                    }
+
+                    td.texte{vertical-align: bottom;
+                    }
+        
+                    img[class="pays"]
+                    {
+                        width:300px;
+                    }                        
+                    </style>
+                    <div class="carte ">
+                        <div class="contenu text">
+                            <h1>TP n°4</h1>
+                            <div>
+                                <div class="tableau-tp3">
+                                    <section class="tp3">
+                                    <table class="tp4">
+                                        <tr>
+                                            <th colspan="2" class="titretableau"> <h1 style="background-color: #C7D0CC;">Top 50 Rock </h1></th>
+                                        </tr>
+                                        <tr class="france">
+                                            <td rowspan="2" class="pays"> <img src="france.jpg" class="pays"></td>
+                                            <td class="texte"> Ombre Rouge - L'instinct</td>
+                                        </tr>
+                                        <tr class="france">
+                                            <td class="texte">Noir Désir - Des Visages des figures</td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="4" class="pays"><img src="amerique.jpg" class="pays"></td>
+                                        </tr>
+                                        <tr class="amerique">
+                                            <td class="texte">Dizzee Rascal - Holiday</td>
+                                        </tr>
+                                        <tr class="amerique">
+                                            <td class="texte">Beyonce -Sweet Dreams</td>
+                                        </tr>
+                                        <tr class="amerique">
+                                            <td class="texte">Mickael Jackson - Thriller</td>
+                                        </tr>
+                                    </table>
+                                    </section>
+                                </div>
+                                <p style="margin-left:100px; margin-right: 100px;">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Sequi deserunt id pariatur nemo magnam cum consequuntur, 
+                                    amet beatae quasi odit placeat eos non accusamus sapiente, inventore voluptas incidunt, vero distinctio.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Sequi deserunt id pariatur nemo magnam cum consequuntur, 
+                                    amet beatae quasi odit placeat eos non accusamus sapiente, inventore voluptas incidunt, vero distinctio.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Sequi deserunt id pariatur nemo magnam cum consequuntur, 
+                                    amet beatae quasi odit placeat eos non accusamus sapiente, inventore voluptas incidunt, vero distinctio.
+                                </p>
+                            </div>
+                        </div> 
+                        <!-- <div class="contenu image">
+                            <article>
+                                <img src="base.jpg" alt="" >
+                            </article>
+                        </div>                   -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+
+
+<!-- Pied de page -->
+    <style>
+        footer {display: grid; background-color: #2F4F4F;}
+        footer .sous-grille {display: grid; grid-template-columns: 1fr; grid-template-rows: auto;}
+        footer .sous-grille .cellule { display: grid;}
+        footer .sous-grille .cellule .carte {display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 64px;}
+        footer .sous-grille .cellule .carte p {color: white;}
+
+    </style>
+	<footer>
+        <div class="sous-grille">
+            <div class="cellule creation">
+                <div class="carte">
+                    <p class="pied">©opyright - 2021/2023</p>
+                </div>
+            </div>
+        </div>
+	</footer>
+</body>
+</html>
