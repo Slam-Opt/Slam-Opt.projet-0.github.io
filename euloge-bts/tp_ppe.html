@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Projets personnalisés encadrés</title>
+	<!-- <link rel="stylesheet" type="text/css" href="portfolio.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <style>
+        body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+    </style>
+
+
+<!-- Entête -->
+
+<style>
+    * { margin: 0px; padding: 0px; box-sizing: border-box; }
+    
+    #header {display: grid; position: sticky; top: 0rem;  transition: top 0.3s; background-color: #2F4F4F;}
+    #header .sous-grille {display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto; column-gap: 20px;}
+    #header .sous-grille .cellule { display: grid;}
+    #header .sous-grille .cellule .carte { margin-left: 64px; margin-right: 64px;}
+
+    #header .sous-grille .cellule .carte .menu { display: grid;}
+    #header .sous-grille .cellule .carte .menu ul { display: flex; list-style-type: none;}
+    #header .sous-grille .cellule .carte .menu ul li { display: grid;}
+    #header .sous-grille .cellule .carte .menu .dropdown { display: grid;}
+
+    #header .sous-grille .cellule .carte .menu ul li a { text-align: center; padding: 15px; text-decoration: none; 
+        font-size: 17px; color: white; outline: none;}
+        #header .sous-grille .cellule .carte .menu .dropdown a { text-align: center; padding: 15px; text-decoration: none; 
+        font-size: 17px; color: white; outline: none;}
+
+    #header .sous-grille .cellule .carte .menu ul li a:hover { color:  orangered;}
+    #header .sous-grille .cellule .carte .menu ul li a.active { color:  orangered;}
+
+    #header .sous-grille .cellule.droite .carte .menu ul { justify-content: flex-end;}
+    #header .sous-grille .cellule.gauche h1 { margin: auto;}
+
+    #header .sous-grille .cellule.droite .carte .menu .contenu li i { padding: 10px;}
+    #header .sous-grille .cellule.droite .carte .menu .dropdown i {padding: 10px;}
+
+    html{ box-sizing: border-box; margin-top: 10px;}
+</style>
+    
+    <header id="header" style="z-index: 2;">
+        <div class="sous-grille">
+            <div class="cellule gauche">
+                <h2 style="color: white; font-style: italic; margin-left: 64px; margin-right: 64px; padding: 15px;" >Projets personnalisés encadrés</h2>
+                <div class="carte">
+                    <nav class="colonne menu navbar">
+                        <ul class="contenu header-2">
+                            <!-- <li><a><p>PRÉSENTATION DES MÉTIERS DE L'INFORMATIQUE</p></a></li> -->
+                            <li><a href="#">Menu déroulant</a></li>
+                            <li><a href="#qcm">QCM</a></li>
+                            <li><a href="#module">Module de facturation</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+    
+            <div class="cellule droite">
+                <div class="carte">
+                    <nav class="colonne menu navbar">
+                        <ul class="contenu">
+                            <li><a href="index.html"><i class="fa fa-home"></i><p>ACCUEIL</p></a></li>
+                            <li><a href="cv.html"><i class="fa fa-user "></i><p>CV</p></a></li>
+                            <div class="dropdown active"><a href="#"><i class="fa fa-eye "></i><p>PROJETS</p></a>
+                                <style>
+                                    #header .dropdown {  position: relative; display: inline-block; height: 7rem;}
+                                    #header .dropdown-content {display: none ; position: absolute; background-color: #2F4F4F;
+                                        width: 110px; flex-direction: column; border: 1px solid white; }
+                                    #header .dropdown-content a {display: flex ;}
+                                    #header .dropdown:hover .dropdown-content {display: flex; flex-direction: column; background-color: #2F4F4F; top: 112px;}
+                                    #header .dropdown-content a:hover {color: orangered; background-color: #40826D;}
+                                </style>
+                                <div class="dropdown-content">
+                                    <a href="#">PPE</a>
+                                    <a href="tp.html" class="active">TP</a>
+                                </div>
+                            </div>
+                            <li><a href="contact.html"><i class="fa fa-envelope"></i><p>CONTACT</p></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <script>
+            var prevScrollY = window.pageYOffset;
+            var header = document.getElementById("header");
+            
+            window.onscroll = function() {
+            var currentScrollY = window.pageYOffset;
+            if (prevScrollY > currentScrollY) {
+                header.style.top = "0";
+            } else {
+                header.style.top = "-34px";
+            }
+            prevScrollY = currentScrollY;
+            }
+        </script>
+    </header>
+
+    <header id="header">
+        <div class="sous-grille">
+    
+        </div>
+        <script>
+            var prevScrollY = window.pageYOffset;
+            var header = document.getElementById("header");
+            
+            window.onscroll = function() {
+            var currentScrollY = window.pageYOffset;
+            if (prevScrollY > currentScrollY) {
+                header.style.top = "0";
+            } else {
+                header.style.top = "-43px";
+            }
+            prevScrollY = currentScrollY;
+            }
+        </script>
+    </header>
+
+    
+    <style>
+        #main {display: grid;  min-height: 40vw;}
+    </style>
+    <main id="main">
+        <style>
+            #section {display: grid; }
+            #section .sous-grille {display: grid; }
+            /*#section .sous-grille .cellule {display: ; border: 1px solid green;} */
+            #section .sous-grille .cellule .carte {display: grid; margin: 64px; border: 1px solid #CECECE;  
+                /* background-color: #f5f5f5;  */
+              }
+            #section .sous-grille .cellule .carte.titre {border: 1px solid green; display: grid; margin: 64px;  border: 1px solid #8B4513; }
+            #section .sous-grille .cellule .carte .contenu {display: flex; flex-direction: column; border: 1px solid  #CECECE; }
+            #section .sous-grille .cellule .carte .contenu.image {display: flex; flex-direction: column;    }
+            #section .sous-grille .cellule .carte .contenu.text {margin: 20px;}
+            #section .sous-grille .cellule .carte .contenu h1 {display: flex; flex-direction: column; padding: 20px; background-color: #CECECE; }
+            #section .sous-grille .cellule .carte .contenu p {display: flex; flex-direction: column; padding: 20px; margin: auto; background-color: white; }
+            #section .sous-grille .cellule .carte .contenu div {display: flex; flex-direction: column;   }
+            #section .sous-grille .cellule .carte .contenu nav {display: flex; flex-direction: column; }
+        </style>
+        <section id="section">
+            <div class="sous-grille"> 
+                <div class="cellule ">
+                    <style>
+                        nav[class="deroulant"] > ul
+                    {
+                        margin: 0px;
+                        padding: 0px;
+                    }
+
+                    nav[class="deroulant"] li
+                    {
+                        list-style-type: none;
+                    }
+
+                    nav[class="deroulant"] > ul > li
+                    {
+                        float: left;
+                    }
+
+                    .sous-menu 
+                    {
+                        display: none;   /*On cache les sous menus */
+                    }
+
+
+                    nav[class="deroulant"] input[type="checkbox"]
+                    {
+                        display: none;
+                    }
+
+                    .menu-mobile
+                    {
+                        display: none;   /*On cache le menu mobile */
+                    }
+
+
+                    nav[class="deroulant"] 
+                    {
+                        width: 100%;
+                        background-color: #424558;
+                    }
+
+
+                    nav[class="deroulant"] > ul > li
+                    {
+                        float: left;
+                        position: relative;
+                    }
+
+                    nav[class="deroulant"] ul::after
+                    {
+                        content: "";
+                        display: table;
+                        clear: both;
+                    }
+
+                    nav[class="deroulant"] a
+                    {
+                        display: inline-block;
+                        text-decoration: none;
+                    }
+
+                    nav[class="deroulant"] > ul > li > a
+                    {
+                        padding: 20px 30px;
+                        color: #FFF;
+                    }
+
+                    nav[class="deroulant"] li:hover .sous-menu
+                    {
+                        display: inline-block;
+                        position: absolute;
+                        top: 100%;
+                        left: 0px;
+                        padding: 0px;z-index: 100000;
+                    }
+
+                    .sous-menu li
+                    {
+                        border-bottom: 1px solid #CCC;
+                    }
+
+                    .sous-menu li a
+                    {
+                        padding: 15px 30px;
+                        font-size: 13px;
+                        color: #222538;
+                        width: 270px;
+                    }
+
+                    .menu-html:hover{
+                        border-top: 5px solid #e44d26;
+                        background-color: RGBa(228, 77, 38, 0.15);
+                    }
+
+                    .menu-css:hover{
+                        border-top: 5px solid #e44d26;
+                        background-color: RGBa(000, 112, 192, 0.15);
+                    }
+
+                    .menu-js:hover{
+                        border-top: 5px solid #e44d26;
+                        background-color: RGBa(241, 211, 79, 0.15);
+                    }
+
+                    .menu-contact:hover{
+                        border-top: 5px solid #e44d26;
+                        background-color: RGBa(220, 220, 220, 0.15);
+                    }
+
+                    nav[class="deroulant"] > ul > li:hover a
+                    {
+                        padding: 15px 30px 20px 30px;
+                    }
+
+                    .menu-html .sous-menu{
+                        background-color: RGB(230, 100, 40);
+                    }
+
+                    .menu-css .sous-menu{
+                        background-color: RGB(000, 160, 240);
+                    }
+
+                    .menu-js .sous-menu{
+                        background-color: RGB(251, 216, 99);
+                    }
+
+
+                    .sous-menu li:hover a{
+                        color: #EEE;
+                        font-weight: bold;
+                    }
+
+                    .menu-html .sous-menu li :hover{
+                        background-color: RGB(210, 77, 60);
+                    }
+
+                    .menu-css .sous-menu li:hover{
+                        background-color: RGB(000, 115, 200);
+                    }
+
+                    .menu-js .sous-menu li:hover{
+                        background-color: RGB(200, 165, 75);
+                    }
+
+
+                    nav[class="deroulant"] input[type=checkbox]:checked ~ ul{
+                        display: block;
+                    }
+
+
+                    @media screen and (max-width:  680px)
+                    {
+                        .menu-mobile 
+                        {
+                            display: block;
+                            color: #fff;
+                            background-color: rgba(29, 197, 151, 0.97);
+                            text-align: center;	
+                            padding: 12px 0;
+                        }
+
+                        nav[class="deroulant"] ul{
+                            display: none;
+                        }
+
+                        nav[class="deroulant"] ul li, nav[class="deroulant"] ul li a
+                        {
+                            width: 100%;
+                            text-align: center;
+                        }
+
+                        nav[class="deroulant"] ul li a, nav[class="deroulant"] ul li:hover a
+                        {
+                            padding: 10px 0px 10px 0px;
+                        }
+
+                        nav[class="deroulant"] li:hover .sous-menu{
+                            display: block;
+                            position: static;
+                        }
+                    }
+                    </style>
+                    <div class="carte deroulant">
+                        <div class="contenu text">
+                            <h1>Le menu déroulant</h1>
+                                    <nav class="deroulant">
+                                    
+                                    <label for="menu-mobile" class="menu-mobile">Menu</label>
+                                    <input type="checkbox" class="checkbox" id="menu-mobile" role="button">
+                                        
+                        
+                                    <ul class="menu-deroulant">
+                                        <li class="menu-html"> <a href="#" class="deroulant">HTML</a>
+                                            <ul class="sous-menu">
+                                                <li class="li"> <a href="#" class="a">HTML</a></li>
+                                                <li class="li"> <a href="#" class="a">CSS </a></li>
+                                                <li class="li"> <a href="#" class="a">JavaScript </a></li>
+                                                <li class="li"> <a href="#" class="a">Contact </a></li>
+                                            </ul>
+                                        </li>
+                                        
+                        
+                                        
+                                        <li class="menu-css"> <a href="#" class="a">CSS</a>
+                                            <ul class="sous-menu">
+                                                <li class="li"> <a href="#" class="a">HTML</a></li>
+                                                <li class="li"> <a href="#" class="a">CSS </a></li>
+                                                <li class="li"> <a href="#" class="a">JavaScript </a></li>
+                                                <li class="li"> <a href="#" class="a">Contact </a></li>
+                                            </ul>
+                                        </li>
+                                        
+                        
+                                        
+                                        <li class="menu-js"> <a href="#" class="a">JavaScript</a> 
+                                            <ul class="sous-menu">
+                                                <li class="li"> <a href="#" class="a">HTML</a></li>
+                                                <li class="li"> <a href="#" class="a">CSS </a></li>
+                                                <li class="li"> <a href="#" class="a">JavaScript </a></li>
+                                                <li class="li"> <a href="#" class="a">Contact </a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-contact"> <a href="contact.html" class="a">Contact</a> </li>
+                                    </ul>
+                                </nav>
+                                <div>
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                        Sequi deserunt id pariatur nemo magnam cum consequuntur, 
+                                        amet beatae quasi odit placeat eos non accusamus sapiente, inventore voluptas incidunt, vero distinctio.
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                        Sequi deserunt id pariatur nemo magnam cum consequuntur, 
+                                        amet beatae quasi odit placeat eos non accusamus sapiente, inventore voluptas incidunt, vero distinctio.
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                        Sequi deserunt id pariatur nemo magnam cum consequuntur, 
+                                        amet beatae quasi odit placeat eos non accusamus sapiente, inventore voluptas incidunt, vero distinctio.
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                        Sequi deserunt id pariatur nemo magnam cum consequuntur, 
+                                        amet beatae quasi odit placeat eos non accusamus sapiente, inventore voluptas incidunt, vero distinctio.
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                        Sequi deserunt id pariatur nemo magnam cum consequuntur, 
+                                        amet beatae quasi odit placeat eos non accusamus sapiente, inventore voluptas incidunt, vero distinctio.
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                        Sequi deserunt id pariatur nemo magnam cum consequuntur, 
+                                        amet beatae quasi odit placeat eos non accusamus sapiente, inventore voluptas incidunt, vero distinctio.
+                                    </p>
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                        Sequi deserunt id pariatur nemo magnam cum consequuntur, 
+                                        amet beatae quasi odit placeat eos non accusamus sapiente, inventore voluptas incidunt, vero distinctio.
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                        Sequi deserunt id pariatur nemo magnam cum consequuntur, 
+                                        amet beatae quasi odit placeat eos non accusamus sapiente, inventore voluptas incidunt, vero distinctio.
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                        Sequi deserunt id pariatur nemo magnam cum consequuntur, 
+                                        amet beatae quasi odit placeat eos non accusamus sapiente, inventore voluptas incidunt, vero distinctio.
+                                    </p>
+                                </div>
+                        </div>                   
+                    </div>
+
+                    <style>
+                        section[class="qcm"]
+                    {
+                        display: flex;
+                        flex-direction: column;
+                        min-height: 55vh;
+                    }
+
+                    form[class="qcm"]
+                    {
+                        display: flex;
+                        flex-direction: column;
+                        font-size: 0.8rem;
+                    }
+
+                    label[class="qcm"]
+                    {
+                        margin: auto;
+                        width: 45%;
+                        padding: 9px ;
+                    }
+
+
+                    p[class="t-qcm"]
+                    {
+                        display: flex;
+                        width: 100%;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+                        color: orangered;
+                        font-weight: bolder;
+                        font-style: italic;
+                    }
+
+                    ol[class="qcm"]
+                    {
+                        display: flex;
+                        flex-direction: column;
+                        margin: auto;
+                        width: 32%;
+                    }
+
+
+                    table[class="boutons"]
+                    {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                        margin-top: 1.5rem;
+                    }
+
+                    h3[class="titre"]
+                    {
+                        display: flex;
+                        justify-content: flex-end;
+                        width: 100%;
+                        height: 2em;
+                        color: #7E3300;
+                    }
+
+                   
+                    #section .sous-grille .cellule .carte.qcm form  {display: grid;}
+                    #section .sous-grille .cellule .carte.qcm form .div-ul  {display: grid; grid-template-columns: 1fr 1fr 1fr;}
+                    #section .sous-grille .cellule .carte.qcm form .div-ul ul  { width: 400px; display: grid; }
+                    #section .sous-grille .cellule .carte.qcm form .div-ul ul li { margin-left: 100px; }
+
+                    #section .sous-grille .cellule .carte.qcm form .options { margin-left: 50px; }
+
+
+                    #section .sous-grille .cellule .carte.qcm form .div-ul ul button { border:  1px solid blue; padding: 10px; }
+                    #section .sous-grille .cellule .carte.qcm .bouton  {display: grid; padding: 40px;}
+                    #section .sous-grille .cellule .carte.qcm .bouton ul  {display: flex; justify-content: center; align-items: center;}
+                    #section .sous-grille .cellule .carte.qcm .bouton ul li  { list-style-type: none; margin-top: 10px;}
+                    #section .sous-grille .cellule .carte.qcm .bouton ul button  {padding: 5px 17px; margin: 5px; cursor: pointer; }
+                    </style>
+                    <div class="carte qcm" id="qcm">
+                        <div class="contenu text">
+                            <h1>Un QCM</h1>
+                                <div>
+                                    <p class="t-qcm" style="padding: 40px;">Questionnaire sous forme de QCM. Les questions peuvent comporter une ou plusieurs réponses.</p>
+
+                                    <form method="" action="" class="qcm"> 
+                                           <div class="div-ul">
+                                                <ul class="qcm">
+                                                    <!-- <h3>Question 1 :</h3> -->
+                                                    <div class="question" id="question1">
+                                                        <p>Question 1 : Quelle est la capitale de la France ?</p>
+                                                        <div class="options">
+                                                            <label><input type="checkbox"> Paris</label>
+                                                            <label><input type="checkbox"> Londres</label>
+                                                            <label><input type="checkbox"> Berlin</label>
+                                                            <label><input type="checkbox"> Rome</label>
+                                                        </div>
+                                                    </div>
+                                                </ul>
+
+                                                <ul class="qcm">
+                                                    <div class="question" id="question2">
+                                                        <p>Question 2 : Quel est le plus grand fleuve du monde ?</p>
+                                                        <div class="options">
+                                                            <label><input type="checkbox"> Nil</label>
+                                                            <label><input type="checkbox"> Amazone</label>
+                                                            <label><input type="checkbox"> Mississippi</label>
+                                                            <label><input type="checkbox"> Yangtsé</label>
+                                                        </div>
+                                                    </div>
+                                                </ul>
+                                        
+                                        
+                                                <ul class="qcm">
+                                                    <div class="question" id="question3">
+                                                        <p>Question 3 : Quel est le symbole chimique de l'oxygène ?</p>
+                                                        <div class="options">
+                                                            <label><input type="checkbox"> O</label>
+                                                            <label><input type="checkbox"> N</label>
+                                                            <label><input type="checkbox"> C</label>
+                                                            <label><input type="checkbox"> H</label>
+                                                        </div>
+                                                    </div>
+                                                </ul>
+                                           </div>
+                                            <div class="bouton">
+                                                <ul>
+                                                    <li><button onclick="checkAnswers()">Valider</button></li>
+                                                    <li><button onclick="resetQuiz()">Réinitialiser</button></li>
+                                                </ul>
+                                            </div>
+
+                                            <script>
+                                                function checkAnswers() {
+                                                    const questions = document.querySelectorAll('.question');
+                                                    let answersHTML = '<html><head><title>Réponses</title></head><body>';
+                                                    
+                                                    questions.forEach((question, index) => {
+                                                        const options = question.querySelectorAll('input[type="checkbox"]');
+                                                        answersHTML += `<p>Question ${index + 1}: `;
+                                                        let isCorrect = false;
+                                                        options.forEach(option => {
+                                                            if (option.checked) {
+                                                                if (option.parentElement.classList.contains('correct') || option.parentElement.textContent.trim() === "Paris" || option.parentElement.textContent.trim() === "Amazone" || (question.id === "question3" && option.parentElement.textContent.trim() === "O")) {
+                                                                    answersHTML += `<span style="color: green;">${option.parentElement.textContent}</span> `;
+                                                                    isCorrect = true;
+                                                                } else {
+                                                                    answersHTML += `<span style="color: red;">${option.parentElement.textContent}</span> `;
+                                                                    option.parentElement.classList.add('incorrect');
+                                                                }
+                                                            }
+                                                        });
+                                                        if (!isCorrect) {
+                                                            answersHTML += `<span style="color: green;">Aucune réponse correcte</span>`;
+                                                        }
+                                                        answersHTML += '</p>';
+                                                        options.forEach(option => option.disabled = true);
+                                                    });
+                                        
+                                                    answersHTML += '</body></html>';
+                                        
+                                                    const newWindow = window.open('', '_blank');
+                                                    newWindow.document.open();
+                                                    newWindow.document.write(answersHTML);
+                                                    newWindow.document.close();
+                                                }
+                                        
+                                                function resetQuiz() {
+                                                    const questions = document.querySelectorAll('.question');
+                                                    
+                                                    questions.forEach(question => {
+                                                        const options = question.querySelectorAll('input[type="checkbox"]');
+                                                        options.forEach(option => {
+                                                            option.checked = false;
+                                                            option.disabled = false;
+                                                            option.parentElement.style.color = '';
+                                                            option.parentElement.classList.remove('incorrect');
+                                                        });
+                                                    });
+                                                }
+                                            </script>
+                                        </form>
+                                </div>
+                        </div>                   
+                    </div>
+
+
+
+                    <style>
+                        #section .sous-grille .cellule .carte.module {display: grid; }
+                        #section .sous-grille .cellule .carte.module .contenu .header 
+                        {display: grid; grid-template-columns: 1fr 1fr; }
+                        #section .sous-grille .cellule .carte.module .contenu .header .logo
+                        {display: grid; width: 400px; }
+                        #section .sous-grille .cellule .carte.module .contenu .header .logo img {width: 100%; }
+                        #section .sous-grille .cellule .carte.module .contenu .header .company{display: grid; 
+                            justify-content: flex-end; align-items: center; }
+                         #section .sous-grille .cellule .carte.module .contenu .header .company ul {width: 300px; }
+                        #section .sous-grille .cellule .carte.module .contenu .header .company ul li {list-style-type: none;}
+                        #section .sous-grille .cellule .carte.module .contenu .header .company ul h2 {padding-bottom: 10px;}
+
+
+                    </style>
+                    <div class="carte module" id="module">
+                        <div class="contenu text">
+                            <h1>Le module de facturation</h1>
+                            <div>
+                                <div class="header" style="border: none;">
+                                    <div class="logo">
+                                        <img src="logo.png" alt="Logo de la compagnie">
+                                    </div>
+                                    <div class="company">
+                                        <ul>
+                                            <h2>Nom de la Compagnie</h2>
+                                            <li><a>Adresse de la Compagnie</a></li>
+                                            <li><a>Téléphone: XXX-XXX-XXXX</a></li>
+                                            <li><a>Email: info@exemple.com</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <style>
+                                    #section .sous-grille .cellule .carte.module .contenu .details 
+                                    {display: grid; grid-template-columns: 1fr 1fr 1fr; column-gap: 20px;}
+
+                                    #section .sous-grille .cellule .carte.module .contenu .details .envoie,
+                                    #section .sous-grille .cellule .carte.module .contenu .details .recoit,
+                                    #section .sous-grille .cellule .carte.module .contenu .details .facture
+                                    { display: grid ; border: 1px solid  #CECECE;}
+                                    #section .sous-grille .cellule .carte.module .contenu .details h3
+                                    { display: grid ; align-items: center; background-color: #CECECE; margin-bottom: 10px;}
+
+                                    #section .sous-grille .cellule .carte.module .contenu .details ul {display: grid; }
+                                    #section .sous-grille .cellule .carte.module .contenu .details ul li {list-style-type: none; }
+                                    /* #section .sous-grille .cellule .carte.module .contenu .details ul li label {} */
+                                    #section .sous-grille .cellule .carte.module .contenu .details ul li input {border: 1px solid #CECECE; outline: none; 
+                                        margin-left: 10px;}
+                                </style>
+                                <div class="details">
+                                    <div class="envoie">
+                                        <h3>Destinataire</h3>
+                                        <ul class="infos">
+                                            <li><label for="Nom">Nom destinataire</label><input type="text"></li>
+                                            <li><label for="societe">Nom de la société</label><input type="text"></li>
+                                            <li><label for="">Adresse</label><input type="text"></li>
+                                            <li><label for="">Téléphone</label><input type="text"></li>
+                                            <li><label for="">Email</label><input type="email"></li>
+                                        </ul>
+                                    </div>
+                                    <div class="recoit">
+                                        <h3>Envoyez à</h3>
+                                        <ul class="infos">
+                                            <li><label for="Nom">Votre nom</label><input type="text"></li>
+                                            <li><label for="societe">Votre Compagnie</label><input type="text"></li>
+                                            <li><label for="">Adresse</label><input type="text"></li>
+                                            <li><label for="">Téléphone</label><input type="text"></li>
+                                            <li><label for="">Email</label><input type="email"></li>
+                                        </ul>
+                                    </div>
+                                    <div class="facture">
+                                        <h1>FACTURE</h1>
+                                        <p id="currentDate">Date: </p>
+                                        <label for="">Numéro Facture</label> <input type="text">
+                                        <!-- <p>Numéro de Facture: INV12345</p> -->
+                                        <script>
+                                            // Obtenir la date actuelle
+                                            const currentDate = new Date();
+                                    
+                                            // Obtenir le jour, le mois et l'année
+                                            const day = currentDate.getDate();
+                                            const month = currentDate.toLocaleString('default', { month: 'long' });
+                                            const year = currentDate.getFullYear();
+                                    
+                                            // Créer la chaîne de date
+                                            const dateString = `${day} ${month} ${year}`;
+                                    
+                                            // Afficher la date dans le paragraphe
+                                            document.getElementById('currentDate').textContent += dateString;
+                                        </script>
+                                    </div>
+                                </div>
+
+                                <style>
+                                    #section .sous-grille .cellule .carte.module .contenu .table 
+                                    {display: grid; grid-template-columns: 4fr 1fr; padding-top: 10px; border: none; }
+                                    #section .sous-grille .cellule .carte.module .contenu .table td
+                                    {text-align: center;}
+                                    #section .sous-grille .cellule .carte.module .contenu .table td input
+                                    { padding: 5px 17px; margin: auto; outline: none; border: 1px solid #CECECE; text-align: center;}
+                                </style>
+                                <!-- Tableau pour les articles -->
+                                <div class="table" style="border: none;">
+                                    <table style="border: none;">
+                                        <thead>
+                                            <tr style="border: none;">
+                                                <th>Article</th>
+                                                <th>Quantité</th>
+                                                <th>Prix Unitaire</th>
+                                                <th>Total</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="invoiceTableBody">
+                                            <tr >
+                                                <td><input type="text" name="article[]" placeholder="Nom de l'article"></td>
+                                                <td><input type="number" name="quantity[]" placeholder="Quantité" oninput="calculateTotal(this)"></td>
+                                                <td><input type="number" name="unit-price[]" placeholder="Prix Unitaire" oninput="calculateTotal(this)"></td>
+                                                <td><input type="text" name="total[]" readonly></td>
+                                            </tr>
+                                            <!-- Vous pouvez ajouter plus de lignes ici... -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            
+                                <style>
+                                    #section .sous-grille .cellule .carte.module .contenu .summary 
+                                    {display: grid;  }
+                                    #section .sous-grille .cellule .carte.module .contenu .summary .totals
+                                    {display: grid; padding-top: 10px; padding-bottom: 10px;}
+                                    #section .sous-grille .cellule .carte.module .contenu .summary .totals ul li 
+                                    {list-style-type: none;}
+                                    #section .sous-grille .cellule .carte.module .contenu .summary .totals ul li input
+                                    {outline: none; border: 1px solid #CECECE; text-align: end;}
+                                </style>
+                                <div class="summary" style="border: none;">
+                                    <div class="totals" style="border: none;">
+                                        <ul>
+                                            <li><a>Sous-total: <input type="text" name="subtotal" readonly></a><span>€</span></li>
+                                            <li><a><label for="">Remise </label>
+                                            <input type="number" id="discount" oninput="calculateBalance()"></a><span>%</span></li>
+                                            <li><a>Sous-total après Remise: <span id="subtotal-after-discount">0.00</span></a></li>
+                                            <li><a><label for="">TVA</label><input type="text" name="vat" readonly value="10.00"><span>%</span></li>
+                                            <li><a><label for="">Coût expédition</label> 
+                                            <input type="text" id="shippingInput"  oninput="calculateBalance()"></a><span>€</span></li>
+                                            <li><a><label for="">Solde dû</label><input type="text" name="balance" readonly value="0.00"></a><span>€</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                    <style>
+                                        #section .sous-grille .cellule .carte.module .contenu .action 
+                                        {display: grid; }
+                                        #section .sous-grille .cellule .carte.module .contenu .actions ul
+                                        {display: flex; justify-content: first baseline; }
+                                        #section .sous-grille .cellule .carte.module .contenu .actions ul li 
+                                        {list-style-type: none;}
+                                        #section .sous-grille .cellule .carte.module .contenu .actions ul li button
+                                        {cursor: pointer; padding: 5px 17px; margin-right: 10px;}
+                                    </style>
+                                    <div class="actions" style="border: none;">
+                                        <ul>
+                                            <li><button id="calculate-button" disabled>Calculer</button></li>
+                                            <li><button id="validate">Valider</button></li>                                        
+                                            <li><button id="add-row" onclick="addRow()">Ajouter une Ligne</button></li>
+                                            <li> <button id="cancel">Annuler</button></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <script>
+                                    // Sélectionnez tous les champs de quantité et de prix unitaire
+                                    const quantityInputs = document.querySelectorAll('input[name="quantity[]"]');
+                                    const unitPriceInputs = document.querySelectorAll('input[name="unit-price[]"]');
+                                    const totalInputs = document.querySelectorAll('input[name="total[]"]');
+                                    const subtotalInput = document.querySelector('input[name="subtotal"]');
+                                    // Sélectionnez le champ de TVA (10%)
+                                    const vatInput = document.querySelector('input[name="vat"]');
+                                    // Sélectionnez le champ de solde
+                                    const balanceInput = document.querySelector('input[name="balance"]');
+                                    // Sélectionnez le bouton de calcul
+                                    const calculateButton = document.getElementById('calculate-button');
+                                    // Sélectionnez le champ de l'expédition (Coût de l'expédition)
+                                    const shippingInput = document.getElementById('shippingInput');
+                                    // Sélectionnez le champ de remise
+                                    const discountInput = document.getElementById('discount');
+                                
+                                    // Fonction pour calculer le total pour une ligne spécifique
+                                    function calculateTotal(input) {
+                                        const row = input.closest('tr');
+                                        const quantity = parseFloat(row.querySelector('input[name="quantity[]"]').value) || 0;
+                                        const unitPrice = parseFloat(row.querySelector('input[name="unit-price[]"]').value) || 0;
+                                        const total = (quantity * unitPrice).toFixed(2);
+                                        row.querySelector('input[name="total[]"]').value = total;
+                                        calculateSubtotal();
+                                        calculateBalance();
+                                    }
+                                
+                                    // Fonction pour calculer le sous-total
+                                    function calculateSubtotal() {
+                                        const subtotalElements = document.querySelectorAll('input[name="total[]"]');
+                                        const subtotal = Array.from(subtotalElements).reduce((acc, input) => {
+                                            const value = parseFloat(input.value) || 0;
+                                            return acc + value;
+                                        }, 0);
+
+                                        subtotalInput.value = subtotal.toFixed(2);
+
+                                        if (!isNaN(discountInput.value) && parseFloat(discountInput.value) > 0) {
+                                            const subtotalAfterDiscount = (subtotalValue - (subtotalValue * discountValue / 100)).toFixed(2);
+                                            document.getElementById('subtotal-after-discount').textContent = subtotalAfterDiscount;
+                                            document.getElementById('subtotal-after-discount').style.display = 'block';
+                                        } else {
+                                            document.getElementById('subtotal-after-discount').style.display = 'none';
+                                        }
+
+                                        calculateVat();
+                                    }
+
+                                
+                                    // Fonction pour calculer la TVA (10%)
+                                    function calculateVat() {
+                                        const subtotal = parseFloat(subtotalInput.value) || 0;
+                                        const vat = (subtotal * 0.1).toFixed(2);
+                                        vatInput.value = vat;
+                                        calculateBalance();
+                                    }
+                                
+                                    // Fonction pour calculer le solde
+                                    function calculateBalance() {
+                                        const subtotalValue = parseFloat(subtotalInput.value) || 0;
+                                        const vatValue = parseFloat(vatInput.value) || 0;
+                                        const shippingValue = parseFloat(shippingInput.value) || 0;
+                                        const discountValue = parseFloat(discountInput.value) || 0;
+                                
+                                        const balance = (subtotalValue + vatValue + shippingValue - (subtotalValue * discountValue / 100)).toFixed(2);
+                                
+                                        balanceInput.value = isNaN(balance) ? '0.00' : balance;
+                                
+                                        if (!isNaN(discountValue) && discountValue > 0) {
+                                            const subtotalAfterDiscount = (subtotalValue - (subtotalValue * discountValue / 100)).toFixed(2);
+                                            document.getElementById('subtotal-after-discount').textContent = subtotalAfterDiscount;
+                                            document.getElementById('subtotal-after-discount').style.display = 'block';
+                                        } else {
+                                            document.getElementById('subtotal-after-discount').style.display = 'none';
+                                        }
+                                    }
+                                
+                                    // Ajoutez des gestionnaires d'événements aux champs de quantité et de prix unitaire
+                                    for (let i = 0; i < quantityInputs.length; i++) {
+                                        quantityInputs[i].addEventListener('input', () => calculateTotal(quantityInputs[i]));
+                                        unitPriceInputs[i].addEventListener('input', () => calculateTotal(unitPriceInputs[i]));
+                                    }
+                            
+                                    // Ajoutez des gestionnaires d'événements au champ de remise
+                                    discountInput.addEventListener('input', calculateBalance);
+                                    // Ajoutez un gestionnaire d'événements au champ de TVA (10%)
+                                    subtotalInput.addEventListener('input', calculateVat);
+                                    // Ajoutez un gestionnaire d'événements au champ de solde
+                                    subtotalInput.addEventListener('input', calculateBalance);
+                                    vatInput.addEventListener('input', calculateBalance); // La TVA affecte le solde
+                                    shippingInput.addEventListener('input', calculateBalance); // La livraison affecte le solde
+                            
+                                    // Ajoutez un gestionnaire d'événements au bouton de calcul
+                                    calculateButton.addEventListener('click', function() {
+                                        calculateSubtotal();
+                                        calculateVat();
+                                        calculateBalance();
+                                    });
+
+
+                                    // Fonction pour réinitialiser tous les champs
+                                    function resetFields() {
+                                        // Réinitialisez les champs de quantité et de prix unitaire
+                                        quantityInputs.forEach(input => input.value = '');
+                                        unitPriceInputs.forEach(input => input.value = '');
+                                        
+                                        // Réinitialisez les champs de total
+                                        totalInputs.forEach(input => input.value = '');
+                                        
+                                        // Réinitialisez le champ de sous-total
+                                        subtotalInput.value = '0.00';
+
+                                        // Réinitialisez le champ de remise
+                                        discountInput.value = '';
+
+                                        // Réinitialisez le champ de TVA
+                                        vatInput.value = '0.00';
+
+                                        // Réinitialisez le champ de coût d'expédition
+                                        shippingInput.value = '';
+
+                                        // Réinitialisez le champ de solde
+                                        balanceInput.value = '0.00';
+
+                                        // Masquez l'élément HTML du sous-total après remise
+                                        document.getElementById('subtotal-after-discount').style.display = 'none';
+                                    }
+
+                                    // Ajoutez un gestionnaire d'événements au bouton "Annuler"
+                                    const cancelButton = document.getElementById('cancel');
+                                    cancelButton.addEventListener('click', function() {
+                                        resetFields(); // Appelez la fonction pour réinitialiser les champs
+                                    });
+
+
+                                    // Fonction pour imprimer la facture
+                                        function printInvoice() {
+                                            // Obtenez les données de facturation à partir des champs de saisie
+                                            const articles = document.querySelectorAll('input[name="article[]"]');
+                                            const quantities = document.querySelectorAll('input[name="quantity[]"]');
+                                            const unitPrices = document.querySelectorAll('input[name="unit-price[]"]');
+                                            const totals = document.querySelectorAll('input[name="total[]"]');
+                                            const subtotal = subtotalInput.value;
+                                            const discount = discountInput.value;
+                                            const subtotalAfterDiscount = document.getElementById('subtotal-after-discount').textContent;
+                                            const vat = vatInput.value;
+                                            const shipping = shippingInput.value;
+                                            const balance = balanceInput.value;
+
+                                            // Créez le tableau HTML pour la facture
+                                            let invoiceHTML = '<table border="1">';
+                                            invoiceHTML += '<thead><tr><th>Article</th><th>Quantité</th><th>Prix Unitaire</th><th>Total</th></tr></thead>';
+                                            invoiceHTML += '<tbody>';
+                                            
+                                            // Ajoutez les lignes de facturation au tableau
+                                            for (let i = 0; i < articles.length; i++) {
+                                                const article = articles[i].value;
+                                                const quantity = quantities[i].value;
+                                                const unitPrice = unitPrices[i].value;
+                                                const total = totals[i].value;
+                                                
+                                                invoiceHTML += `<tr><td>${article}</td><td>${quantity}</td><td>${unitPrice}</td><td>${total}</td></tr>`;
+                                            }
+                                            
+                                            invoiceHTML += '</tbody>';
+                                            invoiceHTML += '</table>';
+
+                                            // Ajoutez les autres détails de la facture au tableau
+                                            invoiceHTML += `<p>Sous-total: ${subtotal}</p> €`;
+                                            if (!isNaN(discount) && discount > 0) {
+                                                invoiceHTML += `<p>Remise: ${discount}%</p> %`;
+                                                invoiceHTML += `<p>Sous-total après Remise: ${subtotalAfterDiscount}</p> €`;
+                                            }
+                                            invoiceHTML += `<p>TVA (10%): ${vat}</p> %`;
+                                            invoiceHTML += `<p>Expédition: ${shipping}</p> €`;
+                                            invoiceHTML += `<p>Solde Dû: ${balance}</p> €`;
+
+                                            // Créez une fenêtre pop-up pour afficher la facture
+                                            const popupWin = window.open('', '_blank');
+                                            popupWin.document.open();
+                                            popupWin.document.write(`
+                                                <html>
+                                                <head>
+                                                    <title>Facture</title>
+                                                </head>
+                                                <body>
+                                                    ${invoiceHTML}
+                                                </body>
+                                                </html>`
+                                            );
+                                            popupWin.document.close();
+                                        }
+
+                                        // Ajoutez un gestionnaire d'événements au bouton "Valider"
+                                        const validateButton = document.getElementById('validate');
+                                        validateButton.addEventListener('click', function() {
+                                            printInvoice(); // Appelez la fonction pour imprimer la facture
+                                        });
+
+
+                                        function addRow() {
+                                            const invoiceTableBody = document.getElementById('invoiceTableBody'); // Sélectionnez le tbody
+                                            const lastRow = invoiceTableBody.lastElementChild; // Sélectionnez la dernière ligne existante
+
+                                            // Clonez la dernière ligne et son contenu
+                                            const newRow = lastRow.cloneNode(true);
+
+                                            // Effacez les valeurs des champs clonés
+                                            const inputFields = newRow.querySelectorAll('input');
+                                            inputFields.forEach(input => input.value = '');
+
+                                            // Ajoutez la nouvelle ligne au tableau
+                                            invoiceTableBody.appendChild(newRow);
+
+                                            // Ajoutez des gestionnaires d'événements aux champs de la nouvelle ligne (si nécessaire)
+                                            const quantityInput = newRow.querySelector('input[name="quantity[]"]');
+                                            const unitPriceInput = newRow.querySelector('input[name="unit-price[]"]');
+                                            const totalInput = newRow.querySelector('input[name="total[]"]'); // Sélectionnez le champ de total de la nouvelle ligne
+
+                                            quantityInput.addEventListener('input', () => calculateTotal(quantityInput));
+                                            unitPriceInput.addEventListener('input', () => calculateTotal(unitPriceInput));
+                                            
+                                            // Ajoutez un gestionnaire d'événements au champ de total de la nouvelle ligne
+                                            totalInput.addEventListener('input', calculateBalance);
+
+                                            // Appelez les fonctions pour recalculer les totaux
+                                            calculateTotalForRow(inputFields.length - 1); // Recalculez le total pour la nouvelle ligne
+                                            calculateSubtotal(); // Recalculez le sous-total
+                                            calculateVat(); // Recalculez la TVA
+                                            calculateBalance(); // Recalculez le solde
+                                        }
+                                </script>
+                            </div>
+                        </div>                   
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+<!-- Pied de page -->
+    <style>
+        footer {display: grid; background-color: #2F4F4F;}
+        footer .sous-grille {display: grid; grid-template-columns: 1fr; grid-template-rows: auto;}
+        footer .sous-grille .cellule { display: grid;}
+        footer .sous-grille .cellule .carte {display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 64px;}
+        footer .sous-grille .cellule .carte p {color: white;}
+
+    </style>
+	<footer>
+        <div class="sous-grille">
+            <div class="cellule creation">
+                <div class="carte">
+                    <p class="pied">©opyright - 2021/2023</p>
+                </div>
+            </div>
+        </div>
+	</footer>
+</body>
+</html>

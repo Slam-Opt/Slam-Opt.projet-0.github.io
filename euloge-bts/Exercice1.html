@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript"> 
+	var note1 = prompt("Donner une première note");
+	var note2 = prompt("Donner une deuxième note");
+	var note3 = prompt("Donner une troisième note");
+
+	var somme = note1*2 + note2*2 + note3*3;
+	var moyenne = somme / 7; 
+
+	
+
+	if (moyenne<8)
+	{
+		alert("Vous redoublez");
+		document.bgColor="red";
+	}
+
+	
+	else if(moyenne >=8)
+	{
+		alert("Vous allez en rattrapage");
+		document.bgColor="blue";
+	}
+	
+	else
+	{
+		alert("Vous êtes admis(e)");
+		document.bgColor="green";
+	}
+
+
+	document.write("voilà la somme : " + somme + "<br>");
+	document.write("voilà la moyenne : " + moyenne);
+
+	
+</script>
+
+
+</body>
+</html>

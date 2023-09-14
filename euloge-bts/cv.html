@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CV</title>
+	<!-- <link rel="stylesheet" type="text/css" href="portfolio.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <style>
+        body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+    </style>
+
+
+<!-- Entête -->
+
+<style>
+    * { margin: 0px; padding: 0px; box-sizing: border-box; }
+    
+    #header {display: grid; position: sticky; top: 0rem;  transition: top 0.3s; background-color: #2F4F4F;}
+    #header .sous-grille {display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto; column-gap: 20px;}
+    #header .sous-grille .cellule { display: grid;}
+    #header .sous-grille .cellule .carte { margin-left: 64px; margin-right: 64px;}
+
+    #header .sous-grille .cellule .carte .menu { display: grid;}
+    #header .sous-grille .cellule .carte .menu ul { display: flex; list-style-type: none;}
+    #header .sous-grille .cellule .carte .menu ul li { display: grid;}
+    #header .sous-grille .cellule .carte .menu .dropdown { display: grid;}
+
+    #header .sous-grille .cellule .carte .menu ul li a { text-align: center; padding: 15px; text-decoration: none; 
+        font-size: 17px; color: white; outline: none;}
+        #header .sous-grille .cellule .carte .menu .dropdown a { text-align: center; padding: 15px; text-decoration: none; 
+        font-size: 17px; color: white; outline: none;}
+
+
+    #header .sous-grille .cellule .carte .menu ul li a:hover { color:  orangered;}
+    #header .sous-grille .cellule .carte .menu ul li a.active { color: orangered;}
+
+    #header .sous-grille .cellule.droite .carte .menu ul { justify-content: flex-end;}
+
+    html{ box-sizing: border-box;}
+</style>
+    
+    <header id="header">
+        <div class="sous-grille">
+            <div class="cellule gauche">
+                <div class="carte">
+                    <nav class="colonne menu navbar">
+                        <ul class="contenu">
+                            <!-- Le chemin d'accès "" est valide et indique la route par défaut. Assurez-vous qu'il n'y a pas d'espaces autour du chemin d'accès vide. -->
+                            <!-- <li><a href="#"><i class="fa fa-home"></i>
+                                <p>HOME</p></a></li>
+                            <li><a href="#"><i class="fa fa-user "></i>
+                                <p>CV</p></a></li>
+                            <li><a href="#"><i class="fa fa-eye "></i>
+                                <p>PROJETS</p></a></li>
+                            <li><a href="#"><i class="fa fa-envelope"></i>
+                                <p>CONTACT</p></a></li> -->
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+    
+            <div class="cellule droite">
+                <div class="carte">
+                    <nav class="colonne menu navbar">
+                        <ul class="contenu">
+                            <li><a href="index.html"><i class="fa fa-home"></i><p>ACCUEIL</p></a></li>
+                            <li><a href="#" class="active"><i class="fa fa-user "></i><p>CV</p></a></li>
+                            <div class="dropdown"><a href="#"><i class="fa fa-eye "></i><p>PROJETS</p></a>
+                                <style>
+                                    #header .dropdown {  position: relative; display: inline-block;}
+                                    #header .dropdown-content {display: none ; position: absolute; background-color: #2F4F4F;
+                                        width: 110px; flex-direction: column; border: 1px solid white; }
+                                    #header .dropdown-content a {display: flex ;}
+                                    #header .dropdown:hover .dropdown-content {display: flex; flex-direction: column; background-color: #2F4F4F; top: 69px;}
+                                    #header .dropdown-content a:hover {background-color: #40826D;}
+
+                                </style>
+                                <div class="dropdown-content">
+                                    <a href="ppe.html">PPE</a>
+                                    <a href="tp.html">TP</a>
+                                </div>
+                            </div>
+                            <li><a href="contact.html"><i class="fa fa-envelope"></i><p>CONTACT</p></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <!-- <script>
+            // Sélectionnez tous les liens dans la liste de menu
+            const menuLinks = document.querySelectorAll(".contenu a");
+        
+            // Ajoutez un gestionnaire d'événements de clic à chaque lien
+            menuLinks.forEach(link => {
+                link.addEventListener("click", function() {
+                    // Retirez d'abord la classe "active" de tous les liens
+                    menuLinks.forEach(link => link.classList.remove("active"));
+                    // Ajoutez la classe "active" au lien cliqué
+                    this.classList.add("active");
+                });
+            });
+        </script> -->
+
+        <script>
+            var prevScrollY = window.pageYOffset;
+            var header = document.getElementById("header");
+            
+            window.onscroll = function() {
+            var currentScrollY = window.pageYOffset;
+            if (prevScrollY > currentScrollY) {
+                header.style.top = "0";
+            } else {
+                header.style.top = "-34px";
+            }
+            prevScrollY = currentScrollY;
+            }
+        </script>
+    </header>
+
+    
+    
+        
+        <style>
+            #section {display: grid; }
+            /* #section .sous-grille {border: 1px solid blue;} */
+            /* #section .sous-grille .cellule {border: 1px solid green;} */
+            #section .sous-grille .cellule .carte { margin: 64px; }
+            #section .sous-grille .cellule .carte ul { display: grid; list-style-type: none; }
+            #section .sous-grille .cellule .carte ul li{ padding-top: 10px;  }
+            #section .sous-grille .cellule .carte.formation ul :first-child {margin-bottom: 20px;}
+            #section .sous-grille .cellule .carte.formation ul li{padding: 40px; background-color: #EDEDED; }
+            #section .sous-grille .cellule .carte.formation ul li span {color:  orangered; font-weight: bold; font-size: 16px;}
+            #section .sous-grille .cellule .carte.formation ul h4 {font-size: 20px;}
+            #section .sous-grille .cellule .carte h1 {margin-bottom: 15px;}
+        </style>
+        <section id="section">
+            <div class="sous-grille formation">
+                <div class="cellule formation">
+                    <div class="carte formation" >
+                        <h1 style="font-size: 30px;">FORMATION</h1>
+                        <!-- <hr style="width:180px"> -->
+                        <ul>
+                            <li>
+                                <span><p>2021 - 2023 |</p></span>
+                                <div>
+                                    <h4>Lycée Parc de Vilgénis </h4>
+                                    <p>Massy (91) - France</p>
+                                </div> <br>
+                                <div>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque ea cum ad quisquam! 
+                                    Illo quis eius exercitationem deserunt sequi eos accusantium obcaecati repellat error tempore! Provident quaerat eligendi accusamus consectetur.
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque ea cum ad quisquam! 
+                                    Illo quis eius exercitationem deserunt sequi eos accusantium obcaecati repellat error tempore! Provident quaerat eligendi accusamus consectetur.
+                                </div>
+                            </li>
+
+                            <li>
+                                <span><p>2019 - 2020 | </p></span>
+                                <div>
+                                    <h4>Lycée Jacques Vaucanson</h4>
+                                    <p>Les Mureaux (78) - France</p>
+                                </div> <br>
+                                <div>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque ea cum ad quisquam! 
+                                    Illo quis eius exercitationem deserunt sequi eos accusantium obcaecati repellat error tempore! Provident quaerat eligendi accusamus consectetur.
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque ea cum ad quisquam! 
+                                    Illo quis eius exercitationem deserunt sequi eos accusantium obcaecati repellat error tempore! Provident quaerat eligendi accusamus consectetur.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <style>
+            #section .sous-grille .cellule .carte.competences ul { display: grid; list-style-type: none; column-gap: 20px;
+                 grid-template-columns: 1fr 1fr 1fr 1fr; }
+            #section .sous-grille .cellule .carte.competences ul h4 {display: flex; text-align: center; padding: 20px; 
+                font-size: 20px; color: white; background-color: #2F4F4F; }
+            #section .sous-grille .cellule .carte.competences ul article {padding: 20px;  border: 1px solid #8B4513;  }
+            #section .sous-grille .cellule .carte.carte.competences ul li{padding: 40px; }
+
+            /* #section .sous-grille.competences {border: 1px solid #8B4513; } */
+
+        </style>
+        <section id="section">
+            <div class="sous-grille competences">
+                <div class="cellule competences">
+                    <div class="carte competences">
+                        <h1 style="font-size: 30px;">COMPÉTENCES</h1>
+                        <!-- <hr style="width:230px"> -->
+                        <ul>
+                            <li>
+                                <h4>Conception et Développement d'applications</h4>
+                                <article>
+                                    <div>
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro dolore ipsa rerum beatae? Esse numquam, soluta vel, 
+                                        molestiae iusto quidem tempore ad nostrum incidunt sapiente obcaecati atque, accusamus dignissimos ipsum?
+                                    </div>
+                                </article>
+                            </li>
+
+                            <li>
+                                <h4>Cybersécurité des services informatiques</h4>
+                                <article>
+                                    <div>
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro dolore ipsa rerum beatae? Esse numquam, soluta vel, 
+                                        molestiae iusto quidem tempore ad nostrum incidunt sapiente obcaecati atque, accusamus dignissimos ipsum?
+                                    </div>
+                                </article>                            
+                            </li>
+
+                            <li>
+                                <h4>Support et mise à disposition des services Informatiques</h4>
+                                <article>
+                                    <div>
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro dolore ipsa rerum beatae? Esse numquam, soluta vel, 
+                                        molestiae iusto quidem tempore ad nostrum incidunt sapiente obcaecati atque, accusamus dignissimos ipsum?
+                                    </div>
+                                </article>                            
+                            </li>
+
+                            <li>
+                                <h4>Administration des systèmes et réseaux</h4>
+                                <article>
+                                    <div>
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro dolore ipsa rerum beatae? Esse numquam, soluta vel, 
+                                        molestiae iusto quidem tempore ad nostrum incidunt sapiente obcaecati atque, accusamus dignissimos ipsum?
+                                    </div>
+                                </article>                            
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <style>
+            #section .sous-grille .cellule .carte.langages ul {padding: 40px; }
+            #section .sous-grille .cellule .carte.langages ul li {display: flex; justify-content: center;}
+            #section .sous-grille .cellule .carte.langages ul li p {display: flex; justify-content: center; align-content: center; width: 70px; height: 4.5rem; border-radius: 50%;
+            box-shadow: 0 15px 24px ;}
+            #section .sous-grille .cellule .carte.langages ul li p img {width: 100%; border-radius: 50%;}
+            #section .sous-grille .cellule .carte.langages ul li div {display: flex; flex-direction: column; justify-content: center; align-items:flex-end;}
+            #section .sous-grille .cellule .carte.langages ul li div p {display: flex; flex-direction: column; justify-content: center; align-content: center; text-align: center;}
+
+            #section .sous-grille.langages {background-color: #EDEDED;   }
+
+        </style>
+        <section id="section">
+            <div class="sous-grille langages">
+                <div class="cellule ">
+                    <div class="carte langages">
+                        <h1 style="font-size: 30px;">LANGAGES</h1>
+                        <!-- <hr style="width:170px"> -->
+                        <ul>
+                            <li>
+                                <p>
+                                    <img src="html.png" alt="">
+                                </p>
+                                <div class="barre" style="height:28px;width:95%; background-color: #e54c21;"><p>95%</p></div>
+                            </li>
+
+                            <li>
+                                <p><img src="java.jpg" alt=""></p>
+                                <div class="barre" style="height:28px;width: 90%; background-color: #0074bd;"><p>90%</p></div>
+                            </li>
+
+                            <li>
+                                <p><img src="logo_php.png" alt=""></p>
+                                <div class="barre" style="height:28px;width:85%; background-color: #7377ad;"><p>85%</p></div>
+                            </li>
+
+                            <li>
+                                <p><img src="css.png" alt=""></p>
+                                <div class="barre" style="height:28px;width:80%; background-color: #3595cf;"><p>80%</p></div>
+                            </li>
+
+                            <li>
+                                <p><img src="js.png" alt=""></p>
+                                <div class="barre" style="height:28px;width:70%; background-color: #f7e01e;"><p>70%</p></div>
+                            </li>
+
+                            <li>
+                                <p><img src="angular.png" alt=""></p>
+                                <div class="barre" style="height:28px;width:60%; background-color: #bd002e;"><p>60%</p></div>
+                            </li>
+                            <li>
+                                <p><img src="mysql.jpg" alt=""></p>
+                                <div class="barre" style="height:28px;width:75%; background-color: #db7e00;"><p>75%</p></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- <script>
+                // Fonction pour animer les barres de progression
+                function animateProgressBar() {
+                    // Sélectionnez tous les éléments avec la classe CSS '.barre'
+                    const progressBarElements = document.querySelectorAll('.barre');
+            
+                    // Pour chaque barre de progression
+                    progressBarElements.forEach((bar) => {
+                        // Récupérez la largeur actuelle de la barre
+                        const width = bar.style.width;
+                        // Réinitialisez la largeur à 0%
+                        bar.style.width = '0%';
+            
+                        // Définissez la largeur cible en tant qu'entier
+                        const targetWidth = parseInt(width);
+                        // Initialisez la largeur actuelle à 0
+                        let currentWidth = 0;
+            
+                        // Définissez un intervalle de temps pour l'animation
+                        const animationInterval = setInterval(() => {
+                            // Vérifiez si la largeur actuelle a atteint la largeur cible
+                            if (currentWidth >= targetWidth) {
+                                // Arrêtez l'animation si la largeur actuelle est supérieure ou égale à la largeur cible
+                                clearInterval(animationInterval);
+                            } else {
+                                // Incrémentez la largeur actuelle
+                                currentWidth++;
+                                // Mettez à jour la largeur de la barre
+                                bar.style.width = currentWidth + '%';
+                            }
+                        }, 15); // L'intervalle de temps de l'animation (plus petit = plus rapide)
+                    });
+                } 
+            
+                // Attachez la fonction d'animation au chargement de la page
+                window.addEventListener('scroll', animateProgressBar);
+            </script> -->
+        </section>
+    </div>
+
+    <!-- Menu Navigation écran mobiles -->
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+    <!-- <Style>
+        
+    </Style>
+    <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+        <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+        <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+        <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">CV</a>
+        <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PROJETS</a>
+        <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+        </div>
+    </div> -->
+
+
+<!-- Pied de page -->
+    <style>
+        footer {display: grid; background-color: #2F4F4F;}
+        footer .sous-grille {display: grid; grid-template-columns: 1fr; grid-template-rows: auto;}
+        footer .sous-grille .cellule { display: grid;}
+        footer .sous-grille .cellule .carte {display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 64px;}
+        footer .sous-grille .cellule .carte p {color: white;}
+
+    </style>
+	<footer>
+        <div class="sous-grille">
+            <div class="cellule creation">
+                <div class="carte">
+                    <p class="pied">©opyright - 2021/2023</p>
+                </div>
+            </div>
+        </div>
+	</footer>
+</body>
+</html>

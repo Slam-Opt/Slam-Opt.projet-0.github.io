@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Traveux pratiques - Formulaire</title>
+	<!-- <link rel="stylesheet" type="text/css" href="portfolio.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <style>
+        body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+    </style>
+
+
+<!-- Entête -->
+
+<style>
+    * { margin: 0px; padding: 0px; box-sizing: border-box; }
+    
+    #header {display: grid; position: sticky; top: 0rem;  transition: top 0.3s; background-color: #2F4F4F;}
+    #header .sous-grille {display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto; column-gap: 20px;}
+    #header .sous-grille .cellule { display: grid;}
+    #header .sous-grille .cellule .carte { margin-left: 64px; margin-right: 64px;}
+
+    #header .sous-grille .cellule .carte .menu { display: grid;}
+    #header .sous-grille .cellule .carte .menu ul { display: flex; list-style-type: none;}
+    #header .sous-grille .cellule .carte .menu ul li { display: grid;}
+    #header .sous-grille .cellule .carte .menu .dropdown { display: grid;}
+
+    #header .sous-grille .cellule .carte .menu ul li a { text-align: center; padding: 15px; text-decoration: none; 
+        font-size: 17px; color: white; outline: none;}
+        #header .sous-grille .cellule .carte .menu .dropdown a { text-align: center; padding: 15px; text-decoration: none; 
+        font-size: 17px; color: white; outline: none;}
+
+    #header .sous-grille .cellule .carte .menu ul li a:hover { color:  orangered;}
+    #header .sous-grille .cellule .carte .menu ul li a.active { color:  orangered;}
+
+    #header .sous-grille .cellule.droite .carte .menu ul { justify-content: flex-end;}
+    #header .sous-grille .cellule.gauche h1 { margin: auto;}
+
+    #header .sous-grille .cellule.droite .carte .menu .contenu li i { padding: 10px;}
+    #header .sous-grille .cellule.droite .carte .menu .dropdown i {padding: 10px;}
+
+    html{ box-sizing: border-box; margin-top: 10px;}
+</style>
+    
+    <header id="header" style="z-index: 2;">
+        <div class="sous-grille">
+            <div class="cellule gauche">
+                <h2 style="color: white; font-style: italic; margin-left: 64px; margin-right: 64px; padding: 15px;" >Le formulaire</h2>
+                <div class="carte">
+                    <nav class="colonne menu navbar">
+                        <ul class="contenu header-2">
+                            <li><a href="tp_html.html">HTML</a></li>
+                            <li><a href="tp_formulaire.html" class="active">Formulaire</a></li>
+                            <li><a href="tp_iframe.html">iFrame</a></li>
+                            <li><a href="tp_css.html">CSS</a></li>
+                            <li><a href="tp_javascript.html">JavaScript</a></li>
+                            <li><a href="tp_mysql.html">MySQL</a></li>
+                            <li><a href="tp_php.html">PHP</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+    
+            <div class="cellule droite">
+                <div class="carte">
+                    <nav class="colonne menu navbar">
+                        <ul class="contenu">
+                            <li><a href="index.html"><i class="fa fa-home"></i><p>ACCUEIL</p></a></li>
+                            <li><a href="cv.html"><i class="fa fa-user "></i><p>CV</p></a></li>
+                            <div class="dropdown active"><a href="#"><i class="fa fa-eye "></i><p>PROJETS</p></a>
+                                <style>
+                                    #header .dropdown {  position: relative; display: inline-block; height: 7rem;}
+                                    #header .dropdown-content {display: none ; position: absolute; background-color: #2F4F4F;
+                                        width: 110px; flex-direction: column; border: 1px solid white; }
+                                    #header .dropdown-content a {display: flex ;}
+                                    #header .dropdown:hover .dropdown-content {display: flex; flex-direction: column; background-color: #2F4F4F; top: 112px;}
+                                    #header .dropdown-content a:hover {color: orangered; background-color: #40826D;}
+                                </style>
+                                <div class="dropdown-content">
+                                    <a href="ppe.html">PPE</a>
+                                    <a href="#" class="active">TP</a>
+                                </div>
+                            </div>
+                            <li><a href="contact.html"><i class="fa fa-envelope"></i><p>CONTACT</p></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <script>
+            var prevScrollY = window.pageYOffset;
+            var header = document.getElementById("header");
+            
+            window.onscroll = function() {
+            var currentScrollY = window.pageYOffset;
+            if (prevScrollY > currentScrollY) {
+                header.style.top = "0";
+            } else {
+                header.style.top = "-34px";
+            }
+            prevScrollY = currentScrollY;
+            }
+        </script>
+    </header>
+
+    <header id="header">
+        <div class="sous-grille">
+    
+        </div>
+        <script>
+            var prevScrollY = window.pageYOffset;
+            var header = document.getElementById("header");
+            
+            window.onscroll = function() {
+            var currentScrollY = window.pageYOffset;
+            if (prevScrollY > currentScrollY) {
+                header.style.top = "0";
+            } else {
+                header.style.top = "-43px";
+            }
+            prevScrollY = currentScrollY;
+            }
+        </script>
+    </header>
+
+    
+    <style>
+        #main {display: grid;  min-height: 40vw;}
+    </style>
+    <main id="main">
+        <style>
+            #section {display: grid; }
+            #section .sous-grille {display: grid; }
+            /*#section .sous-grille .cellule {display: ; border: 1px solid green;} */
+            #section .sous-grille .cellule .carte {display: grid; column-gap: 20px;  margin: 64px; border: 1px solid #CECECE;  
+              }
+            #section .sous-grille .cellule .carte .contenu {display: flex; flex-direction: column;  }
+            #section .sous-grille .cellule .carte .contenu.text {margin: 20px;}
+            #section .sous-grille .cellule .carte .contenu h1 {display: flex; flex-direction: column; padding: 20px; background-color: #CECECE; }
+            #section .sous-grille .cellule .carte .contenu p {display: flex; flex-direction: column; padding: 20px; margin: auto; background-color: white; }
+            #section .sous-grille .cellule .carte .contenu div {display: flex; flex-direction: column;  border: 1px solid  #CECECE; }
+
+            #section .sous-grille .cellule .carte .contenu form {margin: auto; }
+            #section .sous-grille .cellule .carte .contenu form fieldset {padding: 15px;}
+
+            #section .sous-grille .cellule .carte .contenu form .coordonnees input:focus {outline: none;}
+            #section .sous-grille .cellule .carte .contenu form .coordonnees select {display: inline-block ; padding: 15px; background: #f1f1f1; width: 100%;}
+
+            #section .sous-grille .cellule .carte .contenu form button {background-color: #2F4F4F; color: white; padding: 16px 20px; border: none; 
+                cursor: pointer; opacity: 0.9;}
+        </style>
+        <section id="section">
+            <div class="sous-grille"> 
+                <div class="cellule ">
+                    <div class="carte ">
+                        <div class="contenu text">
+                            <h1>Le Formulaire</h1>
+                            <div>
+                                <p>
+                                    <form method="post" action="#">
+                                        <p>
+                                            <style>
+                                                #section .sous-grille .cellule .carte .contenu form .projet h2
+                                                {padding-top: 15px; padding-bottom: 15px ;}
+                                                #section .sous-grille .cellule .carte .contenu form .projet h3
+                                                {padding-top: 10px; padding-bottom: 10px ;}
+                                            </style>
+                                            <fieldset class="projet">
+                                                <legend>Mon projet</legend>
+                    
+                                                <h2>Pique-nique de fin d'année</h2>
+                                                <h3>Inscription</h3>
+                                            </fieldset>
+
+                                            <style>
+                                                #section .sous-grille .cellule .carte .contenu form .coordonnees input 
+                                                {display: inline-block ; border: none; padding: 8px; background: #f1f1f1; width: 100%;}
+                                                #section .sous-grille .cellule .carte .contenu form .coordonnees select 
+                                                {display: inline-block ; border: none; padding: 8px; background: #f1f1f1; width: 100%;}
+                                            </style>
+                                            <fieldset class="coordonnees">
+                                                <legend>Mes coordonnées</legend>
+                                                <label for="prenom" class="cordo">Mon prénom </label><input type="text" name="prenom"> <br>
+                                                <label for="classe" class="cordo">Ma classe  </label>
+                                                    <select name="classe" class="bts"> 
+                                                        <option class="bts">Veuillez choisir une option</option>
+                                                        <option value="SISR">BTS SIO SISR</option> 
+                                                        <option value="SLAM">BTS SLAM</option>
+                                                    </select> <br>
+                                                <label for="email" >Mon mail </label><input type="email" name="email"> <br>
+                                                <label for="passe" >Mon mot de passe </label><input type="password" name="password">
+                                            </fieldset>
+                    
+                                            <!-- <style>
+                                                #section .sous-grille .cellule .carte .contenu form .disponibilites label
+                                                { border: 1px solid red; width: 20rem;}
+                                            </style>
+                                            <fieldset class="disponibilites">
+                                                <legend>Disponibilités</legend>
+                    
+                                                <p>Mes disponibilités : </p>
+                    
+                                             
+                                                    <input type="checkbox" name="dispo">
+                                                    <label for="dispo" class="form">Lundi 10 juin</label>
+                        
+                                                    <input type="checkbox" name="dispo">
+                                                    <label for="dispo" class="form">Mardi 11 juin</label>
+                        
+                                                    <input type="checkbox" name="dispo">
+                                                    <label for="dispo" class=""> Mercredi 12 juin</label> 
+                                              
+                    
+                                                <p>J'apporterai</p>
+                    
+                                              
+                                                    <input type="radio" name="dispo">
+                                                    <label for="dispo" class="">Une entrée</label>
+                        
+                                                    <input type="radio" name="dispo">
+                                                    <label for="dispo" class="">Un plat</label>
+                        
+                                                    <input type="radio" name="dispo">
+                                                    <label for="dispo" class="">Un dessert</label> <br>
+                                            </fieldset> -->
+                                            
+                                            <style>
+                                                #section .sous-grille .cellule .carte .contenu form .message textarea
+                                                { width: 800px; height: 7rem; outline: none;}
+                                            </style>
+                                            <fieldset class="message">
+                                                <legend>Message</legend>
+                                                <!-- <label for="dispo" class="form"> Message </label> <br> -->
+                                                <textarea class="text"></textarea>
+                                            </fieldset>
+                                        </p>
+                                        <button>ENVOYER</button>
+                                    </form>
+                                </p>
+                            </div>
+                        </div>                   
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+
+
+<!-- Pied de page -->
+    <style>
+        footer {display: grid; background-color: #2F4F4F;}
+        footer .sous-grille {display: grid; grid-template-columns: 1fr; grid-template-rows: auto;}
+        footer .sous-grille .cellule { display: grid;}
+        footer .sous-grille .cellule .carte {display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 64px;}
+        footer .sous-grille .cellule .carte p {color: white;}
+
+    </style>
+	<footer>
+        <div class="sous-grille">
+            <div class="cellule creation">
+                <div class="carte">
+                    <p class="pied">©opyright - 2021/2023</p>
+                </div>
+            </div>
+        </div>
+	</footer>
+</body>
+</html>
